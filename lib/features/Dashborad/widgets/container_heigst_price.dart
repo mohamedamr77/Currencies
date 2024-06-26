@@ -1,96 +1,89 @@
 import 'package:flutter/material.dart';
 import '../../../core/color.dart';
+
 class CustomContainerHighestTradingPrices extends StatelessWidget {
   const CustomContainerHighestTradingPrices({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(
-          top: 20,
-          right: 10,
-          left: 10,
-          bottom: 15,
-        ),
-        // height: MediaQuery.sizeOf(context).height*0.224,
-        // width: MediaQuery.sizeOf(context).width*0.52,
-        decoration: BoxDecoration(
-          color: ColorApp.whiteColor,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              textDirection: TextDirection.rtl,
-              children: [
-                CircleAvatar(
-                  child: Image(image: AssetImage("assets/images/amreica.png",),
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: double.infinity,
-                  ),
-                ),
-                SizedBox(width: MediaQuery.sizeOf(context).width*0.03,),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      CountryCurrency("دولار أمريكى "),
-                      AbbreviationOfTheCountry(text: 'USD ',),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                right: 20,
-                top: 10,
-                bottom: 10
-              ),
-              child: LimitedNumberText(number: 48.48),
-            ),
-            Expanded(
-              child: Row(
-                textDirection: TextDirection.rtl,
-                children: [
-                  CircleAvatar(
-                    radius: 14,
-                    child: Image(image: AssetImage("assets/images/amreica.png",),
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: double.infinity,
-                    ),
-                  ),
-                  SizedBox(width: 2,),
-                  SizedBox(
-                    width: 135,
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text("مصرف ابو ظبى الاسلامى ",
-                      maxLines: 1,
-                      textDirection: TextDirection.rtl,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: Color(0xff9a9cb8),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w900,
-                        fontFamily: "Tajawal",
-                      ),
+      padding: EdgeInsets.only(
+        top: 20,
+        left: 10,
+        right: 10,
+        bottom: 15,
 
-                      ),
-                    ),
-                  )
+      ),
+      decoration: BoxDecoration(
+        color: ColorApp.whiteColor,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min, // Adjust the container size to its content
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.end,
+            textDirection: TextDirection.rtl,
+            children: [
+              CircleAvatar(
+                child: Image(
+                  image: AssetImage("assets/images/amreica.png"),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+              ),
+              SizedBox(width: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  CountryCurrency("دولار أمريكى "),
+                  AbbreviationOfTheCountry(text: 'USD '),
                 ],
               ),
-            )
-          ],
-        ),
-
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: LimitedNumberText(number: 48.48),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            textDirection: TextDirection.rtl,
+            children: [
+              CircleAvatar(
+                radius: 14,
+                child: Image(
+                  image: AssetImage("assets/images/amreica.png"),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+              ),
+              SizedBox(width: 2),
+              Flexible(
+                child: SizedBox(
+                  width: 135,
+                  child: Text(
+                    "مصرف ابو ظبى الاسلامي ",
+                    maxLines: 1,
+                    textDirection: TextDirection.rtl,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Color(0xff9a9cb8),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900,
+                      fontFamily: "Tajawal",
+                    ),
+                  ),
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
@@ -181,39 +174,3 @@ class LimitedNumberText extends StatelessWidget {
     );
   }
 }
-
-
-
-/*
-
-// class LimitedNumberText extends StatelessWidget {
-//   final String text;
-//
-//   LimitedNumberText({required this.text});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     String formattedText;
-//     if (text.contains('.')) {
-//       List<String> parts = text.split('.');
-//       String part0 = parts[0].padLeft(2, '0').substring(0, 2);
-//       String part1 = parts[1].padRight(2, '0').substring(0, 2);
-//       formattedText = '$part0.$part1';
-//     } else {
-//       String part0 = text.padLeft(2, '0').substring(0, 2);
-//       formattedText = '$part0.00';
-//     }
-//
-//     return Text(
-//       formattedText,
-//       maxLines: 1,
-//       style: TextStyle(
-//         fontSize: 20,
-//         color: Color(0xff14172c),
-//         fontWeight: FontWeight.w800,
-//         // fontFamily: "Tajawal",
-//       ),
-//     );
-//   }
-// }
- */
