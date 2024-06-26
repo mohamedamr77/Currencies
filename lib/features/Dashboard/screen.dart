@@ -1,11 +1,9 @@
 import 'package:digitaltransactions/core/color.dart';
-import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/text.dart';
-import 'package:digitaltransactions/features/Dashborad/widgets/background_image_top_screen.dart';
-import 'package:digitaltransactions/features/Dashborad/widgets/container_heigst_price.dart';
-import 'package:digitaltransactions/features/Dashborad/widgets/title_drawar.dart';
+import 'package:digitaltransactions/features/Dashboard/widgets/background_image_top_screen.dart';
+import 'package:digitaltransactions/features/Dashboard/widgets/container_heigst_price.dart';
+import 'package:digitaltransactions/features/Dashboard/widgets/title_drawar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -41,7 +39,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     bottom: 0,
                     right: 5,
                     left: 0.1, // Ensure the containers are centered horizontally
@@ -65,8 +63,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 25, right: 16, left: 16),
+            const Padding(
+              padding: EdgeInsets.only(top: 25, right: 16, left: 16),
               child: Row(
                 textDirection: TextDirection.rtl,
                 children: [
@@ -103,15 +101,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
             ),
            ListView.separated(
-             physics: NeverScrollableScrollPhysics(),
+             physics: const NeverScrollableScrollPhysics(),
                shrinkWrap: true,
                itemBuilder: (context, index) =>  Container(
-             padding: EdgeInsets.all(10),
+             padding: const EdgeInsets.all(10),
              decoration: BoxDecoration(
                color: Colors.white,
                borderRadius: BorderRadius.circular(5),
              ),
-             child: Row(
+             child: const Row(
                textDirection: TextDirection.rtl,
                children: [
                  CircleAvatar(
@@ -153,7 +151,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
              ),
            ),
                separatorBuilder: (context, index) {
-                return SizedBox(height: 10,);
+                return const SizedBox(height: 10,);
                },
                itemCount: 10
            ),

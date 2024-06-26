@@ -7,7 +7,7 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: 20,
         left: 10,
         right: 10,
@@ -18,7 +18,7 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
         color: ColorApp.whiteColor,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Column(
+      child: const Column(
         mainAxisSize: MainAxisSize.min, // Adjust the container size to its content
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -46,7 +46,7 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.symmetric(vertical: 10),
             child: LimitedNumberText(number: 48.48),
           ),
           Row(
@@ -91,7 +91,7 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
 class CountryCurrency extends StatelessWidget {
   final String text;
 
-  CountryCurrency(this.text);
+  const CountryCurrency(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class CountryCurrency extends StatelessWidget {
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
       textDirection: TextDirection.rtl,
-      style: TextStyle(
+      style: const TextStyle(
         color: Color(0xff444555),
         fontSize: 16,
         fontFamily: "Tajawal",
@@ -120,14 +120,14 @@ class AbbreviationOfTheCountry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> words = text.split(' ');
-    String truncatedText = words.length > 1 ? '${words[0]}' : text;
+    String truncatedText = words.length > 1 ? words[0] : text;
 
     return Text(
       truncatedText,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
       textDirection: TextDirection.rtl,
-      style: TextStyle(
+      style: const TextStyle(
         color: Color(0XFF9a9cb8),
         fontSize: 16,
         fontFamily: "Tajawal",
@@ -139,7 +139,7 @@ class AbbreviationOfTheCountry extends StatelessWidget {
 class LimitedNumberText extends StatelessWidget {
   final double number;
 
-  LimitedNumberText({required this.number});
+  const LimitedNumberText({super.key, required this.number});
 
   @override
   Widget build(BuildContext context) {
@@ -165,7 +165,7 @@ class LimitedNumberText extends StatelessWidget {
     return Text(
       finalFormattedNumber,
       maxLines: 1,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 20,
         color: Color(0xff14172c),
         fontWeight: FontWeight.w800,

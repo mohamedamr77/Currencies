@@ -8,7 +8,7 @@ class TitleAndDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 25,horizontal: 16),
         child: Row(
