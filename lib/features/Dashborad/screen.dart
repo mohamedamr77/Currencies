@@ -66,28 +66,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 25,right: 16,left: 16),
+              padding: const EdgeInsets.only(top: 25, right: 16, left: 16),
               child: Row(
                 textDirection: TextDirection.rtl,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("البنك",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Color(0xff14172c),
-                    fontFamily: "Tajawal",
-                    fontSize: 16,
+                  Text(
+                    "البنك",
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                      color: Color(0xff14172c),
+                      fontFamily: "Tajawal",
+                      fontSize: 16,
+                    ),
                   ),
+                  Spacer(flex: 2),
+                  Text(
+                    "شراء",
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                      color: Color(0xff14172c),
+                      fontFamily: "Tajawal",
+                      fontSize: 16,
+                    ),
                   ),
-                  Text("شراء",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Color(0xff14172c),
-                    fontFamily: "Tajawal",
-                    fontSize: 16,
-                  ),
-                  ),
-                  Text("بيع",
+                  Spacer(flex: 1),
+                  Text(
+                    "بيع",
                     textAlign: TextAlign.right,
                     style: TextStyle(
                       color: Color(0xff14172c),
@@ -98,6 +102,62 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                textDirection: TextDirection.rtl,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    textDirection: TextDirection.rtl,
+                    children: [
+                      CircleAvatar(
+                        child: Image(
+                          image: AssetImage("assets/images/amreica.png"),
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                          height: double.infinity,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      CountryCurrency("دولار أمريكى "),
+                    ],
+                  ),
+                  Spacer(flex: 2),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "48.48", // Replace with the actual buying price
+                      style: TextStyle(
+                        color: Color(0xff14172c),
+                        fontFamily: "Tajawal",
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(width: 62),
+                    Text(
+                      "48.50", // Replace with the actual selling price
+                      style: TextStyle(
+                        color: Color(0xff14172c),
+                        fontFamily: "Tajawal",
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+
+
+                ],
+              ),
+            )
           ],
         ),
       ),
