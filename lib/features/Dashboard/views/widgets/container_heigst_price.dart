@@ -48,7 +48,7 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
             child: LimitedNumberText(number: 48.48),
           ),
           Row(
