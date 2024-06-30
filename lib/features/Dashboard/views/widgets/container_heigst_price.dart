@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../core/color.dart';
+
+import '../../../../core/color.dart';
+
 
 class CustomContainerHighestTradingPrices extends StatelessWidget {
   const CustomContainerHighestTradingPrices({super.key});

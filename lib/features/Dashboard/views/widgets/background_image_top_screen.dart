@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import '../../../../core/image.dart';
 
-import '../../../core/image.dart';
 
 class BackgroundImageTopScreen extends StatelessWidget {
   const BackgroundImageTopScreen({super.key});
