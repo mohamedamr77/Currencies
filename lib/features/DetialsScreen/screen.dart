@@ -13,7 +13,6 @@ class DetailsScreen extends StatelessWidget {
       SizedBox(
         height: MediaQuery.sizeOf(context).height*0.35,
         child: Stack(
-
           children: [
             Image(
               image:const AssetImage(ImageApp.appBarBGDetailsImage),
