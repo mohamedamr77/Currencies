@@ -8,7 +8,7 @@ class ListviewVertical extends StatelessWidget {
     return   ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemBuilder: (context, index) =>  ListviewVerticalBody(),
+        itemBuilder: (context, index) =>  const ListviewVerticalBody(),
         separatorBuilder: (context, index) {
           return const SizedBox(height: 10,);
         },
