@@ -24,9 +24,9 @@ class DetialsScreenBody extends StatelessWidget {
                     fit: BoxFit.fill,
                   ),
                 ),
-                child: SafeArea(
+                child: const SafeArea(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 20,right: 20),
+                    padding: EdgeInsets.only(top: 20,right: 20),
                     child: Column(
                       children: [
                         Row(
@@ -98,9 +98,9 @@ class DetialsScreenBody extends StatelessWidget {
                 bottom: 50,
                 left: 20,
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 8,horizontal: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 8,horizontal: 15),
                   decoration: BoxDecoration(
-                    color: Color(0xff7853f2),
+                    color: const Color(0xff7853f2),
                     borderRadius: BorderRadius.circular(5)
                   ),
                   child: Row(
@@ -108,8 +108,8 @@ class DetialsScreenBody extends StatelessWidget {
                       SvgPicture.asset("assets/images/svg/calculator.svg",
                         color: Colors.white,
                       ),
-                      SizedBox(width: 10,),
-                      Text("تحويل",
+                      const SizedBox(width: 10,),
+                      const Text("تحويل",
                       style: TextStyle(
                         color: Color(0xfff5f6fa)
                       ),

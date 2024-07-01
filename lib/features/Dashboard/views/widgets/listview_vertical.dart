@@ -11,7 +11,7 @@ class ListviewVertical extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemBuilder: (context, index) =>  Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.white,
