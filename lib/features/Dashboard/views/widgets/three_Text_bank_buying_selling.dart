@@ -1,3 +1,6 @@
+import 'package:digitaltransactions/core/color.dart';
+import 'package:digitaltransactions/core/text.dart';
+import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class BankBuyingSelling extends StatelessWidget {
@@ -10,37 +13,35 @@ class BankBuyingSelling extends StatelessWidget {
       child: Row(
         textDirection: TextDirection.rtl,
         children: [
-          Text(
-            "البنك",
-            textAlign: TextAlign.right,
-            style: TextStyle(
-              color: Color(0xff14172c),
-              fontFamily: "Tajawal",
-              fontSize: 16,
-            ),
-          ),
+          //  TextApp.bankText,
+          CustomText(text: TextApp.bankText,),
           Spacer(flex: 2),
-          Text(
-            "شراء",
-            textAlign: TextAlign.right,
-            style: TextStyle(
-              color: Color(0xff14172c),
-              fontFamily: "Tajawal",
-              fontSize: 16,
-            ),
-          ),
+          // TextApp.sellingText,
+          CustomText(text: TextApp.sellingText,),
           Spacer(flex: 1),
-          Text(
-            "بيع",
-            textAlign: TextAlign.right,
-            style: TextStyle(
-              color: Color(0xff14172c),
-              fontFamily: "Tajawal",
-              fontSize: 16,
-            ),
-          ),
+          //TextApp.buyingText,
+          CustomText(text: TextApp.buyingText,),
         ],
       ),
     );
   }
+}
+
+
+class CustomText extends StatelessWidget{
+  const CustomText({super.key, required this.text});
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+        text,
+        textAlign: TextAlign.right,
+        style: const CustomTextStyle(
+          color: ColorApp.deebBlueTextColor,
+          fontFamily: "Tajawal",
+          fontSize: 16,
+        )
+    );
+  }
+
 }

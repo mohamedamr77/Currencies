@@ -1,3 +1,4 @@
+import 'package:digitaltransactions/core/color.dart';
 import 'package:digitaltransactions/features/DetialsScreen/views/widgets/detials_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xfff5f6fa),
+      backgroundColor: ColorApp.backgroundColor,
       body: DetialsScreenBody(),
     );
   }

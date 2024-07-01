@@ -1,5 +1,6 @@
+import 'package:digitaltransactions/core/textstyle.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/color.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
@@ -16,7 +17,7 @@ class CustomAppbar extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: 230,
+              height: MediaQuery.sizeOf(context).height*0.31,
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -33,13 +34,15 @@ class CustomAppbar extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            child: Text(TextAPP.titleCenterDashboard,
+                            child: Text(TextApp.titleCenterDashboard,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: CustomTextStyle(
                                 color: ColorApp.whiteColor,
                                 fontFamily: "Tajawal",
                                 fontSize: 16,
-                              ),
+                                fontWeight: null,
+                                fontStyle: null,
+                              )
                             ),
                           ),
                           Image(image: AssetImage(ImageApp.actionDashboardImage),
@@ -53,7 +56,7 @@ class CustomAppbar extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
-                        TextAPP.highestTradingPrices,
+                        TextApp.highestTradingPrices,
                         style: TextStyle(
                           color: ColorApp.whiteColor,
                           fontFamily: "Tajawal",
@@ -65,24 +68,17 @@ class CustomAppbar extends StatelessWidget {
                 ],
               ),
             ),
-            const Positioned(
+             Positioned(
               bottom: 0,
               right: 5,
               left: 0.1, // Ensure the containers are centered horizontally
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomContainerHighestTradingPrices(),
-                    SizedBox(width: 10),
-                    CustomContainerHighestTradingPrices(),
-                    SizedBox(width: 10),
-                    CustomContainerHighestTradingPrices(),
-                    SizedBox(width: 10),
-                    CustomContainerHighestTradingPrices(),
-                    SizedBox(width: 10),
-                    CustomContainerHighestTradingPrices(),
-                  ],
+              child: SizedBox(
+                height: MediaQuery.sizeOf(context).height*0.205,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) =>    const CustomContainerHighestTradingPrices(),
+                    separatorBuilder: (context, index) => const SizedBox(width: 10,),
+                  itemCount: 10,
                 ),
               ),
             )
