@@ -5,6 +5,7 @@ import 'features/DetialsScreen/screen.dart';
 
 void main(){
   runApp(const MyApp());
+  //mohamed amr
 }
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
