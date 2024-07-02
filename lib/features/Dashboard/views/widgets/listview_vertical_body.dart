@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/color.dart';
 import '../../../../core/image.dart';
 import '../../../../core/textstyle.dart';
-import '../../data/country_currency.dart';
+import 'country_currency.dart';
 
 class ListviewVerticalBody extends StatelessWidget {
   const ListviewVerticalBody({super.key});

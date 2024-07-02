@@ -6,6 +6,8 @@ class TextApp{
   static const String sellingText= "شراء";
   static const String buyingText= "بيع";
   static const String translateText= "تحويل";
+  static const String dollarText= "دولار أمريكى";
+  static const String aboZabyText= "مصرف أبو ظبي الإسلامي";
 
   static const String priceCalculatorText= "حاسبة الأسعار";
   static const String goldPricesText= "اسعار الذهب";

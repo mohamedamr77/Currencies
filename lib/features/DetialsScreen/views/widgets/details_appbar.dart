@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/color.dart';
@@ -21,7 +22,7 @@ class DetailsAppbar extends StatelessWidget {
       child:  SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.025,right: MediaQuery.of(context).size.width*0.07),
-          child: const Column(
+          child:  Column(
             children: [
               Row(
                 children: [
@@ -35,8 +36,13 @@ class DetailsAppbar extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Icon(Icons.arrow_forward_ios,
-                    color: ColorApp.whiteColor,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.arrow_forward_ios,
+                      color: ColorApp.whiteColor,
+                    ),
                   )
                 ],
               ),

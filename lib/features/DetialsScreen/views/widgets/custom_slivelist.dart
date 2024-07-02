@@ -12,7 +12,7 @@ class CustomSliverList extends StatelessWidget {
         return
           const Column(
             children: [
-              ListviewVerticalBody(),
+               ListviewVerticalBody(),
               SizedBox(height:12),
             ],
           );

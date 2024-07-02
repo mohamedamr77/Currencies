@@ -8,16 +8,16 @@ import '../../../../core/text.dart';
 import 'container_heigst_price.dart';
 
 class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({super.key});
+   CustomAppbar({super.key});
+
 
   @override
   Widget build(BuildContext context) {
-    return
-      SizedBox(
+    return  SizedBox(
         height: MediaQuery.sizeOf(context).height*0.42,
         child: Stack(
           children: [
-            Container(
+             Container(
               height: MediaQuery.sizeOf(context).height*0.31,
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -31,11 +31,11 @@ class CustomAppbar extends StatelessWidget {
                   SafeArea(
                     child: Padding(
                       padding: EdgeInsets.only(left: 16, right: 10, top: 5),
-                      child: Row(
+                      child: Row (
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            child: Text(TextApp.titleCenterDashboard,
+                            child: Text("${TextApp.titleCenterDashboard}",
                               textAlign: TextAlign.center,
                               style: CustomTextStyle(
                                 color: ColorApp.whiteColor,
@@ -50,7 +50,6 @@ class CustomAppbar extends StatelessWidget {
                             onTap: (){
                               Scaffold.of(context).openEndDrawer();
                             },
-
                             child: SizedBox(
                               height: 60,
                               width: 60,
@@ -59,6 +58,7 @@ class CustomAppbar extends StatelessWidget {
                               ),
                             ),
                           ),
+
                         ],
                       ),
                     ),
@@ -68,7 +68,7 @@ class CustomAppbar extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
-                        TextApp.highestTradingPrices,
+                        "${TextApp.highestTradingPrices}",
                         style: TextStyle(
                           color: ColorApp.whiteColor,
                           fontFamily: "Tajawal",
@@ -80,6 +80,7 @@ class CustomAppbar extends StatelessWidget {
                 ],
               ),
             ),
+
              Positioned(
               bottom: 0,
               right: 5,

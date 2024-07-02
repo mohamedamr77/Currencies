@@ -2,9 +2,9 @@ import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/color.dart';
-import '../../data/abbreviation_country.dart';
-import '../../data/country_currency.dart';
-import '../../data/limited_numbert_text.dart';
+import 'abbreviation_country.dart';
+import 'country_currency.dart';
+import 'limited_numbert_text.dart';
 
 class CustomContainerHighestTradingPrices extends StatelessWidget {
   const CustomContainerHighestTradingPrices({super.key});

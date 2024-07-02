@@ -4,7 +4,6 @@ import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:digitaltransactions/features/Dashboard/model/list_drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'body_listview_drawar.dart';
 
 class DrawerBody extends StatelessWidget {
@@ -46,17 +45,8 @@ class DrawerBody extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder: (context, index) => BodyListViewDrawer(index: index,),
          itemCount: drawerList.length,
-        )
+        ),
       ],
     );
   }
 }
-/*
-LinearGradient(
-              colors: [
-                Color(0xff8160ef),
-                Color(0xff3a00fa),
-
-              ],
-            ),
- */

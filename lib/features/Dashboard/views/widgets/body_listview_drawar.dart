@@ -1,8 +1,8 @@
+import 'package:digitaltransactions/features/Dashboard/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/image.dart';
-import '../../../../core/text.dart';
 import '../../../../core/textstyle.dart';
+import '../../../DetialsScreen/screen.dart';
 import '../../model/list_drawer_item.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
@@ -10,19 +10,37 @@ class BodyListViewDrawer extends StatelessWidget {
    final int index;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      trailing: SvgPicture.asset(drawerList[index].image,
-        height: 40,
-        width:40,
-      ),
-      title: Padding(
-        padding: const EdgeInsets.only(top: 15),
-        child: Text(drawerList[index].title,
-          textAlign: TextAlign.right,
-          style: CustomTextStyle(
-            fontSize: 20,
-            fontFamily: "Tajawal",
-            color: Color(0xff200e32),
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          if(drawerList[index].title==drawerList[0].title
+              ||
+              drawerList[index].title==drawerList[2].title
+              ||
+              drawerList[index].title==drawerList[4].title
+          ){
+            return DetailsScreen();
+          }else{
+            return DashboardScreen();
+          }
+        },
+        )
+        );
+      },
+      child: ListTile(
+        trailing: SvgPicture.asset(drawerList[index].image,
+          height: 40,
+          width:40,
+        ),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 15),
+          child: Text(drawerList[index].title,
+            textAlign: TextAlign.right,
+            style: CustomTextStyle(
+              fontSize: 20,
+              fontFamily: "Tajawal",
+              color: Color(0xff200e32),
+            ),
           ),
         ),
       ),

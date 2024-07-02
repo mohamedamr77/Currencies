@@ -1,7 +1,7 @@
 import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/text.dart';
 
-import 'drawer_listview_mode;.dart';
+import 'drawer_listview_model.dart';
 
 List<DrawerModel> drawerList=[
   DrawerModel(image: ImageApp.exchangeRatesImage, title: TextApp.titleCenterDashboard),
