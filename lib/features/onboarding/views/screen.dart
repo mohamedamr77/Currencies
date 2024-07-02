@@ -88,27 +88,3 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
     );
   }
 }
-/*
-Center(
-            child: Container(
-              margin: EdgeInsets.only(top: 100),
-              padding: EdgeInsets.all(20),
-              height: 130,
-              width: 130,// Use animated width
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(100),
-                  bottomRight: Radius.circular(100),
-                ),
-              ),
-              child: ScaleTransition(
-                scale: _scaleAnimation,
-                child: SvgPicture.asset(
-                  "assets/images/svg/bride.svg",
-                  width: _widthAnimation.value,
-                ),
-              ),
-            ),
-          ),
- */

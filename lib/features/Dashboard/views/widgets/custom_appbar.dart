@@ -1,6 +1,7 @@
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import '../../../../core/color.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
@@ -25,11 +26,11 @@ class CustomAppbar extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              child:const Column(
+              child: Column(
                 children: [
                   SafeArea(
                     child: Padding(
-                      padding: EdgeInsets.only(left: 16, right: 22, top: 20),
+                      padding: EdgeInsets.only(left: 16, right: 10, top: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -45,14 +46,25 @@ class CustomAppbar extends StatelessWidget {
                               )
                             ),
                           ),
-                          Image(image: AssetImage(ImageApp.actionDashboardImage),
+                          GestureDetector(
+                            onTap: (){
+                              Scaffold.of(context).openEndDrawer();
+                            },
+
+                            child: SizedBox(
+                              height: 60,
+                              width: 60,
+                              child: Image(image: AssetImage(ImageApp.actionDashboardImage),
+
+                              ),
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(right: 22,top: 35),
+                    padding: EdgeInsets.only(right: 22 , top: 8),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
@@ -73,7 +85,7 @@ class CustomAppbar extends StatelessWidget {
               right: 5,
               left: 0.1, // Ensure the containers are centered horizontally
               child: SizedBox(
-                height: MediaQuery.sizeOf(context).height*0.205,
+                height: MediaQuery.sizeOf(context).height*0.21,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) =>    const CustomContainerHighestTradingPrices(),

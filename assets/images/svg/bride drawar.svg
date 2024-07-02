@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.613" height="50.454" viewBox="0 0 39.613 50.454">
+    <defs>
+        <linearGradient id="uiwps5pp6a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b29bff"/>
+            <stop offset="1" stop-color="#5927ff"/>
+        </linearGradient>
+        <linearGradient id="hpvatgazlb" x1=".067" y1=".05" x2=".833" y2="1.105" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#4624ff"/>
+            <stop offset="1" stop-color="#cabaff"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Group 118" transform="translate(-170 -179.563)">
+        <path data-name="Union 2" d="M0 31.19V6.684A6.683 6.683 0 0 1 6.684 0h8.911a15.576 15.576 0 0 1 12.713 6.56h11.305l-8.444 8.231q.02.4.02.8A15.6 15.6 0 0 1 15.595 31.19z" transform="translate(170 179.563)" style="fill:url(#uiwps5pp6a)"/>
+        <path data-name="Path 222" d="M12.653 0h10.755a13.286 13.286 0 0 1 13.286 13.286v5.061a18.347 18.347 0 1 1-36.694 0v-5.694A12.653 12.653 0 0 1 12.653 0z" transform="rotate(-90 200.008 30.008)" style="fill:url(#hpvatgazlb)"/>
+        <path data-name="Path 221" d="M10.9 0h9.269a11.45 11.45 0 0 1 11.45 11.45v4.362a15.812 15.812 0 0 1-31.619 0V10.9A10.9 10.9 0 0 1 10.9 0z" transform="rotate(-90 200.008 30.008)" style="fill:url(#hpvatgazlb)"/>
+        <path data-name="Path 220" d="M8.965 0h7.62A9.414 9.414 0 0 1 26 9.414V13a13 13 0 0 1-26 0V8.965A8.965 8.965 0 0 1 8.965 0z" transform="rotate(-90 200.008 30.008)" style="fill:url(#hpvatgazlb)"/>
+        <path data-name="Path 211" d="m6611.192 2706.356 9.165-3.2-8.365 8.052z" transform="translate(-6410.745 -2517.029)" style="fill:#e3dbff"/>
+        <circle data-name="Ellipse 49" cx="1.376" cy="1.376" r="1.376" transform="translate(192.016 188.736)" style="fill:#fff"/>
+    </g>
+</svg>
