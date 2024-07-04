@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/color.dart';
-import '../../../../core/image.dart';
-import '../../../../core/textstyle.dart';
-import 'country_currency.dart';
+import '../../../../../core/color.dart';
+import '../../../../../core/image.dart';
+import '../../../../../core/textstyle.dart';
+import '../vertical_horizontal_participants_widget/country_currency.dart';
 
 class ListviewVerticalBody extends StatelessWidget {
-  const ListviewVerticalBody({super.key});
-
+  const ListviewVerticalBody({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});
+final Widget widget;
+final double sellingPrice;
+final double buyingPrice;
+final String nameWidget;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,26 +20,21 @@ class ListviewVerticalBody extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(9),
       ),
-      child: const Row(
+      child:  Row(
         textDirection: TextDirection.rtl,
         children: [
           CircleAvatar(
-            child: Image(
-              image: AssetImage(ImageApp.americaImage),
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
+            child: widget,
           ),
           SizedBox(width: 10),
-          CountryCurrency("دولار أمريكى ", fontSize: 16,),
+          CountryCurrency(nameWidget, fontSize: 16,),
           Spacer(flex: 2,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "45.48", // Replace with the actual buying price
+                "$sellingPrice", // Replace with the actual buying price
                 style: CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",
@@ -45,7 +43,7 @@ class ListviewVerticalBody extends StatelessWidget {
               ),
               SizedBox(width: 62),
               Text(
-                "48.50", // Replace with the actual selling price
+                "$buyingPrice", // Replace with the actual selling price
                 style: CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",

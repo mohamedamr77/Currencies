@@ -17,8 +17,8 @@ class DrawerBody extends StatelessWidget {
         Container(
           alignment: Alignment.center,
           width: double.infinity,
-          padding: EdgeInsets.all(40),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(40),
+          decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
                   ImageApp.appBarBGDetailsImage,
@@ -30,8 +30,8 @@ class DrawerBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(ImageApp.brideDrawerImage),
-              SizedBox(height: 10),
-              Text(TextApp.nameAppText,
+              const SizedBox(height: 10),
+              const Text(TextApp.nameAppText,
               style: CustomTextStyle(
                 fontSize: 20,
                 fontFamily: "Tajawal",

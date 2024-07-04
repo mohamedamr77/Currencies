@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/color.dart';
@@ -26,7 +25,7 @@ class DetailsAppbar extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Text("دولار أمريكى",
                       textAlign: TextAlign.center,
                       style: CustomTextStyle(
@@ -40,7 +39,7 @@ class DetailsAppbar extends StatelessWidget {
                     onTap: (){
                       Navigator.pop(context);
                     },
-                    child: Icon(Icons.arrow_forward_ios,
+                    child: const Icon(Icons.arrow_forward_ios,
                       color: ColorApp.whiteColor,
                     ),
                   )

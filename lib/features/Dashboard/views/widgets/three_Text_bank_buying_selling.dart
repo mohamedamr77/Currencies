@@ -3,24 +3,26 @@ import 'package:digitaltransactions/core/text.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 
-class BankBuyingSelling extends StatelessWidget {
-  const BankBuyingSelling({super.key});
-
+class ThreeTextDescriptionListViewVertical extends StatelessWidget {
+  const ThreeTextDescriptionListViewVertical({super.key,  required this.text1, required this.text2, required this.text3});
+   final String text1;
+   final String text2;
+   final String text3;
   @override
   Widget build(BuildContext context) {
-    return  const Padding(
-      padding: EdgeInsets.only(top: 25, right: 26, left: 26),
+    return   Padding(
+      padding: const EdgeInsets.only(top: 25, right: 26, left: 26),
       child: Row(
         textDirection: TextDirection.rtl,
         children: [
           //  TextApp.bankText,
-          CustomText(text: TextApp.bankText,),
-          Spacer(flex: 2),
+          CustomText(text: text1,),
+          const Spacer(flex: 2),
           // TextApp.sellingText,
-          CustomText(text: TextApp.sellingText,),
-          Spacer(flex: 1),
+          CustomText(text: text2,),
+          const Spacer(flex: 1),
           //TextApp.buyingText,
-          CustomText(text: TextApp.buyingText,),
+          CustomText(text: text3,),
         ],
       ),
     );

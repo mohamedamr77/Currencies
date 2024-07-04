@@ -1,102 +1,45 @@
 import 'package:digitaltransactions/core/textstyle.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import '../../../../core/color.dart';
-import '../../../../core/image.dart';
-import '../../../../core/text.dart';
-import 'container_heigst_price.dart';
 
 class CustomAppbar extends StatelessWidget {
-   CustomAppbar({super.key});
-
-
+   const CustomAppbar({super.key, required this.text, required this.action});
+    final String  text;
+    final Widget  action;
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
-        height: MediaQuery.sizeOf(context).height*0.42,
-        child: Stack(
+    return  SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 16, right: 10, top: 5),
+        child: Row (
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             Container(
-              height: MediaQuery.sizeOf(context).height*0.31,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(ImageApp.appBarBGDashboardImage),
-                  fit: BoxFit.fill,
-                ),
-              ),
-              child: Column(
-                children: [
-                  SafeArea(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 16, right: 10, top: 5),
-                      child: Row (
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            child: Text("${TextApp.titleCenterDashboard}",
-                              textAlign: TextAlign.center,
-                              style: CustomTextStyle(
-                                color: ColorApp.whiteColor,
-                                fontFamily: "Tajawal",
-                                fontSize: 16,
-                                fontWeight: null,
-                                fontStyle: null,
-                              )
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: (){
-                              Scaffold.of(context).openEndDrawer();
-                            },
-                            child: SizedBox(
-                              height: 60,
-                              width: 60,
-                              child: Image(image: AssetImage(ImageApp.actionDashboardImage),
-
-                              ),
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 22 , top: 8),
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        "${TextApp.highestTradingPrices}",
-                        style: TextStyle(
-                          color: ColorApp.whiteColor,
-                          fontFamily: "Tajawal",
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+            Expanded(
+              child: Text(text,
+                  textAlign: TextAlign.center,
+                  style: const CustomTextStyle(
+                    color: ColorApp.whiteColor,
+                    fontFamily: "Tajawal",
+                    fontSize: 16,
+                    fontWeight: null,
+                    fontStyle: null,
+                  )
               ),
             ),
-
-             Positioned(
-              bottom: 0,
-              right: 5,
-              left: 0.1, // Ensure the containers are centered horizontally
+            GestureDetector(
+              onTap: (){
+                Scaffold.of(context).openEndDrawer();
+              },
               child: SizedBox(
-                height: MediaQuery.sizeOf(context).height*0.21,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) =>    const CustomContainerHighestTradingPrices(),
-                    separatorBuilder: (context, index) => const SizedBox(width: 10,),
-                  itemCount: 10,
-                ),
-              ),
-            )
+                height: 60,
+                width: 60,
+                child: action,
+            ),
+            ),
           ],
         ),
-      );
+    ),
+    );
   }
 }
+// Image(image: AssetImage(ImageApp.actionDashboardImage),),

@@ -1,9 +1,9 @@
 import 'package:digitaltransactions/features/Dashboard/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/textstyle.dart';
-import '../../../DetialsScreen/screen.dart';
-import '../../model/list_drawer_item.dart';
+import '../../../../../core/textstyle.dart';
+import '../../../../DetialsScreen/screen.dart';
+import '../../../model/list_drawer_item.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
   const BodyListViewDrawer({super.key, required this.index});
@@ -19,9 +19,9 @@ class BodyListViewDrawer extends StatelessWidget {
               ||
               drawerList[index].title==drawerList[4].title
           ){
-            return DetailsScreen();
+            return const DetailsScreen();
           }else{
-            return DashboardScreen();
+            return const DashboardScreen();
           }
         },
         )
@@ -36,7 +36,7 @@ class BodyListViewDrawer extends StatelessWidget {
           padding: const EdgeInsets.only(top: 15),
           child: Text(drawerList[index].title,
             textAlign: TextAlign.right,
-            style: CustomTextStyle(
+            style: const CustomTextStyle(
               fontSize: 20,
               fontFamily: "Tajawal",
               color: Color(0xff200e32),

@@ -1,14 +1,19 @@
 import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/color.dart';
+import '../../../../../core/color.dart';
 import 'abbreviation_country.dart';
-import 'country_currency.dart';
-import 'limited_numbert_text.dart';
+import '../vertical_horizontal_participants_widget/country_currency.dart';
+import '../vertical_horizontal_participants_widget/limited_numbert_text.dart';
 
-class CustomContainerHighestTradingPrices extends StatelessWidget {
-  const CustomContainerHighestTradingPrices({super.key});
-
+class CustomListViewHorizontalBody extends StatelessWidget {
+  const CustomListViewHorizontalBody({super.key, required this.imageCountry, required this.imageBank, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.nameBank});
+       final String imageCountry;
+       final String imageBank;
+       final String  countryCurrency;
+       final String  abbreviationCountry;
+       final double   price;
+       final String   nameBank;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,37 +36,38 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             textDirection: TextDirection.rtl,
             children: [
-              const CircleAvatar(
+               CircleAvatar(
                 child: Image(
-                  image: AssetImage(ImageApp.americaImage),
+                  //ImageApp.americaImage
+                  image: AssetImage(imageCountry),
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: double.infinity,
                 ),
               ),
               SizedBox(width: MediaQuery.sizeOf(context).width*0.035),
-              const Column(
+               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   //CountryCurrency
-                  CountryCurrency("دولار أمريكى ", fontSize: 16,),
-                  AbbreviationOfTheCountry(text: 'USD '),
+                  CountryCurrency(countryCurrency, fontSize: 16,),
+                  AbbreviationOfTheCountry(text: abbreviationCountry),
                 ],
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-            child: LimitedNumberText(number: 48.48),
+           Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+            child: LimitedNumberText(number: price),
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
             textDirection: TextDirection.rtl,
             children: [
-              const CircleAvatar(
+               CircleAvatar(
                 radius: 14,
                 child: Image(
-                  image: AssetImage(ImageApp.americaImage),
+                  image: AssetImage(imageBank),
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: double.infinity,
@@ -71,8 +77,8 @@ class CustomContainerHighestTradingPrices extends StatelessWidget {
               Flexible(
                 child: SizedBox(
                   width: MediaQuery.sizeOf(context).width*0.38,
-                  child: const Text(
-                    "مصرف ابو ظبى الاسلامي ",
+                  child:  Text(
+                   nameBank,
                     maxLines: 1,
                     textDirection: TextDirection.rtl,
                     overflow: TextOverflow.ellipsis,
