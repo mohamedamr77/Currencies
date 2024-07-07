@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'features/Dashboard/screen.dart';
-import 'features/calculatorPrice/screen2.dart';
-import 'features/calculatorPrice/views/screen.dart';
-import 'features/economicnews/views/screen.dart';
 import 'features/onboarding/views/screen.dart';
 
 void main(){

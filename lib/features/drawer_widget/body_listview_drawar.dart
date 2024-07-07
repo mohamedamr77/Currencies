@@ -1,5 +1,5 @@
-import 'package:digitaltransactions/features/Dashboard/screen.dart';
 import 'package:digitaltransactions/features/ExchangeRates/views/screen.dart';
+import 'package:digitaltransactions/features/goldprices/views/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
@@ -15,8 +15,11 @@ class BodyListViewDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           if(drawerList[index].title==drawerList[0].title){
             return const ExchangeRatesScreen();
-          }else{
-            return const DashboardScreen();
+          }else if(drawerList[index].title==drawerList[2].title){
+            return const GoldPricesScreen();
+          }
+          else{
+            return Container();
           }
         },
         )

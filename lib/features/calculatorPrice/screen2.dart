@@ -1,6 +1,5 @@
 import 'package:digitaltransactions/core/color.dart';
 import 'package:digitaltransactions/core/text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../core/image.dart';
 import '../../core/shared_widget/custom_appbar.dart';
@@ -8,7 +7,7 @@ import '../../core/shared_widget/description_listview_horizontal.dart';
 import '../../core/shared_widget/country_currency.dart';
 
 class CalculatorPriceScreen extends StatefulWidget {
-  const CalculatorPriceScreen({Key? key}) : super(key: key);
+  const CalculatorPriceScreen({super.key});
 
   @override
   State<CalculatorPriceScreen> createState() => _CalculatorPriceScreenState();
@@ -26,14 +25,14 @@ class _CalculatorPriceScreenState extends State<CalculatorPriceScreen> {
         children: [
           Container(
             width: double.infinity,
-            padding: EdgeInsets.only(top: 10, bottom: 15),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.only(top: 10, bottom: 15),
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(ImageApp.appBarBGDetailsImage),
                 fit: BoxFit.fill,
               ),
             ),
-            child: Column(
+            child: const Column(
               children: [
                 CustomAppbar(text: "حاسة الاسعار"),
                 DescriptionListviewHorizontal(text: "حدد العملة المراد تحويلها"),
@@ -41,14 +40,14 @@ class _CalculatorPriceScreenState extends State<CalculatorPriceScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             height: 300,
             width: double.infinity,
             decoration: BoxDecoration(
               color: ColorApp.whiteColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [

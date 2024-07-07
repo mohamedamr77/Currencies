@@ -21,13 +21,13 @@ class _EconomicNewsTabsState extends State<EconomicNewsTabs> with TickerProvider
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: double.infinity,
           height: 65,
           child: TabBar(
             dividerColor: Colors.white,
-            indicatorColor: Color(0xff3f35a6),
-            labelColor: Color(0xff444555),
+            indicatorColor: const Color(0xff3f35a6),
+            labelColor: const Color(0xff444555),
             unselectedLabelColor: Colors.grey,
             controller: tabController,
             tabs: const [
@@ -40,7 +40,7 @@ class _EconomicNewsTabsState extends State<EconomicNewsTabs> with TickerProvider
         Expanded(
           child: TabBarView(
             controller: tabController,
-            children: [
+            children: const [
               LocalNewsTab(),
               LocalNewsTab(),
               LocalNewsTab(),

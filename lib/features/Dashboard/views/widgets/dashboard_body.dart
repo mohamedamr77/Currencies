@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:digitaltransactions/core/shared_widget/three_Text_bank_buying_selling.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/color.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
 import '../../../ExchangeRates/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';

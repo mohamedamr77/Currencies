@@ -1,4 +1,3 @@
-import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/color.dart';
@@ -82,7 +81,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
                     maxLines: 1,
                     textDirection: TextDirection.rtl,
                     overflow: TextOverflow.ellipsis,
-                    style: CustomTextStyle(
+                    style: const CustomTextStyle(
                       color: ColorApp.secondaryTextColor,
                       fontSize: 12,
                       fontWeight: FontWeight.w900,

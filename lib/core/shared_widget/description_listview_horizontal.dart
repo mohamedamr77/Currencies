@@ -6,12 +6,12 @@ class DescriptionListviewHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Padding(
-      padding: EdgeInsets.only(right: 22 , top: 8),
+      padding: const EdgeInsets.only(right: 22 , top: 8),
       child: Align(
         alignment: Alignment.centerRight,
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: ColorApp.whiteColor,
             fontFamily: "Tajawal",
             fontSize: 16,

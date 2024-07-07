@@ -32,7 +32,7 @@ class CustomSliverList extends StatelessWidget {
                   },
                   itemCount: 10
               ),
-              SizedBox(height:12),
+              const SizedBox(height:12),
             ],
           );
       },

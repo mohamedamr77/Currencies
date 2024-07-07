@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:digitaltransactions/features/Dashboard/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,12 +15,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(
+    Future.delayed(const Duration(
         seconds: 2
     ), () {
 
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) {
-        return   ExchangeRatesScreen();
+        return   const ExchangeRatesScreen();
       } ));
 
     }  ) ;
@@ -33,8 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         alignment: Alignment.topLeft,
-        padding: EdgeInsets.only(top: 80),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.only(top: 80),
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 colors: [
                   Color(0xff8160ef),
@@ -48,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               width: MediaQuery.of(context).size.width*0.4,
               height: MediaQuery.of(context).size.height*0.2,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(100),

@@ -9,9 +9,9 @@ class LocalNewsTab extends StatelessWidget {
     return ListView.separated(
       itemBuilder: (context, index) {
         return Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 20),
+          margin: const EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
@@ -20,16 +20,16 @@ class LocalNewsTab extends StatelessWidget {
             textDirection: TextDirection.rtl,
 
             children: [
-              Image(image: AssetImage("assets/images/newsimage.png"),
+              Image(image: const AssetImage("assets/images/newsimage.png"),
                 width: MediaQuery.sizeOf(context).width*0.32,
                 height: MediaQuery.sizeOf(context).height*0.17,
               ),
-              SizedBox(width: 5,),
+              const SizedBox(width: 5,),
               Column(
                 children: [
                  SizedBox(
                      width: MediaQuery.of(context).size.width*0.5,
-                     child: Text("بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
+                     child: const Text("بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
                        maxLines: 2,
                        overflow: TextOverflow.ellipsis,
                        textDirection: TextDirection.rtl,
@@ -44,10 +44,10 @@ class LocalNewsTab extends StatelessWidget {
                      ),
 
                  ),
-                  SizedBox(height: 5,),
+                  const SizedBox(height: 5,),
                   SizedBox(
                     width: MediaQuery.of(context).size.width*0.5,
-                    child: Text('توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.',
+                    child: const Text('توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.',
                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.right,
@@ -62,18 +62,18 @@ class LocalNewsTab extends StatelessWidget {
                     ),
 
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   SizedBox(
                     width: MediaQuery.of(context).size.width*0.5,
                     child: Row(
                       textDirection: TextDirection.rtl,
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 10,
                           backgroundColor: Colors.red,
                         ),
-                        SizedBox(width: 2,),
-                        Text("مصرواي",
+                        const SizedBox(width: 2,),
+                        const Text("مصرواي",
                         style: TextStyle(
                           color: Color(0xff5927ff),
                           fontWeight: FontWeight.w500,
@@ -81,9 +81,9 @@ class LocalNewsTab extends StatelessWidget {
                           fontFamily: "Tajawal",
                         ),
                         ),
-                        Spacer(flex: 4,),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5),
+                        const Spacer(flex: 4,),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 5),
                           child: Text("12:13",
                           style: TextStyle(
                             color: Color(0xff9e9e9e),
@@ -93,11 +93,11 @@ class LocalNewsTab extends StatelessWidget {
                           ),
                           ),
                         ),
-                        SizedBox(width: 3,),
+                        const SizedBox(width: 3,),
                         SvgPicture.asset("assets/images/svg/time_icon.svg"),
-                        Spacer(flex: 1,),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5),
+                        const Spacer(flex: 1,),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 5),
                           child: Text("12:13",
                             style: TextStyle(
                               color: Color(0xff9e9e9e),
@@ -107,7 +107,7 @@ class LocalNewsTab extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 3,),
+                        const SizedBox(width: 3,),
                         SvgPicture.asset("assets/images/svg/time_icon.svg")
                       ],
                     ),

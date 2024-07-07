@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../core/color.dart';
-import '../../../../../core/image.dart';
 import '../../../../../core/textstyle.dart';
 import '../../../../../core/shared_widget/country_currency.dart';
 
@@ -26,25 +24,25 @@ final String nameWidget;
           CircleAvatar(
             child: widget,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           CountryCurrency(nameWidget, fontSize: 16,),
-          Spacer(flex: 2,),
+          const Spacer(flex: 2,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 "$sellingPrice", // Replace with the actual buying price
-                style: CustomTextStyle(
+                style: const CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",
                   fontSize: 16,
                 ),
               ),
-              SizedBox(width: 62),
+              const SizedBox(width: 62),
               Text(
                 "$buyingPrice", // Replace with the actual selling price
-                style: CustomTextStyle(
+                style: const CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",
                   fontSize: 16,

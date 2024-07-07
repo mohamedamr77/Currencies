@@ -26,7 +26,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                 Container(
                   height: 200,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(ImageApp.appBarBGDashboardImage),
                       fit: BoxFit.fill,
@@ -37,10 +37,10 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                       children: [
                         Row(
                           children: [
-                            Expanded(
+                            const Expanded(
                               child: Text(TextApp.economicNewsText,
                                   textAlign: TextAlign.center,
-                                  style: const CustomTextStyle(
+                                  style: CustomTextStyle(
                                     color: ColorApp.whiteColor,
                                     fontFamily: "Tajawal",
                                     fontSize: 16,
@@ -52,7 +52,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                               onTap: () {
                                 Scaffold.of(context).openEndDrawer();
                               },
-                              child: SizedBox(
+                              child: const SizedBox(
                                 height: 60,
                                 width: 60,
                                 child: Image(
@@ -62,7 +62,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                             ),
                           ],
                         ),
-                        DescriptionListviewHorizontal(text: "اخر الأخبار"),
+                        const DescriptionListviewHorizontal(text: "اخر الأخبار"),
                       ],
                     ),
                   ),
@@ -72,9 +72,9 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                   right: 0,
                   left: 0,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     width: double.infinity,
-                    child: Image(
+                    child: const Image(
                       image: AssetImage("assets/images/ecnomicnews_image.png"),
                     ),
                   ),
@@ -84,7 +84,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height - 320,
-            child: EconomicNewsTabs(),
+            child: const EconomicNewsTabs(),
           ),
         ],
       ),

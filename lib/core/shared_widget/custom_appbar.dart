@@ -30,7 +30,7 @@ class CustomAppbar extends StatelessWidget {
               onTap: (){
                 Scaffold.of(context).openEndDrawer();
               },
-              child: SizedBox(
+              child: const SizedBox(
                 height: 60,
                 width: 60,
                 child: Image(image: AssetImage(ImageApp.actionDashboardImage)),

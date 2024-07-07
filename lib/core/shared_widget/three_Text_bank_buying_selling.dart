@@ -1,5 +1,4 @@
 import 'package:digitaltransactions/core/color.dart';
-import 'package:digitaltransactions/core/text.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 
