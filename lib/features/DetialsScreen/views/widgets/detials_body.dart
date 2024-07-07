@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/features/Dashboard/views/widgets/three_Text_bank_buying_selling.dart';
+import 'package:digitaltransactions/core/shared_widget/three_Text_bank_buying_selling.dart';
 import 'package:digitaltransactions/features/DetialsScreen/views/widgets/transactions_buying_selling.dart';
 import 'package:flutter/material.dart';
 import 'Button_calculator.dart';

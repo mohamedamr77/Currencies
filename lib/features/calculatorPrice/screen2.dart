@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../core/image.dart';
 import '../../core/shared_widget/custom_appbar.dart';
-import '../Dashboard/views/widgets/description_listview_horizontal.dart';
+import '../../core/shared_widget/description_listview_horizontal.dart';
 import '../../core/shared_widget/country_currency.dart';
 
 class CalculatorPriceScreen extends StatefulWidget {

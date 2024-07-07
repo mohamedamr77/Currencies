@@ -5,8 +5,8 @@ import '../../../../../core/image.dart';
 import '../../../../../core/textstyle.dart';
 import '../../../../../core/shared_widget/country_currency.dart';
 
-class ListviewVerticalBody extends StatelessWidget {
-  const ListviewVerticalBody({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});
+class ItemListviewVerticalDashboard extends StatelessWidget {
+  const ItemListviewVerticalDashboard({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});
 final Widget widget;
 final double sellingPrice;
 final double buyingPrice;

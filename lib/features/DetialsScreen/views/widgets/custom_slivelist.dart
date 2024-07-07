@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
-import '../../../ExchangeRates/views/widgets/listvertical_widget/listview_vertical_body.dart';
+import '../../../ExchangeRates/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';
 
 class CustomSliverList extends StatelessWidget {
   const CustomSliverList({super.key});
@@ -16,7 +16,7 @@ class CustomSliverList extends StatelessWidget {
               ListView.separated(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemBuilder: (context, index) =>  const ListviewVerticalBody(
+                  itemBuilder: (context, index) =>  const ItemListviewVerticalDashboard(
                     widget: Image(
                       image: AssetImage(ImageApp.americaImage),
                       fit: BoxFit.cover,

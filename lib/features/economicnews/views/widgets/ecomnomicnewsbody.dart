@@ -1,6 +1,6 @@
 import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/text.dart';
-import 'package:digitaltransactions/features/Dashboard/views/widgets/description_listview_horizontal.dart';
+import 'package:digitaltransactions/core/shared_widget/description_listview_horizontal.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/color.dart';
 import '../../../../core/textstyle.dart';
