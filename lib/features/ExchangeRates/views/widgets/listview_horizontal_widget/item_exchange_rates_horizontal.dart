@@ -2,12 +2,12 @@ import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/color.dart';
-import 'abbreviation_country.dart';
-import '../vertical_horizontal_participants_widget/country_currency.dart';
-import '../vertical_horizontal_participants_widget/limited_numbert_text.dart';
+import '../../../../../core/shared_widget/abbreviation_country.dart';
+import '../../../../../core/shared_widget/country_currency.dart';
+import '../../../../../core/shared_widget/limited_numbert_text.dart';
 
-class CustomListViewHorizontalBody extends StatelessWidget {
-  const CustomListViewHorizontalBody({super.key, required this.imageCountry, required this.imageBank, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.nameBank});
+class ItemExchangeRatesListHorizontal extends StatelessWidget {
+  const ItemExchangeRatesListHorizontal({super.key, required this.imageCountry, required this.imageBank, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.nameBank});
        final String imageCountry;
        final String imageBank;
        final String  countryCurrency;

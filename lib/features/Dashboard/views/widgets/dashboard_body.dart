@@ -1,13 +1,12 @@
-import 'package:digitaltransactions/features/Dashboard/views/widgets/custom_appbar.dart';
+import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:digitaltransactions/features/Dashboard/views/widgets/three_Text_bank_buying_selling.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/color.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
-import 'listvertical_widget/listview_vertical_body.dart';
-import 'listview_horizontal_widget/container_heigst_price.dart';
+import '../../../ExchangeRates/views/widgets/listvertical_widget/listview_vertical_body.dart';
+import '../../../ExchangeRates/views/widgets/listview_horizontal_widget/item_exchange_rates_horizontal.dart';
 import 'description_listview_horizontal.dart';
-import 'listvertical_widget/listview_vertical.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -36,7 +35,7 @@ class DashboardBody extends StatelessWidget {
                   child: const Column(
                     children: [
 
-                     CustomAppbar(text: TextApp.titleCenterDashboard, action: Image(image: AssetImage(ImageApp.actionDashboardImage),),),
+                     CustomAppbar(text: TextApp.titleCenterDashboard,),
 
                       DescriptionListviewHorizontal(text: 'اسعار الأونصة عالميا',),
 
@@ -52,7 +51,7 @@ class DashboardBody extends StatelessWidget {
                     height: MediaQuery.sizeOf(context).height*0.21,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) =>     const CustomListViewHorizontalBody(
+                      itemBuilder: (context, index) =>     const ItemExchangeRatesListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         imageBank: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,

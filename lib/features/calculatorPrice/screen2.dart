@@ -1,13 +1,11 @@
 import 'package:digitaltransactions/core/color.dart';
 import 'package:digitaltransactions/core/text.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../core/image.dart';
-import '../Dashboard/views/widgets/custom_appbar.dart';
+import '../../core/shared_widget/custom_appbar.dart';
 import '../Dashboard/views/widgets/description_listview_horizontal.dart';
-import '../Dashboard/views/widgets/vertical_horizontal_participants_widget/country_currency.dart';
+import '../../core/shared_widget/country_currency.dart';
 
 class CalculatorPriceScreen extends StatefulWidget {
   const CalculatorPriceScreen({Key? key}) : super(key: key);
@@ -37,7 +35,7 @@ class _CalculatorPriceScreenState extends State<CalculatorPriceScreen> {
             ),
             child: Column(
               children: [
-                CustomAppbar(text: "حاسة الاسعار", action: Image(image: AssetImage(ImageApp.actionDashboardImage))),
+                CustomAppbar(text: "حاسة الاسعار"),
                 DescriptionListviewHorizontal(text: "حدد العملة المراد تحويلها"),
               ],
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/color.dart';
 import '../../../../../core/image.dart';
 import '../../../../../core/textstyle.dart';
-import '../vertical_horizontal_participants_widget/country_currency.dart';
+import '../../../../../core/shared_widget/country_currency.dart';
 
 class ListviewVerticalBody extends StatelessWidget {
   const ListviewVerticalBody({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});

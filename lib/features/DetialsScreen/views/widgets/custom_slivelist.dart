@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
-import '../../../Dashboard/views/widgets/listvertical_widget/listview_vertical_body.dart';
+import '../../../ExchangeRates/views/widgets/listvertical_widget/listview_vertical_body.dart';
 
 class CustomSliverList extends StatelessWidget {
   const CustomSliverList({super.key});

@@ -1,11 +1,11 @@
 import 'package:digitaltransactions/core/textstyle.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/color.dart';
+import '../color.dart';
+import '../image.dart';
 
 class CustomAppbar extends StatelessWidget {
-   const CustomAppbar({super.key, required this.text, required this.action});
+   const CustomAppbar({super.key, required this.text});
     final String  text;
-    final Widget  action;
   @override
   Widget build(BuildContext context) {
     return  SafeArea(
@@ -33,7 +33,7 @@ class CustomAppbar extends StatelessWidget {
               child: SizedBox(
                 height: 60,
                 width: 60,
-                child: action,
+                child: Image(image: AssetImage(ImageApp.actionDashboardImage)),
             ),
             ),
           ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/color.dart';
 import '../../../../core/image.dart';
-import '../../../Dashboard/views/widgets/listview_horizontal_widget/abbreviation_country.dart';
+import '../../../../core/shared_widget/abbreviation_country.dart';
 
 class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
   const CurrencyInfoCardImageNameCurrency({super.key});
