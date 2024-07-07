@@ -1,6 +1,5 @@
 import 'package:digitaltransactions/features/goldprices/views/widgets/gold_price_body.dart';
 import 'package:flutter/material.dart';
-
 import '../../../core/color.dart';
 import '../../drawer_widget/drawerBody.dart';
 

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
 import '../Dashboard/model/list_drawer_item.dart';
+import '../sliverPrices/screen.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
   const BodyListViewDrawer({super.key, required this.index});
@@ -18,8 +19,10 @@ class BodyListViewDrawer extends StatelessWidget {
           }else if(drawerList[index].title==drawerList[2].title){
             return const GoldPricesScreen();
           }
-          else{
-            return Container();
+          else if (drawerList[index].title==drawerList[4].title){
+            return SliverPricesScreen();
+          }else{
+            return Column();
           }
         },
         )

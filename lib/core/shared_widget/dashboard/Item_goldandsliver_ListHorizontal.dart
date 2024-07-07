@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/color.dart';
-import '../../../../../core/shared_widget/abbreviation_country.dart';
-import '../../../../../core/shared_widget/country_currency.dart';
+import '../../../../core/color.dart';
+import '../../../../core/shared_widget/abbreviation_country.dart';
+import '../../../../core/shared_widget/country_currency.dart';
 
 class ItemGoldAndSliverListHorizontal extends StatelessWidget {
-  const ItemGoldAndSliverListHorizontal({super.key, required this.imageCountry, required this.countryCurrency, required this.abbreviationCountry, required this.price});
+  const ItemGoldAndSliverListHorizontal({super.key, required this.imageCountry, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.isGOld});
   final String imageCountry;
   final String  abbreviationCountry;
   final  String   price;
    final String  countryCurrency;
+   final bool  isGOld;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +47,11 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   //CountryCurrency
-                 const Text("أونصة ذهب",
+                  Text(
+                   isGOld==true?
+                   "أونصة ذهب":
+                    "اونصة الفضه"
+                    ,
                  style: TextStyle(
                    color: Color(0xff444555),
                  ),

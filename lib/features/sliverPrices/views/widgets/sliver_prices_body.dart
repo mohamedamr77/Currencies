@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/image.dart';
 import '../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../core/shared_widget/description_listview_horizontal.dart';
@@ -7,12 +8,12 @@ import '../../../../core/text.dart';
 import '../../../ExchangeRates/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';
 import '../../../../core/shared_widget/dashboard/Item_goldandsliver_ListHorizontal.dart';
 
-class GoldPriceBody extends StatelessWidget {
-  const GoldPriceBody({super.key});
+class SliverPricesBody extends StatelessWidget {
+  const SliverPricesBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return  CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
@@ -30,7 +31,7 @@ class GoldPriceBody extends StatelessWidget {
                   ),
                   child: const Column(
                     children: [
-                      CustomAppbar(text: "أاسعار الذهب"),
+                      CustomAppbar(text: "اسعار الفضة"),
                       DescriptionListviewHorizontal(text: 'اسعار الأونصة عالميا'),
                     ],
                   ),
@@ -48,7 +49,7 @@ class GoldPriceBody extends StatelessWidget {
                         countryCurrency: TextApp.dollarText,
                         abbreviationCountry: "USD",
                         price: "2,330.28",
-                        isGOld:  true,
+                        isGOld: false,
                       ),
                       separatorBuilder: (context, index) => const SizedBox(width: 10),
                       itemCount: 10,
@@ -74,12 +75,12 @@ class GoldPriceBody extends StatelessWidget {
                 children: [
                   ItemListviewVerticalDashboard(
                     widget: CircleAvatar(
-                    backgroundColor: Color(0xffE3AC2A),
-                      child: Text("18"),
+                      backgroundColor: Color(0xffB0B0B0),
+                      child: Text("925"),
                     ),
                     sellingPrice: 48.36,
                     buyingPrice: 48.28,
-                    nameWidget: "عيار 18",
+                    nameWidget: "فضة 925",
                   ),
                   SizedBox(height: 10,),
                 ],
