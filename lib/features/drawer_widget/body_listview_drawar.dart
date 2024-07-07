@@ -1,4 +1,5 @@
 import 'package:digitaltransactions/features/ExchangeRates/views/screen.dart';
+import 'package:digitaltransactions/features/economicnews/views/screen.dart';
 import 'package:digitaltransactions/features/goldprices/views/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,8 +22,11 @@ class BodyListViewDrawer extends StatelessWidget {
           }
           else if (drawerList[index].title==drawerList[4].title){
             return SliverPricesScreen();
-          }else{
-            return Column();
+          } else if (drawerList[index].title==drawerList[5].title){
+            return EconomicNewsScreen();
+          }
+          else{
+          return Column();
           }
         },
         )
