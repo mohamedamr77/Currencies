@@ -1,6 +1,7 @@
-import 'package:digitaltransactions/features/Dashboard/views/widgets/drawer_widget/drawerBody.dart';
 import 'package:digitaltransactions/features/economicnews/views/widgets/ecomnomicnewsbody.dart';
 import 'package:flutter/material.dart';
+
+import '../../drawer_widget/drawerBody.dart';
 
 class EconomicNewsScreen extends StatelessWidget {
   const EconomicNewsScreen({super.key});

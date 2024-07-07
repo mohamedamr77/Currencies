@@ -3,8 +3,7 @@ import 'package:digitaltransactions/features/ExchangeRates/views/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
-import '../../../../DetialsScreen/screen.dart';
-import '../../../model/list_drawer_item.dart';
+import '../Dashboard/model/list_drawer_item.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
   const BodyListViewDrawer({super.key, required this.index});
