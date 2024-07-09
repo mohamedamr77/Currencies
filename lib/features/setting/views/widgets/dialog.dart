@@ -20,13 +20,15 @@ class _DialogScreenState extends State<DialogScreen> {
         child: Column(
           children: [
             Spacer(),
-            Text("اختيار اللغة",style: TextStyle(fontSize: 20),),
+            Text("اختيار اللغة",style: TextStyle(fontSize: 20,
+              fontFamily: "Tajawal",
+            ),),
             Spacer(flex: 2,),
             Row(
               children: [
                 Expanded(
                   child: RadioListTile(
-                      title: Text("العربية",textAlign: TextAlign.right,),
+                      title: Text("العربية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                       value:"العربية" ,
                       groupValue:lang ,
                       onChanged: (val){
@@ -50,7 +52,7 @@ class _DialogScreenState extends State<DialogScreen> {
               children: [
                 Expanded(
                   child: RadioListTile(
-                      title: Text("الأنجليزية",textAlign: TextAlign.right,),
+                      title: Text("الأنجليزية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                       value:"الأنجليزية" ,
                       groupValue:lang ,
                       onChanged: (val){

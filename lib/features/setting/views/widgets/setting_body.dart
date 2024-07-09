@@ -30,7 +30,12 @@ class SettingBody extends StatelessWidget {
                         children: [
                           CustomAppbar(text: "الاعدادت"),
                           SizedBox(height: 15,),
-                          Text("اهلا بيك في اسم التطبيق",style: TextStyle(color: Colors.white),),
+                          Text("اهلا بيك في اسم التطبيق",
+                            style: TextStyle(
+                              fontFamily: "Tajawal",
+                                color: Colors.white),
+
+                          ),
                         ],
                       ),
                     ),
@@ -60,7 +65,9 @@ class SettingBody extends StatelessWidget {
                           ]
                       ),
                       const SizedBox(height: 5,),
-                      const Text("اسم المستخدم",style: TextStyle(color: Colors.black),)
+                      const Text("اسم المستخدم",style: TextStyle(
+                          fontFamily: "Tajawal",
+                          color: Colors.black),)
                     ],
                   ),
                 )
@@ -75,7 +82,7 @@ class SettingBody extends StatelessWidget {
               ListTile(
                 tileColor: Colors.white,
                 leading: Image.asset(ImageApp.arrow,height: 30,width: 30,),
-                title: const Text("العملة الأساسية",textAlign: TextAlign.right,),
+                title: const Text("العملة الأساسية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",),),
                 trailing: Image.asset(ImageApp.el3omla,height: 40,width: 40),
               ),
               const SizedBox(height: 10,),
@@ -91,6 +98,7 @@ class SettingBody extends StatelessWidget {
                 title: const Text(
                   "اللغة",
                   textAlign: TextAlign.right,
+                    style: TextStyle(  fontFamily: "Tajawal",)
                 ),
                 trailing: Image.asset(ImageApp.lang, height: 40, width: 40),
               ),
@@ -98,28 +106,28 @@ class SettingBody extends StatelessWidget {
               ListTile(
                 tileColor: Colors.white,
                 leading: Image.asset(ImageApp.arrow,height: 30,width: 30,),
-                title: const Text("الاشعارات",textAlign: TextAlign.right,),
+                title: const Text("الاشعارات",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                 trailing: Image.asset(ImageApp.notification,height: 40,width: 40),
               ),
               const SizedBox(height: 10,),
               ListTile(
                 tileColor: Colors.white,
                 leading: Image.asset(ImageApp.arrow,height: 30,width: 30,),
-                title: const Text("اعداد الخط",textAlign: TextAlign.right,),
+                title: const Text("اعداد الخط",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                 trailing: Image.asset(ImageApp.elkhat,height: 40,width: 40),
               ),
               const SizedBox(height: 10,),
               ListTile(
                 tileColor: Colors.white,
                 leading: Image.asset(ImageApp.arrow,height: 30,width: 30,),
-                title: const Text("عن التطبيق",textAlign: TextAlign.right,),
+                title: const Text("عن التطبيق",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                 trailing: Image.asset(ImageApp.about,height: 40,width: 40),
               ),
               const SizedBox(height: 10,),
               ListTile(
                 tileColor: Colors.white,
                 leading: Image.asset(ImageApp.arrow,height: 30,width: 30,),
-                title: const Text("تسجيل خروج",textAlign: TextAlign.right,),
+                title: const Text("تسجيل خروج",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                 trailing: Image.asset(ImageApp.signout,height: 40,width: 40),
               ),
 
