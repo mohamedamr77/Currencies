@@ -1,3 +1,4 @@
+import 'package:digitaltransactions/features/DetialsScreen/views/widgets/item_listview_vertical_details.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
@@ -13,7 +14,7 @@ class CustomSliverList extends StatelessWidget {
             (context, index) {
           return Column(
             children: [
-              const ItemListviewVerticalDashboard(
+              const ItemListviewVerticalDetails(
                 widget: Image(
                   image: AssetImage(ImageApp.americaImage),
                   fit: BoxFit.cover,
@@ -33,3 +34,14 @@ class CustomSliverList extends StatelessWidget {
     );
   }
 }
+/*
+  widget: Image(
+                  image: AssetImage(ImageApp.americaImage),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+                sellingPrice: 48.36,
+                buyingPrice: 48.28,
+                nameWidget: TextApp.dollarText,
+ */
