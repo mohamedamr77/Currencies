@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'features/DetialsScreen/screen.dart';
 import 'features/onboarding/views/screen.dart';
 import 'features/onboarding/views/widgets/onboarding_body.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingBody(),
+      home: DetailsScreen(),
     );
   }
 

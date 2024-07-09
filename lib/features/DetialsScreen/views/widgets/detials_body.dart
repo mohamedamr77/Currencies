@@ -30,8 +30,8 @@ class DetialsScreenBody extends StatelessWidget {
         const SliverToBoxAdapter(child: TransactionsBuyingSelling(),),
         const SliverToBoxAdapter(child: SizedBox(height:20,)),
         const SliverToBoxAdapter(child: CustomDivider(),),
-        const SliverToBoxAdapter(child: ThreeTextDescriptionListViewVertical(text1: '', text2: '', text3: '',)),
-        const SliverToBoxAdapter(child: SizedBox(height:10,)),
+        const SliverToBoxAdapter(child: ThreeTextDescriptionListViewVertical(text1: 'البنك', text2: 'شراء', text3: 'بيع',)),
+        const SliverToBoxAdapter(child: SizedBox(height: 8,)),
         const CustomSliverList(),
       ],
     );

@@ -8,35 +8,28 @@ class CustomSliverList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(delegate: SliverChildBuilderDelegate(
-          (context, index) {
-        return
-           Column(
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+            (context, index) {
+          return Column(
             children: [
-              ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) =>  const ItemListviewVerticalDashboard(
-                    widget: Image(
-                      image: AssetImage(ImageApp.americaImage),
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: double.infinity,
-                    ),
-                    sellingPrice: 48.36,
-                    buyingPrice: 48.28,
-                    nameWidget: TextApp.dollarText,
-                  ),
-                  separatorBuilder: (context, index) {
-                    return const SizedBox(height: 10,);
-                  },
-                  itemCount: 10
+              const ItemListviewVerticalDashboard(
+                widget: Image(
+                  image: AssetImage(ImageApp.americaImage),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
+                sellingPrice: 48.36,
+                buyingPrice: 48.28,
+                nameWidget: TextApp.dollarText,
               ),
-              const SizedBox(height:12),
+               SizedBox(height: 10), // Space between every two items
             ],
           );
-      },
-      childCount: 10,
-    ),);
+        },
+        childCount: 10, // Number of items in the list
+      ),
+    );
   }
 }

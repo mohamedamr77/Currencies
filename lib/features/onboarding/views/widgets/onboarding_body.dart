@@ -59,7 +59,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                             width = MediaQuery.of(context).size.width;
                             alignment = Alignment.topLeft;
                           });
-                          Future.delayed(Duration(milliseconds: 700), () {
+                          Future.delayed(Duration(milliseconds: 1000), () {
                             setState(() {
                               height = 110;
                               width = 200;
@@ -84,7 +84,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                           alignment: alignment,
                           child: Transform.translate(
                             offset: height == MediaQuery.of(context).size.height
-                                ? Offset(0, -320)
+                                ? Offset(0, -220)
                                 : Offset(0, 0),
                             child: SvgPicture.asset(
                               "assets/images/svg/bride.svg",
