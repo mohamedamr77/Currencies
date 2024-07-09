@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'features/DetialsScreen/screen.dart';
-import 'features/onboarding/views/screen.dart';
 import 'features/onboarding/views/widgets/onboarding_body.dart';
 
 void main(){

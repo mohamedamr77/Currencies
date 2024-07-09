@@ -14,7 +14,7 @@ final String nameWidget;
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsScreen(),));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10),

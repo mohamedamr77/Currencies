@@ -4,14 +4,14 @@ import '../../../../core/image.dart';
 import '../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../core/shared_widget/description_listview_horizontal.dart';
 
-class GoldCalculatorBody extends StatefulWidget {
-  const GoldCalculatorBody({super.key});
+class CalculatorPriceBody extends StatefulWidget {
+  const CalculatorPriceBody({super.key});
 
   @override
-  State<GoldCalculatorBody> createState() => _GoldCalculatorBodyState();
+  State<CalculatorPriceBody> createState() => _CalculatorPriceBodyState();
 }
 
-class _GoldCalculatorBodyState extends State<GoldCalculatorBody> {
+class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
   TextEditingController weightController = TextEditingController();
   String selectedPurity = "عيار 21";
   String selectedCurrency = "الجنية المصري";

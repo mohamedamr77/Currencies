@@ -15,7 +15,7 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsScreen(),));
       },
       child: Container(
         width: MediaQuery.of(context).size.width*0.47,
@@ -57,7 +57,7 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
                      "أونصة ذهب":
                       "اونصة الفضه"
                       ,
-                   style: TextStyle(
+                   style: const TextStyle(
                      color: Color(0xff444555),
                    ),
                    ),

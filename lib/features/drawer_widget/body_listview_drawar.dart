@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
 import '../Dashboard/model/list_drawer_item.dart';
 import '../calculatorGold/screen.dart';
+import '../calculatorprice/screen.dart';
 import '../sliverPrices/screen.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
@@ -23,16 +24,18 @@ class BodyListViewDrawer extends StatelessWidget {
             return const GoldPricesScreen();
           }
           else if (drawerList[index].title==drawerList[4].title){
-            return SliverPricesScreen();
+            return const SliverPricesScreen();
           } else if (drawerList[index].title==drawerList[5].title){
-            return EconomicNewsScreen();
+            return const EconomicNewsScreen();
           }
           else  if (drawerList[index].title==drawerList[6].title){
-          return SettingScreen();
+          return const SettingScreen();
           }else if (drawerList[index].title==drawerList[3].title){
-            return GoldCalculatorScreen();
+            return const GoldCalculatorScreen();
+          } else if(drawerList[index].title==drawerList[1].title){
+            return const CalculatorPriceScreen();
           } else{
-            return Scaffold();
+            return const SizedBox();
           }
         },
         )

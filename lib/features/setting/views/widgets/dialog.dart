@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../core/image.dart';
@@ -17,20 +16,20 @@ class _DialogScreenState extends State<DialogScreen> {
   Widget build(BuildContext context) {
     return Dialog(
       child: Container(
-        padding: EdgeInsets.all(13),
+        padding: const EdgeInsets.all(13),
         height: 300,
         child: Column(
           children: [
-            Spacer(),
-            Text("اختيار اللغة",style: TextStyle(fontSize: 20,
+            const Spacer(),
+            const Text("اختيار اللغة",style: TextStyle(fontSize: 20,
               fontFamily: "Tajawal",
             ),),
-            Spacer(flex: 2,),
+            const Spacer(flex: 2,),
             Row(
               children: [
                 Expanded(
                   child: RadioListTile(
-                      title: Text("العربية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
+                      title: const Text("العربية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                       value:"العربية" ,
                       groupValue:lang ,
                       onChanged: (val){
@@ -48,13 +47,13 @@ class _DialogScreenState extends State<DialogScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   child: RadioListTile(
-                      title: Text("الأنجليزية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
+                      title: const Text("الأنجليزية",textAlign: TextAlign.right,style: TextStyle(  fontFamily: "Tajawal",)),
                       value:"الأنجليزية" ,
                       groupValue:lang ,
                       onChanged: (val){
@@ -65,25 +64,25 @@ class _DialogScreenState extends State<DialogScreen> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 17),
+                  padding: const EdgeInsets.only(top: 17),
                   child: SvgPicture.asset(
                     ImageApp.english,
                   ),
                 ),
               ],
             ),
-            Spacer(flex: 3,),
+            const Spacer(flex: 3,),
             GestureDetector(
                 onTap: (){
 
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 40,vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 8),
                     decoration: BoxDecoration(
-                      color: Color(0xff5726fc),
+                      color: const Color(0xff5726fc),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                  child: Text("حفظ",
+                  child: const Text("حفظ",
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: "Tajawal",
@@ -93,7 +92,7 @@ class _DialogScreenState extends State<DialogScreen> {
                   ),
                 )
             ),
-            Spacer(flex: 1,),
+            const Spacer(flex: 1,),
           ],
         ),
       ),

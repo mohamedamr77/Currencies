@@ -90,7 +90,7 @@ class SettingBody extends StatelessWidget {
                 onTap: () {
                   showDialog(
                       context: context,
-                      builder: (context) => DialogScreen()
+                      builder: (context) => const DialogScreen()
                   );
                 },
                 tileColor: Colors.white,

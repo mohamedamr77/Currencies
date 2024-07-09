@@ -2,7 +2,6 @@ import 'package:digitaltransactions/features/DetialsScreen/views/widgets/item_li
 import 'package:flutter/cupertino.dart';
 import '../../../../core/image.dart';
 import '../../../../core/text.dart';
-import '../../../ExchangeRates/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';
 
 class CustomSliverList extends StatelessWidget {
   const CustomSliverList({super.key});
@@ -12,9 +11,9 @@ class CustomSliverList extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
             (context, index) {
-          return Column(
+          return const Column(
             children: [
-              const ItemListviewVerticalDetails(
+              ItemListviewVerticalDetails(
                 widget: Image(
                   image: AssetImage(ImageApp.americaImage),
                   fit: BoxFit.cover,

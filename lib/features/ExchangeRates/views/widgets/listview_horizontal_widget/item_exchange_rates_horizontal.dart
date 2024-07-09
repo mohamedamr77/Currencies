@@ -18,7 +18,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsScreen(),));
       },
       child: Container(
         padding:  EdgeInsets.only(

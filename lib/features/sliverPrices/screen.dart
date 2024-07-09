@@ -9,7 +9,7 @@ class SliverPricesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: ColorApp.backgroundColor,
       endDrawer: Drawer(
         child: DrawerBody(),
