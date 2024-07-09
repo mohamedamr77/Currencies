@@ -17,8 +17,8 @@ class EconomicNewsDetailsBody extends StatelessWidget {
                 Center(
                     child: SvgPicture.asset(ImageApp.logo,height: 200,)
                 ),
-                SizedBox(height: 20,),
-                Text("بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
+                const SizedBox(height: 20,),
+                const Text("بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: Colors.black,
@@ -26,9 +26,9 @@ class EconomicNewsDetailsBody extends StatelessWidget {
                     fontFamily: "Tajawal",
                   ),
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
 
-                Text('''توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.
+                const Text('''توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.
                 
                 
                 رفعت مصر أسعار جميع فئات البنزين جنيهاً واحداً، الخميس الماضي كما زادت سعر السولار بأكثر من 21% إلى 10 جنيهات، من 8.25 جنيه، سواء لشركات إنتاج الكهرباء أو سعر تسليم المستهلك لمحطات خدمة وتموين السيارات.              ''',
@@ -43,7 +43,7 @@ class EconomicNewsDetailsBody extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.only(bottom: 50),
+            padding: const EdgeInsets.only(bottom: 50),
             child: GestureDetector(
               onTap: (){},
               child: Container(
@@ -51,9 +51,9 @@ class EconomicNewsDetailsBody extends StatelessWidget {
                 width: 280,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    color: Color(0xff5726fc)
+                    color: const Color(0xff5726fc)
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("مصدر الخبر",
                     textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20,
                       fontWeight: FontWeight.bold,

@@ -12,7 +12,7 @@ class LocalNewsTab extends StatelessWidget {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: (){
-         Navigator.push(context, MaterialPageRoute(builder: (context) => EconomicNewsDetailsScreen()));
+         Navigator.push(context, MaterialPageRoute(builder: (context) => const EconomicNewsDetailsScreen()));
           },
           child: Container(
             padding: const EdgeInsets.all(8),

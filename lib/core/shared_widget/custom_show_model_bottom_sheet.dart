@@ -82,7 +82,7 @@ class CustomShowModelBottomSheet extends StatelessWidget {
       _buildNumberPadRow(["1", "2", "3"]),
       _buildNumberPadRow(["4", "5", "6"]),
       _buildNumberPadRow(["7", "8", "9"]),
-      _buildNumberPadRow([".", "0", Icon(Icons.arrow_forward_rounded, color: Colors.white)]),
+      _buildNumberPadRow([".", "0", const Icon(Icons.arrow_forward_rounded, color: Colors.white)]),
     ];
   }
 
@@ -101,7 +101,7 @@ class CustomShowModelBottomSheet extends StatelessWidget {
                     ? Text(item)
                     : item is Icon
                     ? item
-                    : Text(''),
+                    : const Text(''),
               ),
             ),
           );
