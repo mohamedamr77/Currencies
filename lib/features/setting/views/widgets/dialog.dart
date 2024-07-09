@@ -5,6 +5,8 @@ import '../../../../core/image.dart';
 
 
 class DialogScreen extends StatefulWidget {
+  const DialogScreen({super.key});
+
   @override
   State<DialogScreen> createState() => _DialogScreenState();
 }
