@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
 import '../Dashboard/model/list_drawer_item.dart';
+import '../calculatorGold/screen.dart';
 import '../sliverPrices/screen.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
@@ -28,8 +29,10 @@ class BodyListViewDrawer extends StatelessWidget {
           }
           else  if (drawerList[index].title==drawerList[6].title){
           return SettingScreen();
-          }else{
-            return Column();
+          }else if (drawerList[index].title==drawerList[3].title){
+            return GoldCalculatorScreen();
+          } else{
+            return Scaffold();
           }
         },
         )
