@@ -6,14 +6,14 @@ class CurrencyConverterLogic {
   final TextEditingController targetCurrencyController = TextEditingController();
 
   final Map<String, double> conversionRates = {
-    'USD': 1, // base rate
-    'Egy': 50,
-    'JPY': 110.0,
+    'دولار امريكى': 1, // base rate
+    'جنيه مصرى': 50,
+    'درهم امارتى': 110.0,
     // add more currencies and their rates here
   };
 
-  String baseCurrency = 'USD';
-  String targetCurrency = 'Egy';
+  String baseCurrency = 'دولار امريكى';
+  String targetCurrency = 'جنيه مصرى';
 
   bool _isUpdatingBase = false;
   bool _isUpdatingTarget = false;

@@ -66,39 +66,46 @@ class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
             children: [
               Row(
                 children: [
-                  Expanded(
-                    child: TextFormField(
-                      controller: _converterLogic.baseCurrencyController,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
+                    child: Expanded(
+                      child: TextFormField(
+                        controller: _converterLogic.baseCurrencyController,
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
 
+                        ),
                       ),
                     ),
                   ),
                   const Spacer(),
-                  Expanded(
-                    child: DropdownButton<String>(
-                      value: _converterLogic.baseCurrency,
-                      items: _converterLogic.conversionRates.keys
-                          .map((currency) => DropdownMenuItem<String>(
-                        value: currency,
-                        child: Text(currency),
-                      ))
-                          .toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          _converterLogic.onBaseCurrencyDropdownChanged(value);
-                        });
-                      },
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
+                    child: Expanded(
+                      child: DropdownButton<String>(
+                        value: _converterLogic.baseCurrency,
+                        items: _converterLogic.conversionRates.keys
+                            .map((currency) => DropdownMenuItem<String>(
+                          value: currency,
+                          child: Text(currency),
+                        ))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _converterLogic.onBaseCurrencyDropdownChanged(value);
+                          });
+                        },
+                      ),
                     ),
                   ),
-                  Image.asset(ImageApp.about, height: 35, width: 35),
+                  Image.asset(ImageApp.about, height: 25, width: 25),
                 ],
               ),
               const SizedBox(height: 20),
               Row(
                 children: [
-                  Expanded(
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
                     child: TextFormField(
                       controller: _converterLogic.targetCurrencyController,
                       keyboardType: TextInputType.number,
@@ -107,9 +114,9 @@ class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
                       ),
                     ),
                   ),
-
                   const Spacer(),
-                  Expanded(
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
                     child: DropdownButton<String>(
                       value: _converterLogic.targetCurrency,
                       items: _converterLogic.conversionRates.keys
@@ -124,8 +131,8 @@ class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
                         });
                       },
                     ),
-                  ),    
-                  Image.asset(ImageApp.about, height: 35, width: 35),
+                  ),
+                  Image.asset(ImageApp.about, height: 25, width: 25),
                 ],
               ),
             ],
