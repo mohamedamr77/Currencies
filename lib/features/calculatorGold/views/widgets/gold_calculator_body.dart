@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/image.dart';
 import '../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../core/shared_widget/description_listview_horizontal.dart';
+import '../view_model/logic.dart';
 
 class GoldCalculatorBody extends StatefulWidget {
   const GoldCalculatorBody({super.key});
@@ -12,9 +12,23 @@ class GoldCalculatorBody extends StatefulWidget {
 }
 
 class _GoldCalculatorBodyState extends State<GoldCalculatorBody> {
-  TextEditingController weightController = TextEditingController();
-  String selectedPurity = "عيار 21";
-  String selectedCurrency = "الجنية المصري";
+
+  final GoldConverterLogic _converterLogic = GoldConverterLogic();
+
+  @override
+  void initState() {
+    super.initState();
+    _converterLogic.baseCurrencyController.addListener(_converterLogic.onBaseCurrencyChanged);
+    _converterLogic.targetCurrencyController.addListener(_converterLogic.onTargetCurrencyChanged);
+  }
+
+  @override
+  void dispose() {
+    _converterLogic.baseCurrencyController.removeListener(_converterLogic.onBaseCurrencyChanged);
+    _converterLogic.targetCurrencyController.removeListener(_converterLogic.onTargetCurrencyChanged);
+    _converterLogic.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -48,72 +62,73 @@ class _GoldCalculatorBodyState extends State<GoldCalculatorBody> {
             children: [
               Row(
                 children: [
-                  Expanded(
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
+                    child: Expanded(
+                      child: TextFormField(
+                        controller: _converterLogic.baseCurrencyController,
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
 
-                    child: TextFormField(
-                      onTap: (){
-                        setState(() {
-
-                        });
-                      },
-                      controller: weightController,
-                      decoration: const InputDecoration(
-                        hintText: "40",
+                        ),
                       ),
-                      keyboardType: TextInputType.number,
                     ),
                   ),
                   const Spacer(),
-                  Expanded(
-                    child: DropdownButton<String>(
-                      value: selectedPurity,
-                      items: <String>['عيار 21', 'عيار 18', 'عيار 24'].map((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-
-                          selectedPurity = newValue!;
-                        });
-                      },
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
+                    child: Expanded(
+                      child: DropdownButton<String>(
+                        value: _converterLogic.baseCurrency,
+                        items: _converterLogic.conversionRates.keys
+                            .map((currency) => DropdownMenuItem<String>(
+                          value: currency,
+                          child: Text(currency),
+                        ))
+                            .toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _converterLogic.onBaseCurrencyDropdownChanged(value);
+                          });
+                        },
+                      ),
                     ),
                   ),
-                  Image.asset(ImageApp.about, height: 35, width: 35),
+                  Image.asset(ImageApp.about, height: 25, width: 25),
                 ],
               ),
               const SizedBox(height: 20),
               Row(
                 children: [
-
-                  Expanded(
-                    child: Text(
-                      weightController.text.isEmpty
-                          ? "0"
-                          : (double.parse(weightController.text) * 1940).toStringAsFixed(2),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
+                    child: TextFormField(
+                      controller: _converterLogic.targetCurrencyController,
+                      keyboardType: TextInputType.number,
+                      decoration: const InputDecoration(
+                        // focusedBorder: InputBorder.none
+                      ),
                     ),
                   ),
                   const Spacer(),
-                  Expanded(
-                    flex: 2,
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.33,
                     child: DropdownButton<String>(
-                      value: selectedCurrency,
-                      items: <String>['الجنية المصري', 'الدولار الامريكي'].map((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
+                      value: _converterLogic.targetCurrency,
+                      items: _converterLogic.conversionRates.keys
+                          .map((currency) => DropdownMenuItem<String>(
+                        value: currency,
+                        child: Text(currency),
+                      ))
+                          .toList(),
+                      onChanged: (value) {
                         setState(() {
-                          selectedCurrency = newValue!;
+                          _converterLogic.onTargetCurrencyDropdownChanged(value);
                         });
                       },
                     ),
                   ),
-                  Image.asset(ImageApp.about, height: 35, width: 35),
+                  Image.asset(ImageApp.about, height: 25, width: 25),
                 ],
               ),
             ],
