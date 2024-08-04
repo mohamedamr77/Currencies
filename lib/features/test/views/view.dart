@@ -22,5 +22,3 @@ class CustomButtonScreen extends StatelessWidget {
     );
   }
 }
-
-

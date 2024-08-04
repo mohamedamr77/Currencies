@@ -13,7 +13,7 @@ class SliverPricesBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  CustomScrollView(
+    return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
@@ -32,7 +32,8 @@ class SliverPricesBody extends StatelessWidget {
                   child: const Column(
                     children: [
                       CustomAppbar(text: "اسعار الفضة"),
-                      DescriptionListviewHorizontal(text: 'اسعار الأونصة عالميا'),
+                      DescriptionListviewHorizontal(
+                          text: 'اسعار الأونصة عالميا'),
                     ],
                   ),
                 ),
@@ -44,14 +45,16 @@ class SliverPricesBody extends StatelessWidget {
                     height: MediaQuery.sizeOf(context).height * 0.21,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => const ItemGoldAndSliverListHorizontal(
+                      itemBuilder: (context, index) =>
+                          const ItemGoldAndSliverListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,
                         abbreviationCountry: "USD",
                         price: "2,330.28",
                         isGOld: false,
                       ),
-                      separatorBuilder: (context, index) => const SizedBox(width: 10),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(width: 10),
                       itemCount: 10,
                     ),
                   ),
@@ -67,10 +70,13 @@ class SliverPricesBody extends StatelessWidget {
             text3: 'بيع',
           ),
         ),
-        const SliverToBoxAdapter(child: SizedBox(height: 10,)),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 10,
+        )),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-                (context, index) {
+            (context, index) {
               return const Column(
                 children: [
                   ItemListviewVerticalDashboard(
@@ -82,9 +88,11 @@ class SliverPricesBody extends StatelessWidget {
                     buyingPrice: 48.28,
                     nameWidget: "فضة 925",
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                 ],
-              ) ;
+              );
             },
             childCount: 10,
           ),

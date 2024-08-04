@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class CurrencyConverterLogic {
   final TextEditingController baseCurrencyController = TextEditingController();
-  final TextEditingController targetCurrencyController = TextEditingController();
+  final TextEditingController targetCurrencyController =
+      TextEditingController();
 
   final Map<String, double> conversionRates = {
     'دولار امريكى': 1, // base rate
@@ -27,8 +28,10 @@ class CurrencyConverterLogic {
       targetCurrencyController.text = '';
     } else if (num1 != null) {
       _isUpdatingBase = true;
-      final conversionRate = conversionRates[targetCurrency]! / conversionRates[baseCurrency]!;
-      targetCurrencyController.text = (num1 * conversionRate).toStringAsFixed(2);
+      final conversionRate =
+          conversionRates[targetCurrency]! / conversionRates[baseCurrency]!;
+      targetCurrencyController.text =
+          (num1 * conversionRate).toStringAsFixed(2);
       _isUpdatingBase = false;
     }
   }
@@ -42,7 +45,8 @@ class CurrencyConverterLogic {
       baseCurrencyController.text = '';
     } else if (num2 != null) {
       _isUpdatingTarget = true;
-      final conversionRate = conversionRates[baseCurrency]! / conversionRates[targetCurrency]!;
+      final conversionRate =
+          conversionRates[baseCurrency]! / conversionRates[targetCurrency]!;
       baseCurrencyController.text = (num2 * conversionRate).toStringAsFixed(2);
       _isUpdatingTarget = false;
     }

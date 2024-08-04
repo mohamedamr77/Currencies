@@ -10,7 +10,7 @@ class CustomSliverList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-            (context, index) {
+        (context, index) {
           return const Column(
             children: [
               ItemListviewVerticalDetails(
@@ -24,7 +24,7 @@ class CustomSliverList extends StatelessWidget {
                 buyingPrice: 48.28,
                 nameWidget: TextApp.dollarText,
               ),
-               SizedBox(height: 10), // Space between every two items
+              SizedBox(height: 10), // Space between every two items
             ],
           );
         },

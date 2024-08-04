@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../../core/color.dart';
 import '../../drawer_widget/drawerBody.dart';
 
-
 class ExchangeRatesScreen extends StatelessWidget {
   const ExchangeRatesScreen({super.key});
 

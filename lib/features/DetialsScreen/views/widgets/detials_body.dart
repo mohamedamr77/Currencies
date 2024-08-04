@@ -16,7 +16,7 @@ class DetialsScreenBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
-            height: MediaQuery.sizeOf(context).height*0.38,
+            height: MediaQuery.sizeOf(context).height * 0.38,
             child: const Stack(
               children: [
                 DetailsAppbar(),
@@ -26,36 +26,55 @@ class DetialsScreenBody extends StatelessWidget {
             ),
           ),
         ),
-        const SliverToBoxAdapter(child: SizedBox(height: 8,)),
-        const SliverToBoxAdapter(child: TransactionsBuyingSelling(),),
-        const SliverToBoxAdapter(child: SizedBox(height:20,)),
-        const SliverToBoxAdapter(child: CustomDivider(),),
-        const SliverToBoxAdapter(child: ThreeTextDescriptionListViewVertical(text1: 'البنك', text2: 'شراء', text3: 'بيع',)),
-        const SliverToBoxAdapter(child: SizedBox(height: 8,)),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 8,
+        )),
+        const SliverToBoxAdapter(
+          child: TransactionsBuyingSelling(),
+        ),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 20,
+        )),
+        const SliverToBoxAdapter(
+          child: CustomDivider(),
+        ),
+        const SliverToBoxAdapter(
+            child: ThreeTextDescriptionListViewVertical(
+          text1: 'البنك',
+          text2: 'شراء',
+          text3: 'بيع',
+        )),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 8,
+        )),
         const CustomSliverList(),
       ],
     );
   }
 }
 
-class CustomNumberText extends StatelessWidget{
-  const CustomNumberText({super.key, required this.number, required this.colorText});
-   final double number;
-   final Color colorText;
+class CustomNumberText extends StatelessWidget {
+  const CustomNumberText(
+      {super.key, required this.number, required this.colorText});
+  final double number;
+  final Color colorText;
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
-      width: MediaQuery.of(context).size.width/3,
-      child: Text("$number",
+    return SizedBox(
+      width: MediaQuery.of(context).size.width / 3,
+      child: Text(
+        "$number",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: colorText,
           fontFamily: "Tajawal",
-          fontSize:20,
+          fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
       ),
     );
   }
-
 }

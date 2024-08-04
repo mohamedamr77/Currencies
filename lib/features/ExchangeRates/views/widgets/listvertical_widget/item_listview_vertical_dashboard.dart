@@ -5,16 +5,25 @@ import '../../../../../core/shared_widget/country_currency.dart';
 import '../../../../DetialsScreen/screen.dart';
 
 class ItemListviewVerticalDashboard extends StatelessWidget {
-  const ItemListviewVerticalDashboard({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});
-final Widget widget;
-final double sellingPrice;
-final double buyingPrice;
-final String nameWidget;
+  const ItemListviewVerticalDashboard(
+      {super.key,
+      required this.widget,
+      required this.sellingPrice,
+      required this.buyingPrice,
+      required this.nameWidget});
+  final Widget widget;
+  final double sellingPrice;
+  final double buyingPrice;
+  final String nameWidget;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsScreen(),));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const DetailsScreen(),
+            ));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -23,15 +32,20 @@ final String nameWidget;
           color: Colors.white,
           borderRadius: BorderRadius.circular(9),
         ),
-        child:  Row(
+        child: Row(
           textDirection: TextDirection.rtl,
           children: [
             CircleAvatar(
               child: widget,
             ),
             const SizedBox(width: 10),
-            CountryCurrency(nameWidget, fontSize: 16,),
-            const Spacer(flex: 2,),
+            CountryCurrency(
+              nameWidget,
+              fontSize: 16,
+            ),
+            const Spacer(
+              flex: 2,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,

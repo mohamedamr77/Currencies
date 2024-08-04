@@ -56,13 +56,15 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                                 height: 60,
                                 width: 60,
                                 child: Image(
-                                  image: AssetImage(ImageApp.actionDashboardImage),
+                                  image:
+                                      AssetImage(ImageApp.actionDashboardImage),
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        const DescriptionListviewHorizontal(text: "اخر الأخبار"),
+                        const DescriptionListviewHorizontal(
+                            text: "اخر الأخبار"),
                       ],
                     ),
                   ),

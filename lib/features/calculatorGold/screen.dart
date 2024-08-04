@@ -2,6 +2,7 @@ import 'package:digitaltransactions/features/calculatorGold/views/widgets/gold_c
 import 'package:flutter/material.dart';
 
 import '../drawer_widget/drawerBody.dart';
+
 class GoldCalculatorScreen extends StatelessWidget {
   const GoldCalculatorScreen({super.key});
 
@@ -12,11 +13,10 @@ class GoldCalculatorScreen extends StatelessWidget {
         child: DrawerBody(),
       ),
       backgroundColor: Color(0xffF5F6FA),
-      body:GoldCalculatorBody() ,
+      body: GoldCalculatorBody(),
     );
   }
 }
-
 
 //GoldCalculatorBody
 //  backgroundColor: Color(0xffF5F6FA),

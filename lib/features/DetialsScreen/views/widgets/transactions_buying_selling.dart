@@ -17,20 +17,28 @@ class TransactionsBuyingSelling extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             CustomText(text: "شراء"),
-
             CustomText(text: "بيع"),
-
             CustomText(text: "تغير"),
-
           ],
         ),
-        SizedBox(height: 5,),
+        SizedBox(
+          height: 5,
+        ),
         Row(
           textDirection: TextDirection.rtl,
           children: [
-            CustomNumberText(number: 213, colorText: ColorApp.deebBlueTextColor,),
-            CustomNumberText(number: 47.32, colorText:ColorApp.deebBlueTextColor ,),
-            CustomNumberText(number: -12, colorText: ColorApp.redColor,),
+            CustomNumberText(
+              number: 213,
+              colorText: ColorApp.deebBlueTextColor,
+            ),
+            CustomNumberText(
+              number: 47.32,
+              colorText: ColorApp.deebBlueTextColor,
+            ),
+            CustomNumberText(
+              number: -12,
+              colorText: ColorApp.redColor,
+            ),
           ],
         ),
       ],

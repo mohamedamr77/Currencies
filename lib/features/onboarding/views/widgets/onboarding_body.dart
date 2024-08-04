@@ -37,7 +37,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                 SizedBox(height: height == 100 ? 50 : 100),
                 Stack(
                   children: [
-                    if (height == 100) // Show the white container only when height is 100
+                    if (height ==
+                        100) // Show the white container only when height is 100
                       Container(
                         width: MediaQuery.of(context).size.width * 0.4,
                         height: MediaQuery.of(context).size.height * 0.2,
@@ -50,7 +51,11 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                         ),
                       ),
                     Padding(
-                      padding: height == 100 ? const EdgeInsets.only(top: 20, left: 40) : height==110? EdgeInsets.symmetric(horizontal: width/2):EdgeInsets.zero,
+                      padding: height == 100
+                          ? const EdgeInsets.only(top: 20, left: 40)
+                          : height == 110
+                              ? EdgeInsets.symmetric(horizontal: width / 2)
+                              : EdgeInsets.zero,
                       child: InkWell(
                         onTap: () {
                           setState(() {
@@ -58,7 +63,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                             width = MediaQuery.of(context).size.width;
                             alignment = Alignment.topLeft;
                           });
-                          Future.delayed(const Duration(milliseconds: 1000), () {
+                          Future.delayed(const Duration(milliseconds: 1000),
+                              () {
                             setState(() {
                               height = 110;
                               width = 200;
@@ -69,7 +75,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const ExchangeRatesScreen(), // Replace with your screen widget
+                                    builder: (context) =>
+                                        const ExchangeRatesScreen(), // Replace with your screen widget
                                   ),
                                 );
                               });
@@ -99,7 +106,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                 ),
                 if (showText) // Show the text if showText is true
                   Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: width/2+1,vertical: 10),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: width / 2 + 1, vertical: 10),
                     child: const Text(
                       "اسعار العملات",
                       style: TextStyle(

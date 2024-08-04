@@ -10,8 +10,7 @@ class DrawerBody extends StatelessWidget {
   const DrawerBody({super.key});
 
   @override
-  Widget build(
-      BuildContext context) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
@@ -19,32 +18,33 @@ class DrawerBody extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(40),
           decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                  ImageApp.appBarBGDetailsImage,
-                ),
-              fit: BoxFit.fill
-            )
-          ),
+              image: DecorationImage(
+                  image: AssetImage(
+                    ImageApp.appBarBGDetailsImage,
+                  ),
+                  fit: BoxFit.fill)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(ImageApp.brideDrawerImage),
               const SizedBox(height: 10),
-              const Text(TextApp.nameAppText,
-              style: CustomTextStyle(
-                fontSize: 20,
-                fontFamily: "Tajawal",
-                color: Colors.white,
-              ),
+              const Text(
+                TextApp.nameAppText,
+                style: CustomTextStyle(
+                  fontSize: 20,
+                  fontFamily: "Tajawal",
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
         ),
         ListView.builder(
           shrinkWrap: true,
-          itemBuilder: (context, index) => BodyListViewDrawer(index: index,),
-         itemCount: drawerList.length,
+          itemBuilder: (context, index) => BodyListViewDrawer(
+            index: index,
+          ),
+          itemCount: drawerList.length,
         ),
       ],
     );

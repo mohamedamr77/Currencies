@@ -43,7 +43,8 @@ class ExchangeRatesBody extends StatelessWidget {
                     height: MediaQuery.sizeOf(context).height * 0.21,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => const ItemExchangeRatesListHorizontal(
+                      itemBuilder: (context, index) =>
+                          const ItemExchangeRatesListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         imageBank: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,
@@ -51,7 +52,8 @@ class ExchangeRatesBody extends StatelessWidget {
                         price: 48.8,
                         nameBank: TextApp.aboZabyText,
                       ),
-                      separatorBuilder: (context, index) => const SizedBox(width: 10),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(width: 10),
                       itemCount: 10,
                     ),
                   ),
@@ -67,27 +69,32 @@ class ExchangeRatesBody extends StatelessWidget {
             text3: 'بيع',
           ),
         ),
-        const SliverToBoxAdapter(child: SizedBox(height: 10,)),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 10,
+        )),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                 return const Column(
-                   children: [
-                     ItemListviewVerticalDashboard(
-                       widget: Image(
-                         image: AssetImage(ImageApp.americaImage),
-                         fit: BoxFit.cover,
-                         width: double.infinity,
-                         height: double.infinity,
-                       ),
-                       sellingPrice: 48.36,
-                       buyingPrice: 48.28,
-                       nameWidget: TextApp.dollarText,
-                     ),
-                     SizedBox(height: 10,),
-                   ],
-                 ) ;
-                },
+            (context, index) {
+              return const Column(
+                children: [
+                  ItemListviewVerticalDashboard(
+                    widget: Image(
+                      image: AssetImage(ImageApp.americaImage),
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
+                    sellingPrice: 48.36,
+                    buyingPrice: 48.28,
+                    nameWidget: TextApp.dollarText,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              );
+            },
             childCount: 10,
           ),
         ),

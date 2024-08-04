@@ -15,35 +15,35 @@ class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
         left: 0,
         child: Column(
           children: [
-            Stack(
-                alignment: Alignment.center,
-                children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundColor: ColorApp.backgroundColor,
-                  ),
-                  CircleAvatar(
-                    radius: 32,
-                    child: Image(image: AssetImage(ImageApp.americaImage),
-                      fit: BoxFit.contain,
-                      height: double.infinity,
-                      width: double.infinity,
-                    ),
-                  ),
-                ]
+            Stack(alignment: Alignment.center, children: [
+              CircleAvatar(
+                radius: 40,
+                backgroundColor: ColorApp.backgroundColor,
+              ),
+              CircleAvatar(
+                radius: 32,
+                child: Image(
+                  image: AssetImage(ImageApp.americaImage),
+                  fit: BoxFit.contain,
+                  height: double.infinity,
+                  width: double.infinity,
+                ),
+              ),
+            ]),
+            SizedBox(
+              height: 10,
             ),
-            SizedBox(height: 10,),
-            Text("دولار أمريكى ",
+            Text(
+              "دولار أمريكى ",
               maxLines: 1,
               style: TextStyle(
                 color: ColorApp.primaryTextColor,
                 fontFamily: "Tajawal",
-                fontSize:20,
+                fontSize: 20,
               ),
             ),
             AbbreviationOfTheCountry(text: "USD"),
           ],
-        )
-    );
+        ));
   }
 }

@@ -31,7 +31,8 @@ class GoldPriceBody extends StatelessWidget {
                   child: const Column(
                     children: [
                       CustomAppbar(text: "أاسعار الذهب"),
-                      DescriptionListviewHorizontal(text: 'اسعار الأونصة عالميا'),
+                      DescriptionListviewHorizontal(
+                          text: 'اسعار الأونصة عالميا'),
                     ],
                   ),
                 ),
@@ -43,14 +44,16 @@ class GoldPriceBody extends StatelessWidget {
                     height: MediaQuery.sizeOf(context).height * 0.21,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => const ItemGoldAndSliverListHorizontal(
+                      itemBuilder: (context, index) =>
+                          const ItemGoldAndSliverListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,
                         abbreviationCountry: "USD",
                         price: "2,330.28",
-                        isGOld:  true,
+                        isGOld: true,
                       ),
-                      separatorBuilder: (context, index) => const SizedBox(width: 10),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(width: 10),
                       itemCount: 10,
                     ),
                   ),
@@ -66,24 +69,29 @@ class GoldPriceBody extends StatelessWidget {
             text3: 'بيع',
           ),
         ),
-        const SliverToBoxAdapter(child: SizedBox(height: 10,)),
+        const SliverToBoxAdapter(
+            child: SizedBox(
+          height: 10,
+        )),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-                (context, index) {
+            (context, index) {
               return const Column(
                 children: [
                   ItemListviewVerticalDashboard(
                     widget: CircleAvatar(
-                    backgroundColor: Color(0xffE3AC2A),
+                      backgroundColor: Color(0xffE3AC2A),
                       child: Text("18"),
                     ),
                     sellingPrice: 48.36,
                     buyingPrice: 48.28,
                     nameWidget: "عيار 18",
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                 ],
-              ) ;
+              );
             },
             childCount: 10,
           ),

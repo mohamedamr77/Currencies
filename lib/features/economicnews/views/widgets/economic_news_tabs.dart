@@ -8,7 +8,8 @@ class EconomicNewsTabs extends StatefulWidget {
   State<EconomicNewsTabs> createState() => _EconomicNewsTabsState();
 }
 
-class _EconomicNewsTabsState extends State<EconomicNewsTabs> with TickerProviderStateMixin {
+class _EconomicNewsTabsState extends State<EconomicNewsTabs>
+    with TickerProviderStateMixin {
   late TabController tabController;
 
   @override

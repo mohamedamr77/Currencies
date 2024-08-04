@@ -9,8 +9,8 @@ class DetailsAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Container(
-      height: MediaQuery.sizeOf(context).height*0.248,
+    return Container(
+      height: MediaQuery.sizeOf(context).height * 0.248,
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -18,28 +18,32 @@ class DetailsAppbar extends StatelessWidget {
           fit: BoxFit.fill,
         ),
       ),
-      child:  SafeArea(
+      child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.025,right: MediaQuery.of(context).size.width*0.07),
-          child:  Column(
+          padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.025,
+              right: MediaQuery.of(context).size.width * 0.07),
+          child: Column(
             children: [
               Row(
                 children: [
                   const Expanded(
-                    child: Text("دولار أمريكى",
+                    child: Text(
+                      "دولار أمريكى",
                       textAlign: TextAlign.center,
                       style: CustomTextStyle(
                         color: ColorApp.whiteColor,
                         fontFamily: "Tajawal",
-                        fontSize:20,
+                        fontSize: 20,
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
                     },
-                    child: const Icon(Icons.arrow_forward_ios,
+                    child: const Icon(
+                      Icons.arrow_forward_ios,
                       color: ColorApp.whiteColor,
                     ),
                   )

@@ -8,10 +8,7 @@ class EconomicNewsDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(10),
-        child: EconomicNewsDetailsBody()
-      ),
-    ) ;
-
+          padding: EdgeInsets.all(10), child: EconomicNewsDetailsBody()),
+    );
   }
 }

@@ -3,6 +3,7 @@ import 'package:digitaltransactions/features/Dashboard/views/widgets/dashboard_b
 import 'package:flutter/material.dart';
 
 import '../drawer_widget/drawerBody.dart';
+
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -18,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       endDrawer: Drawer(
         child: DrawerBody(),
       ),
-      body:  DashboardBody(),
+      body: DashboardBody(),
     );
   }
 }

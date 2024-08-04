@@ -5,8 +5,6 @@ import '../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../core/shared_widget/description_listview_horizontal.dart';
 import '../view_model/logic.dart';
 
-
-
 class CalculatorPriceBody extends StatefulWidget {
   const CalculatorPriceBody({super.key});
 
@@ -15,20 +13,23 @@ class CalculatorPriceBody extends StatefulWidget {
 }
 
 class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
-
   final CurrencyConverterLogic _converterLogic = CurrencyConverterLogic();
 
   @override
   void initState() {
     super.initState();
-    _converterLogic.baseCurrencyController.addListener(_converterLogic.onBaseCurrencyChanged);
-    _converterLogic.targetCurrencyController.addListener(_converterLogic.onTargetCurrencyChanged);
+    _converterLogic.baseCurrencyController
+        .addListener(_converterLogic.onBaseCurrencyChanged);
+    _converterLogic.targetCurrencyController
+        .addListener(_converterLogic.onTargetCurrencyChanged);
   }
 
   @override
   void dispose() {
-    _converterLogic.baseCurrencyController.removeListener(_converterLogic.onBaseCurrencyChanged);
-    _converterLogic.targetCurrencyController.removeListener(_converterLogic.onTargetCurrencyChanged);
+    _converterLogic.baseCurrencyController
+        .removeListener(_converterLogic.onBaseCurrencyChanged);
+    _converterLogic.targetCurrencyController
+        .removeListener(_converterLogic.onTargetCurrencyChanged);
     _converterLogic.dispose();
     super.dispose();
   }
@@ -67,32 +68,31 @@ class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width*0.33,
+                    width: MediaQuery.of(context).size.width * 0.33,
                     child: Expanded(
                       child: TextFormField(
                         controller: _converterLogic.baseCurrencyController,
                         keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-
-                        ),
+                        decoration: const InputDecoration(),
                       ),
                     ),
                   ),
                   const Spacer(),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width*0.33,
+                    width: MediaQuery.of(context).size.width * 0.33,
                     child: Expanded(
                       child: DropdownButton<String>(
                         value: _converterLogic.baseCurrency,
                         items: _converterLogic.conversionRates.keys
                             .map((currency) => DropdownMenuItem<String>(
-                          value: currency,
-                          child: Text(currency),
-                        ))
+                                  value: currency,
+                                  child: Text(currency),
+                                ))
                             .toList(),
                         onChanged: (value) {
                           setState(() {
-                            _converterLogic.onBaseCurrencyDropdownChanged(value);
+                            _converterLogic
+                                .onBaseCurrencyDropdownChanged(value);
                           });
                         },
                       ),
@@ -105,29 +105,30 @@ class _CalculatorPriceBodyState extends State<CalculatorPriceBody> {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width*0.33,
+                    width: MediaQuery.of(context).size.width * 0.33,
                     child: TextFormField(
                       controller: _converterLogic.targetCurrencyController,
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
-                        // focusedBorder: InputBorder.none
-                      ),
+                          // focusedBorder: InputBorder.none
+                          ),
                     ),
                   ),
                   const Spacer(),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width*0.33,
+                    width: MediaQuery.of(context).size.width * 0.33,
                     child: DropdownButton<String>(
                       value: _converterLogic.targetCurrency,
                       items: _converterLogic.conversionRates.keys
                           .map((currency) => DropdownMenuItem<String>(
-                        value: currency,
-                        child: Text(currency),
-                      ))
+                                value: currency,
+                                child: Text(currency),
+                              ))
                           .toList(),
                       onChanged: (value) {
                         setState(() {
-                          _converterLogic.onTargetCurrencyDropdownChanged(value);
+                          _converterLogic
+                              .onTargetCurrencyDropdownChanged(value);
                         });
                       },
                     ),

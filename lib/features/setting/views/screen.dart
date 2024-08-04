@@ -14,7 +14,6 @@ class SettingScreen extends StatelessWidget {
       ),
       backgroundColor: Color(0xffF5F6FA),
       body: SettingBody(),
-
     );
   }
 }

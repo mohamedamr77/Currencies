@@ -15,10 +15,15 @@ class EconomicNewsDetailsBody extends StatelessWidget {
             child: Column(
               children: [
                 Center(
-                    child: SvgPicture.asset(ImageApp.logo,height: 200,)
+                    child: SvgPicture.asset(
+                  ImageApp.logo,
+                  height: 200,
+                )),
+                const SizedBox(
+                  height: 20,
                 ),
-                const SizedBox(height: 20,),
-                const Text("بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
+                const Text(
+                  "بعد رفع سعر البنزين والسولار.. توقعات بزيادة مؤقتة في معدل التضخم",
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: Colors.black,
@@ -26,9 +31,11 @@ class EconomicNewsDetailsBody extends StatelessWidget {
                     fontFamily: "Tajawal",
                   ),
                 ),
-                const SizedBox(height: 50,),
-
-                const Text('''توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.
+                const SizedBox(
+                  height: 50,
+                ),
+                const Text(
+                  '''توقع مصرفيون ومحللون، تحدث إليهم "مصراوي"، أن يرتفع معدل التضخم- زيادة أسعار السلع- خلال الربع الثاني من العام الجاري بشكل مؤقت تحت ضغط زيادة أسعار البنزين والسولار باعتبارهما عناصر أساسية في تسعير كافة أنواع السلع قبل أن يعود للتراجع تدريجيا.
                 
                 
                 رفعت مصر أسعار جميع فئات البنزين جنيهاً واحداً، الخميس الماضي كما زادت سعر السولار بأكثر من 21% إلى 10 جنيهات، من 8.25 جنيه، سواء لشركات إنتاج الكهرباء أو سعر تسليم المستهلك لمحطات خدمة وتموين السيارات.              ''',
@@ -41,25 +48,26 @@ class EconomicNewsDetailsBody extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             padding: const EdgeInsets.only(bottom: 50),
             child: GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: Container(
                 height: 60,
                 width: 280,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    color: const Color(0xff5726fc)
-                ),
+                    color: const Color(0xff5726fc)),
                 child: const Center(
-                  child: Text("مصدر الخبر",
-                    textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20,
+                  child: Text(
+                    "مصدر الخبر",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontFamily: "Tajawal",
-                    )
-                    ,
+                    ),
                   ),
                 ),
               ),

@@ -5,7 +5,12 @@ import '../../../../core/shared_widget/country_currency.dart';
 import '../../../../core/textstyle.dart';
 
 class ItemListviewVerticalDetails extends StatelessWidget {
-  const ItemListviewVerticalDetails({super.key, required this.widget, required this.sellingPrice, required this.buyingPrice, required this.nameWidget});
+  const ItemListviewVerticalDetails(
+      {super.key,
+      required this.widget,
+      required this.sellingPrice,
+      required this.buyingPrice,
+      required this.nameWidget});
   final Widget widget;
   final double sellingPrice;
   final double buyingPrice;
@@ -19,15 +24,20 @@ class ItemListviewVerticalDetails extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(9),
       ),
-      child:  Row(
+      child: Row(
         textDirection: TextDirection.rtl,
         children: [
           CircleAvatar(
             child: widget,
           ),
           const SizedBox(width: 10),
-          CountryCurrency(nameWidget, fontSize: 16,),
-          const Spacer(flex: 2,),
+          CountryCurrency(
+            nameWidget,
+            fontSize: 16,
+          ),
+          const Spacer(
+            flex: 2,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
