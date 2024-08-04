@@ -21,7 +21,7 @@ class DetialsScreenBody extends StatelessWidget {
               children: [
                 DetailsAppbar(),
                 CurrencyInfoCardImageNameCurrency(),
-                ButtonCalculator(),
+                // ButtonCalculator(),
               ],
             ),
           ),

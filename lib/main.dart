@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'features/onboarding/views/widgets/onboarding_body.dart';
+import 'features/test/views/view.dart';
 
 void main(){
   runApp(const MyApp());
