@@ -1,14 +1,49 @@
+import 'package:digitaltransactions/features/banner_ads.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../core/image.dart';
 import '../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
 import '../../../../core/text.dart';
 import '../../../../core/shared_widget/description_listview_horizontal.dart';
+import '../../../ad_manager.dart';
 import 'listvertical_widget/item_listview_vertical_dashboard.dart';
 import 'listview_horizontal_widget/item_exchange_rates_horizontal.dart';
 
-class ExchangeRatesBody extends StatelessWidget {
+class ExchangeRatesBody extends StatefulWidget {
   const ExchangeRatesBody({super.key});
+
+  @override
+  State<ExchangeRatesBody> createState() => _ExchangeRatesBodyState();
+}
+
+class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
+  BannerAd? bannerAd;
+  bool isLoading = false;
+
+  void load() {
+    bannerAd = BannerAd(
+      size: AdSize.banner,
+      adUnitId: AdManager.bannerHome,
+      listener: BannerAdListener(
+        onAdLoaded: (ad) {
+          setState(() {
+            isLoading = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+        },
+      ),
+      request: const AdRequest(),
+    )..load();
+  }
+
+  @override
+  void initState() {
+    load();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +79,7 @@ class ExchangeRatesBody extends StatelessWidget {
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) =>
-                          const ItemExchangeRatesListHorizontal(
+                      const ItemExchangeRatesListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         imageBank: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,
@@ -53,7 +88,7 @@ class ExchangeRatesBody extends StatelessWidget {
                         nameBank: TextApp.aboZabyText,
                       ),
                       separatorBuilder: (context, index) =>
-                          const SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       itemCount: 10,
                     ),
                   ),
@@ -71,31 +106,60 @@ class ExchangeRatesBody extends StatelessWidget {
         ),
         const SliverToBoxAdapter(
             child: SizedBox(
-          height: 10,
-        )),
+              height: 10,
+            )),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              return const Column(
-                children: [
-                  ItemListviewVerticalDashboard(
-                    widget: Image(
-                      image: AssetImage(ImageApp.americaImage),
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: double.infinity,
+                (context, index) {
+              // Calculate the actual item index
+              int actualIndex = index - (index ~/ 6);
+
+              if (index % 5 == 0&&index!=0) {
+                // Insert an ad after every 5 items
+                return Column(
+                  children: [
+                    if (isLoading)
+                      Container(
+                        alignment: Alignment.center,
+                        child: AdWidget(ad: bannerAd!),
+                        width: bannerAd!.size.width.toDouble(),
+                        height: bannerAd!.size.height.toDouble(),
+                      ),
+                    const SizedBox(height: 10),
+                    ItemListviewVerticalDashboard(
+                      widget: const Image(
+                        image: AssetImage(ImageApp.americaImage),
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: double.infinity,
+                      ),
+                      sellingPrice: 48.36,
+                      buyingPrice: 48.28,
+                      nameWidget: TextApp.dollarText,
                     ),
-                    sellingPrice: 48.36,
-                    buyingPrice: 48.28,
-                    nameWidget: TextApp.dollarText,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
-              );
+                    const SizedBox(height: 10),
+                  ],
+                );
+              } else {
+                return Column(
+                  children: [
+                    ItemListviewVerticalDashboard(
+                      widget: const Image(
+                        image: AssetImage(ImageApp.americaImage),
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: double.infinity,
+                      ),
+                      sellingPrice: 48.36,
+                      buyingPrice: 48.28,
+                      nameWidget: TextApp.dollarText,
+                    ),
+                    const SizedBox(height: 10),
+                  ],
+                );
+              }
             },
-            childCount: 10,
+            childCount: 12, // Adjusted to show 10 items + 2 ads
           ),
         ),
       ],

@@ -37,8 +37,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                 SizedBox(height: height == 100 ? 50 : 100),
                 Stack(
                   children: [
-                    if (height ==
-                        100) // Show the white container only when height is 100
+                    if (height == 100) // Show the white container only when height is 100
                       Container(
                         width: MediaQuery.of(context).size.width * 0.4,
                         height: MediaQuery.of(context).size.height * 0.2,
@@ -50,7 +49,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                           ),
                         ),
                       ),
-                    Padding(
+                     Padding(
                       padding: height == 100
                           ? const EdgeInsets.only(top: 20, left: 40)
                           : height == 110

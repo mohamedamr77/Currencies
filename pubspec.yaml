@@ -39,6 +39,8 @@ dependencies:
   dropdown_button2: ^2.3.9
   animate_do: ^3.3.4
   shimmer: ^3.0.0
+  google_mobile_ads: ^5.1.0
+
 
 dev_dependencies:
   flutter_test:
