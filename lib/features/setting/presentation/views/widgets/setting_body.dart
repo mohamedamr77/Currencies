@@ -1,5 +1,6 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/image.dart';
 import 'dialog.dart';
@@ -15,7 +16,7 @@ class SettingBody extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.34,
           child: Stack(children: [
             Container(
-              height: 200,
+              height: 200.h,
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -81,115 +82,60 @@ class SettingBody extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
+          child: ListView(
+            shrinkWrap: true,
             children: [
-              ListTile(
-                tileColor: Colors.white,
-                leading: Image.asset(
-                  ImageApp.arrow,
-                  height: 30,
-                  width: 30,
-                ),
-                title: const Text(
-                  "العملة الأساسية",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontFamily: "Tajawal",
-                  ),
-                ),
-                trailing: Image.asset(ImageApp.el3omla, height: 40, width: 40),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                onTap: () {
-                  showDialog(
-                      context: context,
-                      builder: (context) => const DialogScreen());
-                },
-                tileColor: Colors.white,
-                leading: Image.asset(ImageApp.arrow, height: 30, width: 30),
-                title: const Text("اللغة",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontFamily: "Tajawal",
-                    )),
-                trailing: Image.asset(ImageApp.lang, height: 40, width: 40),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                tileColor: Colors.white,
-                leading: Image.asset(
-                  ImageApp.arrow,
-                  height: 30,
-                  width: 30,
-                ),
-                title: const Text("الاشعارات",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontFamily: "Tajawal",
-                    )),
-                trailing:
-                    Image.asset(ImageApp.notification, height: 40, width: 40),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                tileColor: Colors.white,
-                leading: Image.asset(
-                  ImageApp.arrow,
-                  height: 30,
-                  width: 30,
-                ),
-                title: const Text("اعداد الخط",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontFamily: "Tajawal",
-                    )),
-                trailing: Image.asset(ImageApp.elkhat, height: 40, width: 40),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                tileColor: Colors.white,
-                leading: Image.asset(
-                  ImageApp.arrow,
-                  height: 30,
-                  width: 30,
-                ),
-                title: const Text("عن التطبيق",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontFamily: "Tajawal",
-                    )),
-                trailing: Image.asset(ImageApp.about, height: 40, width: 40),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                tileColor: Colors.white,
-                leading: Image.asset(
-                  ImageApp.arrow,
-                  height: 30,
-                  width: 30,
-                ),
-                title: const Text("تسجيل خروج",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontFamily: "Tajawal",
-                    )),
-                trailing: Image.asset(ImageApp.signout, height: 40, width: 40),
-              ),
+              CustomListTile(trailingImage: ImageApp.el3omla, title:  "العملة الأساسية",),
+
+              CustomListTile(trailingImage: ImageApp.lang, title: "اللغة",onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (context) => const DialogScreen());
+              },),
+
+
+              CustomListTile(trailingImage: ImageApp.notification, title: "الاشعارات",),
+
+              CustomListTile(trailingImage: ImageApp.elkhat, title: "اعداد الخط",),
+
+
+              CustomListTile(trailingImage: ImageApp.about, title: "عن التطبيق",),
+
+              CustomListTile(trailingImage: ImageApp.signout, title: "تسجيل خروج",)
             ],
-          ),
+          )
         )
       ],
+    );
+  }
+}
+
+
+class CustomListTile extends StatelessWidget {
+   CustomListTile({super.key, required this.trailingImage, required this.title,this.onTap});
+   final String trailingImage;
+   final String title;
+  void Function()? onTap;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: ListTile(
+        onTap: onTap,
+        tileColor: Colors.white,
+        leading: Image.asset(
+          ImageApp.arrow,
+          height: 15.h,
+          width: 15.w,
+        ),
+        title:  Text(title,
+            textAlign: TextAlign.right,
+            style: const TextStyle(
+              fontFamily: "Tajawal",
+            )),
+        trailing:
+        Image.asset(trailingImage, height: 30, width: 30),
+      ),
     );
   }
 }
