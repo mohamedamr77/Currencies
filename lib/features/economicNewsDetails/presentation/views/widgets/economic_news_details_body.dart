@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/image.dart';
+import '../../../../../core/utils/image.dart';
 
 class EconomicNewsDetailsBody extends StatelessWidget {
   const EconomicNewsDetailsBody({super.key});

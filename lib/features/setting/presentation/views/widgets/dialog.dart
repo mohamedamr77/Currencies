@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/image.dart';
+import '../../../../../core/utils/image.dart';
 
 class DialogScreen extends StatefulWidget {
   const DialogScreen({super.key});

@@ -1,6 +1,6 @@
 import 'package:digitaltransactions/features/DetialsScreen/screen.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/color.dart';
+import '../../utils/color.dart';
 import '../../../../core/shared_widget/abbreviation_country.dart';
 import '../../../../core/shared_widget/country_currency.dart';
 

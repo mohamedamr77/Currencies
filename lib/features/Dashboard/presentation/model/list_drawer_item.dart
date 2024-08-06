@@ -1,5 +1,5 @@
-import 'package:digitaltransactions/core/image.dart';
-import 'package:digitaltransactions/core/text.dart';
+import 'package:digitaltransactions/core/utils/image.dart';
+import 'package:digitaltransactions/core/utils/text.dart';
 
 import 'drawer_listview_model.dart';
 

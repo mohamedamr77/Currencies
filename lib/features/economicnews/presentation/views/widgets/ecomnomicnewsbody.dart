@@ -1,9 +1,9 @@
-import 'package:digitaltransactions/core/image.dart';
-import 'package:digitaltransactions/core/text.dart';
+import 'package:digitaltransactions/core/utils/image.dart';
+import 'package:digitaltransactions/core/utils/text.dart';
 import 'package:digitaltransactions/core/shared_widget/description_listview_horizontal.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/color.dart';
-import '../../../../../core/textstyle.dart';
+import '../../../../../core/utils/color.dart';
+import '../../../../../core/utils/textstyle.dart';
 import 'economic_news_tabs.dart';
 
 class EconomicNewsBody extends StatefulWidget {

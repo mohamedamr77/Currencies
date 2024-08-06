@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../color.dart';
+import '../utils/color.dart';
 class DescriptionListviewHorizontal extends StatelessWidget {
   const DescriptionListviewHorizontal({super.key, required this.text});
      final String text;

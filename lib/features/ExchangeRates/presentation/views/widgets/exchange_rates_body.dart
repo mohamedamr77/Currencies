@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import '../../../../../core/image.dart';
+import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../../core/shared_widget/description_listview_horizontal.dart';
 import '../../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
-import '../../../../../core/text.dart';
+import '../../../../../core/utils/text.dart';
 import '../../../../ad_manager.dart';
 import 'listvertical_widget/item_listview_vertical_dashboard.dart';
 import 'listview_horizontal_widget/item_exchange_rates_horizontal.dart';

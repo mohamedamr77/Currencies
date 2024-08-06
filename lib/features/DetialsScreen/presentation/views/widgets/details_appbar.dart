@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/color.dart';
-import '../../../../../core/image.dart';
-import '../../../../../core/textstyle.dart';
+import '../../../../../core/utils/color.dart';
+import '../../../../../core/utils/image.dart';
+import '../../../../../core/utils/textstyle.dart';
 
 class DetailsAppbar extends StatelessWidget {
   const DetailsAppbar({super.key});

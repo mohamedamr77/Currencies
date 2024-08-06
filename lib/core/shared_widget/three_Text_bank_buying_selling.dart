@@ -1,5 +1,5 @@
-import 'package:digitaltransactions/core/color.dart';
-import 'package:digitaltransactions/core/textstyle.dart';
+import 'package:digitaltransactions/core/utils/color.dart';
+import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class ThreeTextDescriptionListViewVertical extends StatelessWidget {

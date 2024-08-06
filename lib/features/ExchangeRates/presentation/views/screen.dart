@@ -1,7 +1,7 @@
 import 'package:digitaltransactions/features/ExchangeRates/presentation/views/widgets/exchange_rates_body.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/color.dart';
+import '../../../../core/utils/color.dart';
 import '../../../drawer_widget/drawerBody.dart';
 
 class ExchangeRatesScreen extends StatelessWidget {

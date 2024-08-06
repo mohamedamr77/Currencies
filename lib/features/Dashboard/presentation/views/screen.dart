@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/core/color.dart';
+import 'package:digitaltransactions/core/utils/color.dart';
 import 'package:digitaltransactions/features/Dashboard/presentation/views/widgets/dashboard_body.dart';
 import 'package:flutter/material.dart';
 

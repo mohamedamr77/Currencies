@@ -1,6 +1,6 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/image.dart';
+import '../../../../../core/utils/image.dart';
 import 'dialog.dart';
 
 class SettingBody extends StatelessWidget {

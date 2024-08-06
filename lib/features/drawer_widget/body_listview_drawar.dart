@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../../core/textstyle.dart';
+import 'package:go_router/go_router.dart';
+import '../../core/utils/routes.dart';
+import '../../core/utils/textstyle.dart';
 import '../Dashboard/presentation/model/list_drawer_item.dart';
-import '../ExchangeRates/presentation/views/screen.dart';
-import '../calculatorGold/presentation/views/screen.dart';
-import '../calculatorprice/presentation/views/screen.dart';
-import '../economicnews/presentation/views/screen.dart';
-import '../goldprices/presentation/views/screen.dart';
-import '../setting/presentation/views/screen.dart';
-import '../sliverPrices/screen.dart';
+
 
 class BodyListViewDrawer extends StatelessWidget {
   const BodyListViewDrawer({super.key, required this.index});
@@ -17,42 +14,52 @@ class BodyListViewDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) {
-            if (drawerList[index].title == drawerList[0].title) {
-              return const ExchangeRatesScreen();
-            } else if (drawerList[index].title == drawerList[2].title) {
-              return const GoldPricesScreen();
-            } else if (drawerList[index].title == drawerList[4].title) {
-              return const SliverPricesScreen();
-            } else if (drawerList[index].title == drawerList[5].title) {
-              return const EconomicNewsScreen();
-            } else if (drawerList[index].title == drawerList[6].title) {
-              return const SettingScreen();
-            } else if (drawerList[index].title == drawerList[3].title) {
-              return const GoldCalculatorScreen();
-            } else if (drawerList[index].title == drawerList[1].title) {
-              return const CalculatorPriceScreen();
-            } else {
-              return const SizedBox();
-            }
-          },
-        ));
+
+          if (drawerList[index].title == drawerList[0].title) {
+            GoRouter.of(context)
+                .pushReplacement(AppRouter.kExchangeRates);
+          } else if (drawerList[index].title == drawerList[2].title) {
+            //GoldPricesScreen
+            GoRouter.of(context)
+                .push(AppRouter.kGoldPrices);
+          } else if (drawerList[index].title == drawerList[4].title) {
+            // return const SliverPricesScreen();
+            GoRouter.of(context)
+                .push(AppRouter.kSliverPrices);
+          } else if (drawerList[index].title == drawerList[5].title) {
+            //return const EconomicNewsScreen();
+            GoRouter.of(context)
+                .push(AppRouter.kEconomicNews);
+          } else if (drawerList[index].title == drawerList[6].title) {
+            // return const SettingScreen();
+            GoRouter.of(context)
+                .push(AppRouter.kSetting);
+          } else if (drawerList[index].title == drawerList[3].title) {
+            // return const GoldCalculatorScreen();
+            GoRouter.of(context)
+                .push(AppRouter.kCalculatorGold);
+          } else if (drawerList[index].title == drawerList[1].title) {
+            // return const CalculatorPriceScreen();
+            GoRouter.of(context)
+                .push(AppRouter.kCalculatorPrice);
+          }
+
       },
       child: ListTile(
         trailing: SvgPicture.asset(
           drawerList[index].image,
-          height: 40,
-          width: 40,
+          height: 20,
+          width: 20,
         ),
         title: Padding(
           padding: const EdgeInsets.only(top: 15),
           child: Text(
             drawerList[index].title,
             textAlign: TextAlign.right,
-            style: const CustomTextStyle(
-              fontSize: 20,
+            style:  CustomTextStyle(
+              fontSize: 16.sp,
               fontFamily: "Tajawal",
+              fontWeight: FontWeight.w400,
               color: Color(0xff200e32),
             ),
           ),

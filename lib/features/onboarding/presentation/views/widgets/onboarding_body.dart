@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/routes.dart';
 
-import '../../../../ExchangeRates/presentation/views/screen.dart';
 
 class OnboardingBody extends StatefulWidget {
   const OnboardingBody({super.key});
@@ -73,13 +74,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                               showText = true; // Show the text
                               // Delayed navigation after 1 second
                               Future.delayed(const Duration(seconds: 1), () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ExchangeRatesScreen(), // Replace with your screen widget
-                                  ),
-                                );
+                                GoRouter.of(context)
+                                    .pushReplacement(AppRouter.kExchangeRates);
                               });
                             });
                           });

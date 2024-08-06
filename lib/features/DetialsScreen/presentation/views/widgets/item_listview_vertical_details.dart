@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/color.dart';
+import '../../../../../core/utils/color.dart';
 import '../../../../../core/shared_widget/country_currency.dart';
-import '../../../../../core/textstyle.dart';
+import '../../../../../core/utils/textstyle.dart';
 
 class ItemListviewVerticalDetails extends StatelessWidget {
   const ItemListviewVerticalDetails(

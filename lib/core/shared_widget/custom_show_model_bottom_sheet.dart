@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/core/image.dart';
+import 'package:digitaltransactions/core/utils/image.dart';
 import 'package:flutter/material.dart';
 
 

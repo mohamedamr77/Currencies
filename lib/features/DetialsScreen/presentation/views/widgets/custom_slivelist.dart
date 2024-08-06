@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import '../../../../../core/image.dart';
-import '../../../../../core/text.dart';
+import '../../../../../core/utils/image.dart';
+import '../../../../../core/utils/text.dart';
 import 'item_listview_vertical_details.dart';
 
 class CustomSliverList extends StatelessWidget {
