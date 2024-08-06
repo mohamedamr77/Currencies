@@ -17,7 +17,7 @@ class DrawerBody extends StatelessWidget {
         Container(
           alignment: Alignment.center,
           width: double.infinity,
-           padding: const EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
@@ -30,7 +30,7 @@ class DrawerBody extends StatelessWidget {
               children: [
                 SvgPicture.asset(ImageApp.brideDrawerImage),
                 const SizedBox(height: 10),
-                 Text(
+                Text(
                   TextApp.nameAppText,
                   style: CustomTextStyle(
                     fontSize: 20.sp,

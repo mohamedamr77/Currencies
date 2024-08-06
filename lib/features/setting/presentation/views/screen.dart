@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/features/setting/presentation/views/widgets/setting_body.dart';
 import 'package:flutter/material.dart';
 
-
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
 

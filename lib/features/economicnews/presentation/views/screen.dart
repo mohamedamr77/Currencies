@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/features/economicnews/presentation/views/widgets/ecomnomicnewsbody.dart';
 import 'package:flutter/material.dart';
 
-
 class EconomicNewsScreen extends StatelessWidget {
   const EconomicNewsScreen({super.key});
 
@@ -9,7 +8,6 @@ class EconomicNewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: EconomicNewsBody(),
-
     );
   }
 }

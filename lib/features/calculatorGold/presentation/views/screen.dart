@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/features/calculatorGold/presentation/views/widgets/gold_calculator_body.dart';
 import 'package:flutter/material.dart';
 
-
 class GoldCalculatorScreen extends StatelessWidget {
   const GoldCalculatorScreen({super.key});
 

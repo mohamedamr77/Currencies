@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/routes.dart';
 
-
 class OnboardingBody extends StatefulWidget {
   const OnboardingBody({super.key});
 

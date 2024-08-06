@@ -74,19 +74,25 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  child:  Column(
+                  child: Column(
                     children: [
-                      CustomAppbar(text: "أسعار العملات", action: GestureDetector(
-                        onTap: (){
-                          Scaffold.of(context).openEndDrawer();
-                        },
-                        child: const SizedBox(
-                          height: 60,
-                          width: 60,
-                          child: Image(image: AssetImage(ImageApp.actionDashboardImage)),
+                      CustomAppbar(
+                        text: "أسعار العملات",
+                        action: GestureDetector(
+                          onTap: () {
+                            Scaffold.of(context).openEndDrawer();
+                          },
+                          child: const SizedBox(
+                            height: 60,
+                            width: 60,
+                            child: Image(
+                                image:
+                                    AssetImage(ImageApp.actionDashboardImage)),
+                          ),
                         ),
-                      ),),
-                      const DescriptionListviewHorizontal(text: 'اعلي الأسعار تداول'),
+                      ),
+                      const DescriptionListviewHorizontal(
+                          text: 'اعلي الأسعار تداول'),
                     ],
                   ),
                 ),

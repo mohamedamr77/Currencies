@@ -30,11 +30,19 @@ class GoldPriceBody extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  child:  Column(
+                  child: Column(
                     children: [
-                      CustomAppbar(text: "أاسعار الذهب",
-
-                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
+                      CustomAppbar(
+                        text: "أاسعار الذهب",
+                        action: IconButton(
+                            onPressed: () {
+                              GoRouter.of(context).pop();
+                            },
+                            icon: const Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.white,
+                            )),
+                      ),
                       const DescriptionListviewHorizontal(
                           text: 'اسعار الأونصة عالميا'),
                     ],

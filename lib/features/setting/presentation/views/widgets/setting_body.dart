@@ -24,12 +24,22 @@ class SettingBody extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child:  SafeArea(
+              child: SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      CustomAppbar(text: "الاعدادت", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
+                      CustomAppbar(
+                        text: "الاعدادت",
+                        action: IconButton(
+                            onPressed: () {
+                              GoRouter.of(context).pop();
+                            },
+                            icon: const Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.white,
+                            )),
+                      ),
                       const SizedBox(
                         height: 15,
                       ),
@@ -81,40 +91,54 @@ class SettingBody extends StatelessWidget {
           height: 10,
         ),
         Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              CustomListTile(trailingImage: ImageApp.el3omla, title:  "العملة الأساسية",),
-
-              CustomListTile(trailingImage: ImageApp.lang, title: "اللغة",onTap: () {
-                showDialog(
-                    context: context,
-                    builder: (context) => const DialogScreen());
-              },),
-
-
-              CustomListTile(trailingImage: ImageApp.notification, title: "الاشعارات",),
-
-              CustomListTile(trailingImage: ImageApp.elkhat, title: "اعداد الخط",),
-
-
-              CustomListTile(trailingImage: ImageApp.about, title: "عن التطبيق",),
-
-              CustomListTile(trailingImage: ImageApp.signout, title: "تسجيل خروج",)
-            ],
-          )
-        )
+            padding: const EdgeInsets.all(10.0),
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                CustomListTile(
+                  trailingImage: ImageApp.el3omla,
+                  title: "العملة الأساسية",
+                ),
+                CustomListTile(
+                  trailingImage: ImageApp.lang,
+                  title: "اللغة",
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => const DialogScreen());
+                  },
+                ),
+                CustomListTile(
+                  trailingImage: ImageApp.notification,
+                  title: "الاشعارات",
+                ),
+                CustomListTile(
+                  trailingImage: ImageApp.elkhat,
+                  title: "اعداد الخط",
+                ),
+                CustomListTile(
+                  trailingImage: ImageApp.about,
+                  title: "عن التطبيق",
+                ),
+                CustomListTile(
+                  trailingImage: ImageApp.signout,
+                  title: "تسجيل خروج",
+                )
+              ],
+            ))
       ],
     );
   }
 }
 
-
 class CustomListTile extends StatelessWidget {
-   CustomListTile({super.key, required this.trailingImage, required this.title,this.onTap});
-   final String trailingImage;
-   final String title;
+  CustomListTile(
+      {super.key,
+      required this.trailingImage,
+      required this.title,
+      this.onTap});
+  final String trailingImage;
+  final String title;
   void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -128,13 +152,12 @@ class CustomListTile extends StatelessWidget {
           height: 15.h,
           width: 15.w,
         ),
-        title:  Text(title,
+        title: Text(title,
             textAlign: TextAlign.right,
             style: const TextStyle(
               fontFamily: "Tajawal",
             )),
-        trailing:
-        Image.asset(trailingImage, height: 30, width: 30),
+        trailing: Image.asset(trailingImage, height: 30, width: 30),
       ),
     );
   }
