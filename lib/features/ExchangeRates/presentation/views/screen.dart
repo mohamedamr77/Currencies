@@ -2,7 +2,7 @@ import 'package:digitaltransactions/features/ExchangeRates/presentation/views/wi
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/color.dart';
-import '../../../drawer_widget/drawerBody.dart';
+import 'widgets/drawerBody.dart';
 
 class ExchangeRatesScreen extends StatelessWidget {
   const ExchangeRatesScreen({super.key});

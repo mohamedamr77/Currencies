@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-
 import '../../../../../../core/utils/image.dart';
 import '../../../../../../core/utils/text.dart';
 import '../../../../../ad_manager.dart';
@@ -17,9 +16,10 @@ class _ListVerticalBanksSellingBuyingState extends State<ListVerticalBanksSellin
 
   final List<BannerAd> bannerAds = [];
   bool isLoading = false;
+  int childCountList=11;
 
   void loadAds() {
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < childCountList~/5; i++) {
       BannerAd bannerAd = BannerAd(
         size: AdSize.banner,
         adUnitId: AdManager.bannerHome,
@@ -59,7 +59,7 @@ class _ListVerticalBanksSellingBuyingState extends State<ListVerticalBanksSellin
     return SliverList(
       delegate: SliverChildBuilderDelegate(
             (context, index) {
-          if (index % 6 == 5) {
+          if (index % 5 == 0&&index!=0) {
             // Insert an ad after every 5 items
             return Column(
               children: [
@@ -105,7 +105,7 @@ class _ListVerticalBanksSellingBuyingState extends State<ListVerticalBanksSellin
             );
           }
         },
-        childCount: 20, // Adjusted to show 10 items + 2 ads
+        childCount: childCountList, // Adjusted to show 10 items + 2 ads
       ),
     );
   }

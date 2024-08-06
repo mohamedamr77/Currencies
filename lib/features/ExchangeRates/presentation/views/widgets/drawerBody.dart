@@ -4,7 +4,7 @@ import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../Dashboard/presentation/model/list_drawer_item.dart';
+import '../../../../Dashboard/presentation/model/list_drawer_item.dart';
 import 'body_listview_drawar.dart';
 
 class DrawerBody extends StatelessWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/utils/routes.dart';
-import '../../core/utils/textstyle.dart';
-import '../Dashboard/presentation/model/list_drawer_item.dart';
+import '../../../../../core/utils/routes.dart';
+import '../../../../../core/utils/textstyle.dart';
+import '../../../../Dashboard/presentation/model/list_drawer_item.dart';
 
 class BodyListViewDrawer extends StatelessWidget {
   const BodyListViewDrawer({super.key, required this.index});
