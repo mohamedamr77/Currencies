@@ -14,25 +14,28 @@ class BodyListViewDrawer extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (drawerList[index].title == drawerList[0].title) {
-          GoRouter.of(context).pushReplacement(AppRouter.kExchangeRates);
+          //GoRouter.of(context).pushReplacement(AppRouter.kExchangeRates);
+          GoRouter.of(context).push(AppRouter.kCalculatorPrice);
         } else if (drawerList[index].title == drawerList[2].title) {
           //GoldPricesScreen
-          GoRouter.of(context).push(AppRouter.kGoldPrices);
+          // GoRouter.of(context).push(AppRouter.kGoldPrices);
+          GoRouter.of(context).push(AppRouter.kCalculatorGold);
         } else if (drawerList[index].title == drawerList[4].title) {
           // return const SliverPricesScreen();
-          GoRouter.of(context).push(AppRouter.kSliverPrices);
+          // GoRouter.of(context).push(AppRouter.kSliverPrices);
+          GoRouter.of(context).push(AppRouter.kEconomicNews);
         } else if (drawerList[index].title == drawerList[5].title) {
           //return const EconomicNewsScreen();
-          GoRouter.of(context).push(AppRouter.kEconomicNews);
-        } else if (drawerList[index].title == drawerList[6].title) {
-          // return const SettingScreen();
+          // GoRouter.of(context).push(AppRouter.kEconomicNews);
           GoRouter.of(context).push(AppRouter.kSetting);
-        } else if (drawerList[index].title == drawerList[3].title) {
+        }  else if (drawerList[index].title == drawerList[3].title) {
           // return const GoldCalculatorScreen();
-          GoRouter.of(context).push(AppRouter.kCalculatorGold);
+          // GoRouter.of(context).push(AppRouter.kCalculatorGold);
+          GoRouter.of(context).push(AppRouter.kSliverPrices);
         } else if (drawerList[index].title == drawerList[1].title) {
           // return const CalculatorPriceScreen();
-          GoRouter.of(context).push(AppRouter.kCalculatorPrice);
+         // GoRouter.of(context).push(AppRouter.kCalculatorPrice);
+          GoRouter.of(context).push(AppRouter.kGoldPrices);
         }
       },
       child: ListTile(
