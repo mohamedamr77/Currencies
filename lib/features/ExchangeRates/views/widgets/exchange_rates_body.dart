@@ -18,31 +18,44 @@ class ExchangeRatesBody extends StatefulWidget {
 }
 
 class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
-  BannerAd? bannerAd;
+
+  final List<BannerAd> bannerAds = [];
   bool isLoading = false;
 
-  void load() {
-    bannerAd = BannerAd(
-      size: AdSize.banner,
-      adUnitId: AdManager.bannerHome,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          setState(() {
-            isLoading = true;
-          });
-        },
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
-        },
-      ),
-      request: const AdRequest(),
-    )..load();
+  void loadAds() {
+    for (int i = 0; i < 2; i++) {
+      BannerAd bannerAd = BannerAd(
+        size: AdSize.banner,
+        adUnitId: AdManager.bannerHome,
+        listener: BannerAdListener(
+          onAdLoaded: (ad) {
+            setState(() {
+              isLoading = true;
+            });
+          },
+          onAdFailedToLoad: (ad, error) {
+            ad.dispose();
+          },
+        ),
+        request: const AdRequest(),
+      )..load();
+
+      bannerAds.add(bannerAd);
+    }
   }
 
   @override
   void initState() {
-    load();
+    loadAds();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    for (BannerAd bannerAd in bannerAds) {
+      bannerAd.dispose();
+    }
+    super.dispose();
   }
 
   @override
@@ -78,8 +91,7 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
                     height: MediaQuery.sizeOf(context).height * 0.21,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) =>
-                      const ItemExchangeRatesListHorizontal(
+                      itemBuilder: (context, index) => const ItemExchangeRatesListHorizontal(
                         imageCountry: ImageApp.americaImage,
                         imageBank: ImageApp.americaImage,
                         countryCurrency: TextApp.dollarText,
@@ -87,8 +99,7 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
                         price: 48.8,
                         nameBank: TextApp.aboZabyText,
                       ),
-                      separatorBuilder: (context, index) =>
-                      const SizedBox(width: 10),
+                      separatorBuilder: (context, index) => const SizedBox(width: 10),
                       itemCount: 10,
                     ),
                   ),
@@ -114,16 +125,17 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
               // Calculate the actual item index
               int actualIndex = index - (index ~/ 6);
 
-              if (index % 5 == 0&&index!=0) {
+              if (index % 6 == 5) {
                 // Insert an ad after every 5 items
                 return Column(
                   children: [
-                    if (isLoading)
+                    if (isLoading && index ~/ 6 < bannerAds.length)
                       Container(
                         alignment: Alignment.center,
-                        child: AdWidget(ad: bannerAd!),
-                        width: bannerAd!.size.width.toDouble(),
-                        height: bannerAd!.size.height.toDouble(),
+                        //you must every ad contain new bannerads
+                        child: AdWidget(ad: bannerAds[index ~/ 6]),
+                        width: bannerAds[index ~/ 6].size.width.toDouble(),
+                        height: bannerAds[index ~/ 6].size.height.toDouble(),
                       ),
                     const SizedBox(height: 10),
                     ItemListviewVerticalDashboard(
@@ -159,7 +171,7 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
                 );
               }
             },
-            childCount: 12, // Adjusted to show 10 items + 2 ads
+            childCount: 20, // Adjusted to show 10 items + 2 ads
           ),
         ),
       ],
