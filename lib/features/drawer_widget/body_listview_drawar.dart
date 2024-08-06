@@ -1,13 +1,13 @@
-import 'package:digitaltransactions/features/ExchangeRates/views/screen.dart';
-import 'package:digitaltransactions/features/economicnews/views/screen.dart';
-import 'package:digitaltransactions/features/goldprices/views/screen.dart';
-import 'package:digitaltransactions/features/setting/views/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/textstyle.dart';
-import '../Dashboard/model/list_drawer_item.dart';
-import '../calculatorGold/screen.dart';
-import '../calculatorprice/screen.dart';
+import '../Dashboard/presentation/model/list_drawer_item.dart';
+import '../ExchangeRates/presentation/views/screen.dart';
+import '../calculatorGold/presentation/views/screen.dart';
+import '../calculatorprice/presentation/views/screen.dart';
+import '../economicnews/presentation/views/screen.dart';
+import '../goldprices/presentation/views/screen.dart';
+import '../setting/presentation/views/screen.dart';
 import '../sliverPrices/screen.dart';
 
 class BodyListViewDrawer extends StatelessWidget {

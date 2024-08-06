@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/features/sliverPrices/views/widgets/sliver_prices_body.dart';
+import 'package:digitaltransactions/features/sliverPrices/presentation/views/widgets/sliver_prices_body.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/color.dart';

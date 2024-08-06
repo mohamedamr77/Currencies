@@ -1,9 +1,9 @@
 import 'package:digitaltransactions/core/image.dart';
 import 'package:digitaltransactions/core/text.dart';
 import 'package:digitaltransactions/core/textstyle.dart';
-import 'package:digitaltransactions/features/Dashboard/model/list_drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../Dashboard/presentation/model/list_drawer_item.dart';
 import 'body_listview_drawar.dart';
 
 class DrawerBody extends StatelessWidget {
@@ -11,7 +11,6 @@ class DrawerBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
         Container(
