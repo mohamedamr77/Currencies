@@ -4,8 +4,6 @@ import 'package:digitaltransactions/core/utils/text.dart';
 import 'package:digitaltransactions/core/shared_widget/description_listview_horizontal.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/color.dart';
-import '../../../../../core/utils/textstyle.dart';
 import 'economic_news_tabs.dart';
 
 class EconomicNewsBody extends StatefulWidget {
@@ -37,7 +35,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                   child: SafeArea(
                     child: Column(
                       children: [
-                        CustomAppbar(text: TextApp.economicNewsText, action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,))),
+                        CustomAppbar(text: TextApp.economicNewsText, action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,))),
                         const DescriptionListviewHorizontal(
                             text: "اخر الأخبار"),
                       ],

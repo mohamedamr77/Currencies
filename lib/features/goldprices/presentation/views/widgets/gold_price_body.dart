@@ -34,8 +34,8 @@ class GoldPriceBody extends StatelessWidget {
                     children: [
                       CustomAppbar(text: "أاسعار الذهب",
 
-                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
-                      DescriptionListviewHorizontal(
+                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
+                      const DescriptionListviewHorizontal(
                           text: 'اسعار الأونصة عالميا'),
                     ],
                   ),

@@ -2,7 +2,6 @@ import 'package:digitaltransactions/features/goldprices/presentation/views/widge
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/color.dart';
-import '../../../drawer_widget/drawerBody.dart';
 
 class GoldPricesScreen extends StatelessWidget {
   const GoldPricesScreen({super.key});

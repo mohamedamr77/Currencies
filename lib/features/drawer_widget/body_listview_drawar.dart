@@ -60,7 +60,7 @@ class BodyListViewDrawer extends StatelessWidget {
               fontSize: 16.sp,
               fontFamily: "Tajawal",
               fontWeight: FontWeight.w400,
-              color: Color(0xff200e32),
+              color: const Color(0xff200e32),
             ),
           ),
         ),

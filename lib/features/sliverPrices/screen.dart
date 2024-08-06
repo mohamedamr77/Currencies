@@ -2,7 +2,6 @@ import 'package:digitaltransactions/features/sliverPrices/presentation/views/wid
 import 'package:flutter/material.dart';
 
 import '../../core/utils/color.dart';
-import '../drawer_widget/drawerBody.dart';
 
 class SliverPricesScreen extends StatelessWidget {
   const SliverPricesScreen({super.key});

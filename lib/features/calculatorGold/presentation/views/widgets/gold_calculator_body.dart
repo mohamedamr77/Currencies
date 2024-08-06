@@ -50,8 +50,8 @@ class _GoldCalculatorBodyState extends State<GoldCalculatorBody> {
           child:  SafeArea(
             child: Column(
               children: [
-                CustomAppbar(text: "حاسبة الذهب", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
-                DescriptionListviewHorizontal(text: "حدد العيار المراد تحويله"),
+                CustomAppbar(text: "حاسبة الذهب", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
+                const DescriptionListviewHorizontal(text: "حدد العيار المراد تحويله"),
               ],
             ),
           ),

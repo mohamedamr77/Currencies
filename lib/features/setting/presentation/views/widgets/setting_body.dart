@@ -25,14 +25,14 @@ class SettingBody extends StatelessWidget {
               ),
               child:  SafeArea(
                 child: Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      CustomAppbar(text: "الاعدادت", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
-                      SizedBox(
+                      CustomAppbar(text: "الاعدادت", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "اهلا بيك في اسم التطبيق",
                         style: TextStyle(
                             fontFamily: "Tajawal", color: Colors.white),

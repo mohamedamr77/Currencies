@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../utils/color.dart';
-import '../utils/image.dart';
 
 class CustomAppbar extends StatelessWidget {
    const CustomAppbar({super.key, required this.text, required this.action,});

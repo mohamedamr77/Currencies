@@ -34,9 +34,9 @@ class DashboardBody extends StatelessWidget {
                     children: [
                       CustomAppbar(
                         text: TextApp.titleCenterDashboard,
-                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),
+                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),
                       ),
-                      DescriptionListviewHorizontal(
+                      const DescriptionListviewHorizontal(
                         text: 'اسعار الأونصة عالميا',
                       ),
                     ],

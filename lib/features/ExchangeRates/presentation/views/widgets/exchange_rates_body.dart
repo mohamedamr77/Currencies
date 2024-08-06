@@ -86,7 +86,7 @@ class _ExchangeRatesBodyState extends State<ExchangeRatesBody> {
                           child: Image(image: AssetImage(ImageApp.actionDashboardImage)),
                         ),
                       ),),
-                      DescriptionListviewHorizontal(text: 'اعلي الأسعار تداول'),
+                      const DescriptionListviewHorizontal(text: 'اعلي الأسعار تداول'),
                     ],
                   ),
                 ),
