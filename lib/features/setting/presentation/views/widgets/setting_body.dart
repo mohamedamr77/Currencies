@@ -1,5 +1,6 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/image.dart';
 import 'dialog.dart';
 
@@ -22,12 +23,12 @@ class SettingBody extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: const SafeArea(
+              child:  SafeArea(
                 child: Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      CustomAppbar(text: "الاعدادت"),
+                      CustomAppbar(text: "الاعدادت", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
                       SizedBox(
                         height: 15,
                       ),

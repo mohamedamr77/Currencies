@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/custom_appbar.dart';
@@ -29,9 +30,11 @@ class GoldPriceBody extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  child: const Column(
+                  child:  Column(
                     children: [
-                      CustomAppbar(text: "أاسعار الذهب"),
+                      CustomAppbar(text: "أاسعار الذهب",
+
+                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
                       DescriptionListviewHorizontal(
                           text: 'اسعار الأونصة عالميا'),
                     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../../core/shared_widget/description_listview_horizontal.dart';
@@ -46,10 +47,10 @@ class _GoldCalculatorBodyState extends State<GoldCalculatorBody> {
               fit: BoxFit.fill,
             ),
           ),
-          child: const SafeArea(
+          child:  SafeArea(
             child: Column(
               children: [
-                CustomAppbar(text: "حاسبة الذهب"),
+                CustomAppbar(text: "حاسبة الذهب", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),),
                 DescriptionListviewHorizontal(text: "حدد العيار المراد تحويله"),
               ],
             ),

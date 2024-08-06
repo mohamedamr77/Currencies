@@ -1,7 +1,9 @@
+import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:digitaltransactions/core/utils/image.dart';
 import 'package:digitaltransactions/core/utils/text.dart';
 import 'package:digitaltransactions/core/shared_widget/description_listview_horizontal.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/textstyle.dart';
 import 'economic_news_tabs.dart';
@@ -35,34 +37,7 @@ class _EconomicNewsBodyState extends State<EconomicNewsBody> {
                   child: SafeArea(
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            const Expanded(
-                              child: Text(TextApp.economicNewsText,
-                                  textAlign: TextAlign.center,
-                                  style: CustomTextStyle(
-                                    color: ColorApp.whiteColor,
-                                    fontFamily: "Tajawal",
-                                    fontSize: 16,
-                                    fontWeight: null,
-                                    fontStyle: null,
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Scaffold.of(context).openEndDrawer();
-                              },
-                              child: const SizedBox(
-                                height: 60,
-                                width: 60,
-                                child: Image(
-                                  image:
-                                      AssetImage(ImageApp.actionDashboardImage),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        CustomAppbar(text: TextApp.economicNewsText, action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,))),
                         const DescriptionListviewHorizontal(
                             text: "اخر الأخبار"),
                       ],

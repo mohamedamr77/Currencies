@@ -4,7 +4,8 @@ import '../utils/color.dart';
 import '../utils/image.dart';
 
 class CustomAppbar extends StatelessWidget {
-   const CustomAppbar({super.key, required this.text});
+   const CustomAppbar({super.key, required this.text, required this.action,});
+   final Widget action;
     final String  text;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,17 @@ class CustomAppbar extends StatelessWidget {
                   )
               ),
             ),
-            GestureDetector(
+            action,
+          ],
+        ),
+    ),
+    );
+  }
+}
+// Image(image: AssetImage(ImageApp.actionDashboardImage),),
+
+/*
+GestureDetector(
               onTap: (){
                 Scaffold.of(context).openEndDrawer();
               },
@@ -36,10 +47,4 @@ class CustomAppbar extends StatelessWidget {
                 child: Image(image: AssetImage(ImageApp.actionDashboardImage)),
             ),
             ),
-          ],
-        ),
-    ),
-    );
-  }
-}
-// Image(image: AssetImage(ImageApp.actionDashboardImage),),
+ */

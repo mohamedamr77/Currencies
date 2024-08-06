@@ -11,9 +11,7 @@ class GoldPricesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: ColorApp.backgroundColor,
-      endDrawer: Drawer(
-        child: DrawerBody(),
-      ),
+
       body: GoldPriceBody(),
     );
   }

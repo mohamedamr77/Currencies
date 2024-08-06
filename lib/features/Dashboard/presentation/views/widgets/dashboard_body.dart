@@ -1,6 +1,7 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
 import 'package:digitaltransactions/core/shared_widget/three_Text_bank_buying_selling.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/description_listview_horizontal.dart';
@@ -29,10 +30,11 @@ class DashboardBody extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  child: const Column(
+                  child:  Column(
                     children: [
                       CustomAppbar(
                         text: TextApp.titleCenterDashboard,
+                        action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios,color: Colors.white,)),
                       ),
                       DescriptionListviewHorizontal(
                         text: 'اسعار الأونصة عالميا',

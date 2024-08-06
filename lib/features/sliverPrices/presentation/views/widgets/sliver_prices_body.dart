@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/custom_appbar.dart';
@@ -29,9 +30,9 @@ class SliverPricesBody extends StatelessWidget {
                       fit: BoxFit.fill,
                     ),
                   ),
-                  child: const Column(
+                  child:  Column(
                     children: [
-                      CustomAppbar(text: "اسعار الفضة"),
+                      CustomAppbar(text: "اسعار الفضة", action: IconButton(onPressed: (){GoRouter.of(context).pop();}, icon: Icon(Icons.arrow_forward_ios)),),
                       DescriptionListviewHorizontal(
                           text: 'اسعار الأونصة عالميا'),
                     ],

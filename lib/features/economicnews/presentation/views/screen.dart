@@ -10,9 +10,7 @@ class EconomicNewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: EconomicNewsBody(),
-      endDrawer: Drawer(
-        child: DrawerBody(),
-      ),
+
     );
   }
 }

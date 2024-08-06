@@ -16,9 +16,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: ColorApp.backgroundColor,
-      endDrawer: Drawer(
-        child: DrawerBody(),
-      ),
+
       body: DashboardBody(),
     );
   }

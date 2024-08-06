@@ -9,9 +9,6 @@ class GoldCalculatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      endDrawer: Drawer(
-        child: DrawerBody(),
-      ),
       backgroundColor: Color(0xffF5F6FA),
       body: GoldCalculatorBody(),
     );
