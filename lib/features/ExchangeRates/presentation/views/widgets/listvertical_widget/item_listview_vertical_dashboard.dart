@@ -1,4 +1,6 @@
+import 'package:digitaltransactions/core/shared_widget/limited_numbert_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../core/utils/color.dart';
 import '../../../../../../core/shared_widget/country_currency.dart';
 import '../../../../../../core/utils/textstyle.dart';
@@ -7,13 +9,13 @@ import '../../../../../DetialsScreen/screen.dart';
 class ItemListviewVerticalDashboard extends StatelessWidget {
   const ItemListviewVerticalDashboard(
       {super.key,
-      @required this.widget,
+      required this.widget,
       required this.sellingPrice,
-      required this.buyingPrice,
+      @required this.buyingPrice,
       required this.nameWidget});
-  final Widget? widget;
-  final double sellingPrice;
-  final double buyingPrice;
+  final Widget widget;
+  final String sellingPrice;
+  final String? buyingPrice;
   final String nameWidget;
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         child: Row(
           textDirection: TextDirection.rtl,
           children: [
-
+            widget,
             const SizedBox(width: 10),
             CountryCurrency(
               nameWidget,
@@ -48,24 +50,26 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 90,
-                  child: Text(
-                    "$sellingPrice", // Replace with the actual buying price
-                    style: const CustomTextStyle(
-                      color: ColorApp.deebBlueTextColor,
-                      fontFamily: "Tajawal",
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-
+               if(buyingPrice!=null)
                 Text(
                   "$buyingPrice", // Replace with the actual selling price
                   style: const CustomTextStyle(
                     color: ColorApp.deebBlueTextColor,
                     fontFamily: "Tajawal",
                     fontSize: 16,
+                  ),
+                ),
+                Padding(
+                  padding:buyingPrice!=null? EdgeInsets.zero: EdgeInsets.only(left: 55),
+                  child: SizedBox(
+                    width: 90,
+                    child: LimitedNumberText(
+                      number: double.parse(sellingPrice),
+                      style: const CustomTextStyle(
+                        color: ColorApp.deebBlueTextColor,
+                        fontFamily: "Tajawal",
+                        fontSize: 16,
+                      ),)
                   ),
                 ),
               ],
@@ -76,3 +80,10 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
     );
   }
 }
+/*
+style: const CustomTextStyle(
+                        color: ColorApp.deebBlueTextColor,
+                        fontFamily: "Tajawal",
+                        fontSize: 16,
+                      ),
+ */

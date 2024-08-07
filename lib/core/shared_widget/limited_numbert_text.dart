@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 class LimitedNumberText extends StatelessWidget {
   final double number;
-
-  const LimitedNumberText({super.key, required this.number});
+ final TextStyle style;
+  const LimitedNumberText({super.key, required this.number, required this.style});
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +29,7 @@ class LimitedNumberText extends StatelessWidget {
     return Text(
       finalFormattedNumber,
       maxLines: 1,
-      style: const TextStyle(
-        fontSize: 20,
-        color: Color(0xff14172c),
-        fontWeight: FontWeight.w800,
-        // fontFamily: "Tajawal",
-      ),
+      style: style,
     );
   }
 }

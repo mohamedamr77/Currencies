@@ -76,7 +76,12 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              child: LimitedNumberText(number: price),
+              child: LimitedNumberText(number: price, style: const TextStyle(
+                fontSize: 20,
+                color: Color(0xff14172c),
+                fontWeight: FontWeight.w800,
+                // fontFamily: "Tajawal",
+              ),),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,

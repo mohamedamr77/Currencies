@@ -92,8 +92,8 @@ class DashboardBody extends StatelessWidget {
                       width: double.infinity,
                       height: double.infinity,
                     ),
-                    sellingPrice: 48.36,
-                    buyingPrice: 48.28,
+                    sellingPrice: "48.36",
+                    buyingPrice: "48.28",
                     nameWidget: TextApp.dollarText,
                   ),
               separatorBuilder: (context, index) {

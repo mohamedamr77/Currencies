@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:digitaltransactions/features/ExchangeRates/presentation/view_model/currency_price_model.dart';
 import 'package:digitaltransactions/services/get_currency_prices.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../../../core/utils/image.dart';
@@ -96,9 +97,11 @@ class _ListVerticalBanksSellingBuyingState extends State<ListVerticalBanksSellin
                           ),
                         const SizedBox(height: 10),
                          ItemListviewVerticalDashboard(
-                          sellingPrice: double.parse(bank.sellingPrice),
-                          buyingPrice: double.parse(bank.purchasingPrice),
-                          nameWidget: bank.name,
+                           widget: SvgPicture.network(bank.image,width: 40,height: 40,),
+                          // sellingPrice: double.parse(bank.sellingPrice),
+                          // buyingPrice: double.parse(bank.purchasingPrice),
+                           sellingPrice: bank.priceInEgp,
+                           nameWidget: bank.name,
                         ),
                         const SizedBox(height: 10),
                       ],
@@ -107,8 +110,8 @@ class _ListVerticalBanksSellingBuyingState extends State<ListVerticalBanksSellin
                     return  Column(
                       children: [
                         ItemListviewVerticalDashboard(
-                          sellingPrice: double.parse(bank.sellingPrice),
-                          buyingPrice: double.parse(bank.purchasingPrice),
+                          widget: SvgPicture.network(bank.image,width: 40,height: 40,),
+                           sellingPrice: bank.priceInEgp,
                           nameWidget: bank.name,
                         ),
                         SizedBox(height: 10),

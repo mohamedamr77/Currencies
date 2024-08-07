@@ -1,45 +1,38 @@
-import 'dart:convert';
-// Define the CurrencyPrice model class
+// Define the Price class
 class CurrencyPriceModel {
   final int id;
   final String name;
-  final String? icon;
-  final String purchasingPrice;
-  final String sellingPrice;
+  final String priceInEgp;
+  final String symbol;
+  final String image;
 
-  CurrencyPriceModel({
+  CurrencyPriceModel( {
     required this.id,
     required this.name,
-    required this.icon,
-    required this.purchasingPrice,
-    required this.sellingPrice,
+    required this.priceInEgp,
+    required this.symbol,
+    required this.image,
   });
 
-  // Factory constructor to create a CurrencyPrice instance from JSON
+  // Factory constructor to create an instance from JSON
   factory CurrencyPriceModel.fromJson(Map<String, dynamic> json) {
     return CurrencyPriceModel(
       id: json['id'],
       name: json['name'],
-      icon: json['icon'],
-      purchasingPrice: json['purchasing_price'],
-      sellingPrice: json['selling_price'],
+      priceInEgp: json['price_in_egp'],
+      symbol: json['symbol'],
+      image: json['image'],
     );
   }
 
-  // Method to convert a CurrencyPrice instance to JSON
+  // Convert instance to JSON
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'name': name,
-      'icon': icon,
-      'purchasing_price': purchasingPrice,
-      'selling_price': sellingPrice,
+      'price_in_egp': priceInEgp,
+      'symbol': symbol,
+      'image':image,
     };
   }
-
-  @override
-  String toString() {
-    return 'CurrencyPrice(id: $id, name: $name, icon: $icon, purchasingPrice: $purchasingPrice, sellingPrice: $sellingPrice)';
-  }
 }
-
