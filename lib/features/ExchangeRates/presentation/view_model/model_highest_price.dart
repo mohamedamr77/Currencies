@@ -1,8 +1,8 @@
 import 'dart:convert';
 class BankModel {
-  final String BankName;
-  final String image;
-  final double highestPurchasePrice;
+  final String? BankName;
+  final String? image;
+  final String highestPurchasePrice;
   final Currency currency;
 
   BankModel({
@@ -15,7 +15,7 @@ class BankModel {
   // Factory constructor to create a Bank instance from JSON
   factory BankModel.fromJson(Map<String, dynamic> json) {
     return BankModel(
-      BankName: json['Bank_name'],
+      BankName: json['bank_name'],
       image: json['image'],
       highestPurchasePrice: json['highest_purchase_price'],
       currency: Currency.fromJson(json['currency']),
@@ -43,7 +43,7 @@ class Currency {
   final int id;
   final String name;
   final String image;
-  final double priceInEgp;
+  final String priceInEgp;
   final String symbol;
 
   Currency({

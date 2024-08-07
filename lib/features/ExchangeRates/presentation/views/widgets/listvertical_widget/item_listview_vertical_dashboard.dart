@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../../core/utils/color.dart';
 import '../../../../../../core/shared_widget/country_currency.dart';
 import '../../../../../../core/utils/textstyle.dart';
@@ -8,11 +7,11 @@ import '../../../../../DetialsScreen/screen.dart';
 class ItemListviewVerticalDashboard extends StatelessWidget {
   const ItemListviewVerticalDashboard(
       {super.key,
-      required this.widget,
+      @required this.widget,
       required this.sellingPrice,
       required this.buyingPrice,
       required this.nameWidget});
-  final Widget widget;
+  final Widget? widget;
   final double sellingPrice;
   final double buyingPrice;
   final String nameWidget;
@@ -36,9 +35,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         child: Row(
           textDirection: TextDirection.rtl,
           children: [
-            CircleAvatar(
-              child: widget,
-            ),
+
             const SizedBox(width: 10),
             CountryCurrency(
               nameWidget,
@@ -51,15 +48,18 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "$sellingPrice", // Replace with the actual buying price
-                  style: const CustomTextStyle(
-                    color: ColorApp.deebBlueTextColor,
-                    fontFamily: "Tajawal",
-                    fontSize: 16,
+                SizedBox(
+                  width: 90,
+                  child: Text(
+                    "$sellingPrice", // Replace with the actual buying price
+                    style: const CustomTextStyle(
+                      color: ColorApp.deebBlueTextColor,
+                      fontFamily: "Tajawal",
+                      fontSize: 16,
+                    ),
                   ),
                 ),
-                const SizedBox(width: 62),
+
                 Text(
                   "$buyingPrice", // Replace with the actual selling price
                   style: const CustomTextStyle(

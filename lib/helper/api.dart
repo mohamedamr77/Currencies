@@ -8,6 +8,7 @@ class Api {
     if (token != null) {
       headers.addAll({
         "Authorization": "Bearer $token",
+        "lang":"ar",
       });
     }
 
@@ -32,6 +33,7 @@ class Api {
     if (token != null) {
       headers.addAll({
         "Authorization": "Bearer $token",
+        "lang":"ar",
       });
     }
 

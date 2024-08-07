@@ -1,5 +1,6 @@
 import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../core/utils/color.dart';
 import '../../../../../../core/shared_widget/abbreviation_country.dart';
@@ -53,15 +54,12 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               textDirection: TextDirection.rtl,
               children: [
-                CircleAvatar(
-                  child: Image(
-                    //ImageApp.americaImage
-                    image: AssetImage(imageCountry),
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: double.infinity,
+                SvgPicture.network(imageCountry,
+                    width: 30,
+                    height: 30,
+                    
                   ),
-                ),
+
                 SizedBox(width: MediaQuery.sizeOf(context).width * 0.035),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -85,9 +83,10 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
               textDirection: TextDirection.rtl,
               children: [
                 CircleAvatar(
+                  backgroundColor: Colors.white,
                   radius: 14,
                   child: Image(
-                    image: AssetImage(imageBank),
+                    image: NetworkImage(imageBank),
                     fit: BoxFit.cover,
                     width: double.infinity,
                     height: double.infinity,
