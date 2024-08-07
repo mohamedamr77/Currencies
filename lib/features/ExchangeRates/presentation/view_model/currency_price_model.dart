@@ -6,7 +6,7 @@ class CurrencyPriceModel {
   final String symbol;
   final String image;
 
-  CurrencyPriceModel( {
+  CurrencyPriceModel({
     required this.id,
     required this.name,
     required this.priceInEgp,
@@ -32,7 +32,7 @@ class CurrencyPriceModel {
       'name': name,
       'price_in_egp': priceInEgp,
       'symbol': symbol,
-      'image':image,
+      'image': image,
     };
   }
 }

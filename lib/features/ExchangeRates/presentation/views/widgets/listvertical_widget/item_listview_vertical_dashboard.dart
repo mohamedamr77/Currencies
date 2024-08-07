@@ -1,6 +1,5 @@
 import 'package:digitaltransactions/core/shared_widget/limited_numbert_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../core/utils/color.dart';
 import '../../../../../../core/shared_widget/country_currency.dart';
 import '../../../../../../core/utils/textstyle.dart';
@@ -50,27 +49,29 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               if(buyingPrice!=null)
-                Text(
-                  "$buyingPrice", // Replace with the actual selling price
-                  style: const CustomTextStyle(
-                    color: ColorApp.deebBlueTextColor,
-                    fontFamily: "Tajawal",
-                    fontSize: 16,
+                if (buyingPrice != null)
+                  Text(
+                    "$buyingPrice", // Replace with the actual selling price
+                    style: const CustomTextStyle(
+                      color: ColorApp.deebBlueTextColor,
+                      fontFamily: "Tajawal",
+                      fontSize: 16,
+                    ),
                   ),
-                ),
                 Padding(
-                  padding:buyingPrice!=null? EdgeInsets.zero: EdgeInsets.only(left: 55),
+                  padding: buyingPrice != null
+                      ? EdgeInsets.zero
+                      : const EdgeInsets.only(left: 55),
                   child: SizedBox(
-                    width: 90,
-                    child: LimitedNumberText(
-                      number: double.parse(sellingPrice),
-                      style: const CustomTextStyle(
-                        color: ColorApp.deebBlueTextColor,
-                        fontFamily: "Tajawal",
-                        fontSize: 16,
-                      ),)
-                  ),
+                      width: 90,
+                      child: LimitedNumberText(
+                        number: double.parse(sellingPrice),
+                        style: const CustomTextStyle(
+                          color: ColorApp.deebBlueTextColor,
+                          fontFamily: "Tajawal",
+                          fontSize: 16,
+                        ),
+                      )),
                 ),
               ],
             ),

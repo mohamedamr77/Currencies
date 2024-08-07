@@ -1,5 +1,4 @@
 import 'package:digitaltransactions/services/get_currency_prices.dart';
-import 'package:digitaltransactions/services/get_highest_purchase_price_for_all_currencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';

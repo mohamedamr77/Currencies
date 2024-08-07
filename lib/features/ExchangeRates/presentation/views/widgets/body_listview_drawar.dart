@@ -28,13 +28,13 @@ class BodyListViewDrawer extends StatelessWidget {
           //return const EconomicNewsScreen();
           // GoRouter.of(context).push(AppRouter.kEconomicNews);
           GoRouter.of(context).push(AppRouter.kSetting);
-        }  else if (drawerList[index].title == drawerList[3].title) {
+        } else if (drawerList[index].title == drawerList[3].title) {
           // return const GoldCalculatorScreen();
           // GoRouter.of(context).push(AppRouter.kCalculatorGold);
           GoRouter.of(context).push(AppRouter.kSliverPrices);
         } else if (drawerList[index].title == drawerList[1].title) {
           // return const CalculatorPriceScreen();
-         // GoRouter.of(context).push(AppRouter.kCalculatorPrice);
+          // GoRouter.of(context).push(AppRouter.kCalculatorPrice);
           GoRouter.of(context).push(AppRouter.kGoldPrices);
         }
       },

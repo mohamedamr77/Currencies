@@ -54,12 +54,11 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               textDirection: TextDirection.rtl,
               children: [
-                SvgPicture.network(imageCountry,
-                    width: 30,
-                    height: 30,
-                    
-                  ),
-
+                SvgPicture.network(
+                  imageCountry,
+                  width: 30,
+                  height: 30,
+                ),
                 SizedBox(width: MediaQuery.sizeOf(context).width * 0.035),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -76,12 +75,15 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              child: LimitedNumberText(number: price, style: const TextStyle(
-                fontSize: 20,
-                color: Color(0xff14172c),
-                fontWeight: FontWeight.w800,
-                // fontFamily: "Tajawal",
-              ),),
+              child: LimitedNumberText(
+                number: price,
+                style: const TextStyle(
+                  fontSize: 20,
+                  color: Color(0xff14172c),
+                  fontWeight: FontWeight.w800,
+                  // fontFamily: "Tajawal",
+                ),
+              ),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,

@@ -9,7 +9,8 @@ class ListHorizontalHigstPrices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<BankModel>>(
-      future: GetHighestPurchasePriceForAllCurrencies().get_highest_purchase_price_for_all_currencies(),
+      future: GetHighestPurchasePriceForAllCurrencies()
+          .get_highest_purchase_price_for_all_currencies(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
@@ -26,7 +27,8 @@ class ListHorizontalHigstPrices extends StatelessWidget {
               itemBuilder: (context, index) {
                 var bank = snapshot.data![index];
                 return ItemExchangeRatesListHorizontal(
-                  imageCountry: bank.currency.image, // Update with actual country image logic
+                  imageCountry: bank
+                      .currency.image, // Update with actual country image logic
                   imageBank: bank.image ?? "", // Placeholder image if null
                   countryCurrency: bank.currency.name,
                   abbreviationCountry: bank.currency.symbol,
