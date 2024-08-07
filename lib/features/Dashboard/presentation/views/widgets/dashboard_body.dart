@@ -1,8 +1,8 @@
 import 'package:digitaltransactions/core/shared_widget/custom_appbar.dart';
-import 'package:digitaltransactions/core/shared_widget/three_Text_bank_buying_selling.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
 import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/description_listview_horizontal.dart';
 import '../../../../../core/utils/text.dart';

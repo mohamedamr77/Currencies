@@ -1,7 +1,7 @@
 import 'package:digitaltransactions/core/shared_widget/custom_banner_prices_gold_sliver_currency.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
+import '../../../../../core/shared_widget/three_Text_Bank_buying_selling.dart';
 import 'ListVerticalSliverSellingPricing.dart';
 import 'list_horizontal_sliver_highest.dart';
 

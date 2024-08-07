@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/core/shared_widget/three_Text_bank_buying_selling.dart';
+import 'package:digitaltransactions/core/shared_widget/three_Text_Bank_buying_selling.dart';
 import 'package:digitaltransactions/features/DetialsScreen/presentation/views/widgets/transactions_buying_selling.dart';
 import 'package:flutter/material.dart';
 import 'CurrencyInfoCard_image_nameCurrency.dart';

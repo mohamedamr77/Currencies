@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/shared_widget/custom_banner_prices_gold_sliver_currency.dart';
 import '../../../../../core/utils/image.dart';
-import '../../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
-import 'listvertical_widget/list_vertical_banks_selling_buying.dart';
+import '../../../../../core/shared_widget/three_Text_Bank_buying_selling.dart';
+import 'listvertical_widget/list_vertical_Banks_selling_buying.dart';
 import 'listview_horizontal_widget/list_horizontal_higest_prices.dart';
 
 class ExchangeRatesBody extends StatelessWidget {

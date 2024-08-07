@@ -18,7 +18,7 @@ class Api {
 
     if (response.statusCode == 200) {
       if (kDebugMode) {
-        print(response.body);
+        print(jsonDecode(response.body));
       }
       return jsonDecode(response.body);
     } else {

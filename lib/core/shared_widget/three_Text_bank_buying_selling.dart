@@ -14,7 +14,7 @@ class ThreeTextDescriptionListViewVertical extends StatelessWidget {
       child: Row(
         textDirection: TextDirection.rtl,
         children: [
-          //  TextApp.bankText,
+          //  TextApp.BankText,
           CustomText(text: text1,),
           const Spacer(flex: 2),
           // TextApp.sellingText,

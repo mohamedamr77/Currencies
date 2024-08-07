@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/color.dart';
-import '../../../../../core/shared_widget/three_Text_bank_buying_selling.dart';
+import '../../../../../core/shared_widget/three_Text_Bank_buying_selling.dart';
 import 'detials_body.dart';
 
 class TransactionsBuyingSelling extends StatelessWidget {
