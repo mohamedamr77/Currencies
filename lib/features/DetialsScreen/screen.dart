@@ -8,11 +8,12 @@ class DetailsScreen extends StatelessWidget {
     required this.id,
     required this.name,
     required this.symbol,
+    required this.image,
   });
   final int id;
   final String name;
   final String symbol;
-
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,7 @@ class DetailsScreen extends StatelessWidget {
         sellingPrice: '',
         buyingPrice: '',
         name: name,
-        symbol: symbol,
+        symbol: symbol, image: image,
       ),
     );
   }

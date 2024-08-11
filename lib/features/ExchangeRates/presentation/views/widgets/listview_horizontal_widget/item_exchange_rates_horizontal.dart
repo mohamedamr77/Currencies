@@ -37,7 +37,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
               builder: (context) => DetailsScreen(
                 id: id,
                 name: countryCurrency,
-                symbol: symbol,
+                symbol: symbol, image: imageCountry,
               ),
             ));
       },

@@ -13,12 +13,13 @@ class DetialsScreenBody extends StatelessWidget {
       required this.sellingPrice,
       required this.buyingPrice,
       required this.name,
-      required this.symbol});
+      required this.symbol, required this.image});
   final int id;
   final String sellingPrice;
   final String buyingPrice;
   final String name;
   final String symbol;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -28,10 +29,10 @@ class DetialsScreenBody extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * 0.38,
             child: Stack(
               children: [
-                 DetailsAppbar(name: name,),
+                DetailsAppbar(name: name,),
                 CurrencyInfoCardImageNameCurrency(
                   name: name,
-                  symbol: symbol,
+                  symbol: symbol, image: image,
                 ),
                 // ButtonCalculator(),
               ],

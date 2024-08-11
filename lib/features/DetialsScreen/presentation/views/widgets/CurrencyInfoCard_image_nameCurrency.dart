@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/image.dart';
@@ -6,9 +7,10 @@ import '../../../../../core/shared_widget/abbreviation_country.dart';
 
 class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
   const CurrencyInfoCardImageNameCurrency(
-      {super.key, required this.name, required this.symbol});
+      {super.key, required this.name, required this.symbol, required this.image});
   final String name;
   final String symbol;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -17,20 +19,23 @@ class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
         left: 0,
         child: Column(
           children: [
-            const Stack(alignment: Alignment.center, children: [
+             Stack(alignment: Alignment.center, children: [
               CircleAvatar(
                 radius: 40,
                 backgroundColor: ColorApp.backgroundColor,
               ),
-              CircleAvatar(
-                radius: 32,
-                child: Image(
-                  image: AssetImage(ImageApp.americaImage),
-                  fit: BoxFit.contain,
-                  height: double.infinity,
-                  width: double.infinity,
+              if (image.contains(".svg"))
+                SvgPicture.network(
+                  image,
+                  width: 65,
+                  height: 65,
                 ),
-              ),
+              if (image.contains(".png") || image.contains(".jpg"))
+                Image.network(
+                  image,
+                  width: 65,
+                  height: 65,
+                ),
             ]),
             const SizedBox(
               height: 10,
