@@ -64,7 +64,7 @@ class DashboardBody extends StatelessWidget {
                         countryCurrency: TextApp.dollarText,
                         abbreviationCountry: "USD",
                         price: 48.8,
-                        nameBank: TextApp.aboZabyText,
+                        nameBank: TextApp.aboZabyText, id: 20,
                       ),
                       separatorBuilder: (context, index) => const SizedBox(
                         width: 10,
@@ -95,6 +95,7 @@ class DashboardBody extends StatelessWidget {
                     sellingPrice: "48.36",
                     buyingPrice: "48.28",
                     nameWidget: TextApp.dollarText,
+                    id: 20,
                   ),
               separatorBuilder: (context, index) {
                 return const SizedBox(

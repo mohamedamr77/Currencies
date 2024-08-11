@@ -95,6 +95,7 @@ class _ListVerticalBanksSellingBuyingState
                           ),
                         const SizedBox(height: 10),
                         ItemListviewVerticalDashboard(
+                          id: bank.id,
                           widget: SvgPicture.network(
                             bank.image,
                             width: 40,
@@ -112,6 +113,7 @@ class _ListVerticalBanksSellingBuyingState
                     return Column(
                       children: [
                         ItemListviewVerticalDashboard(
+                          id: bank.id,
                           widget: SvgPicture.network(
                             bank.image,
                             width: 40,

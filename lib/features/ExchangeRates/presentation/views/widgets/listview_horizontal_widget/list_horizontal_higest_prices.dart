@@ -27,6 +27,7 @@ class ListHorizontalHigstPrices extends StatelessWidget {
               itemBuilder: (context, index) {
                 var bank = snapshot.data![index];
                 return ItemExchangeRatesListHorizontal(
+                  id: bank.currency.id,
                   imageCountry: bank
                       .currency.image, // Update with actual country image logic
                   imageBank: bank.image ?? "", // Placeholder image if null

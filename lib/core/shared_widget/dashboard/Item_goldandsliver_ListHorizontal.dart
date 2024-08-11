@@ -5,17 +5,18 @@ import '../../../../core/shared_widget/abbreviation_country.dart';
 import '../../../../core/shared_widget/country_currency.dart';
 
 class ItemGoldAndSliverListHorizontal extends StatelessWidget {
-  const ItemGoldAndSliverListHorizontal({super.key, required this.imageCountry, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.isGOld});
+  const ItemGoldAndSliverListHorizontal({super.key, required this.imageCountry, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.isGOld, required this.id});
   final String imageCountry;
   final String  abbreviationCountry;
   final  String   price;
    final String  countryCurrency;
    final bool  isGOld;
+   final int id;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsScreen(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsScreen(id: id,),));
       },
       child: Container(
         width: MediaQuery.of(context).size.width*0.47,

@@ -16,7 +16,7 @@ abstract class AppRouter{
   static const String kCalculatorGold= '/calculatorGold';
   static const String kCalculatorPrice= '/calculatorprice';
   static const String kDashboard= '/Dashboard';
-  static const String kDetialsScreen= '/DetialsScreen';
+  // static const String kDetialsScreen= '/DetialsScreen';
   static const String kEconomicNews= '/economicnews';
   static const String kEconomicNewsDetails= '/economicNewsDetails';
   static const String kExchangeRates= '/ExchangeRates';
@@ -41,10 +41,10 @@ abstract class AppRouter{
         path: kDashboard,
         builder: (context, state) => const DashboardScreen(),
       ),//4
-      GoRoute(
-        path: kDetialsScreen,
-        builder: (context, state) => const DetailsScreen(),
-      ),//5
+      // GoRoute(
+      //   path: kDetialsScreen,
+      //   builder: (context, state) => const DetailsScreen(),
+      // ),//5
       GoRoute(
         path: kEconomicNews,
         builder: (context, state) => const EconomicNewsScreen(),

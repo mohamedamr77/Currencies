@@ -2,7 +2,7 @@ import '../features/DetialsScreen/presentation/view_model/price_of_currency_in_b
 import '../helper/api.dart';
 
 class GetPriceOfCurrencyInBank{
-  Future<List<dynamic>> getPriceOfCurrencyInBank({required int id})async{
+  Future<List<PriceOfCurrencyInBankModel>> getPriceOfCurrencyInBank({required int id})async{
     Map<String, dynamic> jsonData = await Api().get(
         url: "https://bankeer.banker-eg.live/api/currencies/$id/banks");
     try {

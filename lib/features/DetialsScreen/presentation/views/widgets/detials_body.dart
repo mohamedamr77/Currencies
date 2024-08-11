@@ -7,8 +7,10 @@ import 'details_appbar.dart';
 import 'divider.dart';
 
 class DetialsScreenBody extends StatelessWidget {
-  const DetialsScreenBody({super.key});
-
+  const DetialsScreenBody({super.key, required this.id, required this.sellingPrice, required this.buyingPrice});
+ final int id;
+ final String sellingPrice;
+  final String buyingPrice;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -29,8 +31,8 @@ class DetialsScreenBody extends StatelessWidget {
             child: SizedBox(
           height: 8,
         )),
-        const SliverToBoxAdapter(
-          child: TransactionsBuyingSelling(),
+         SliverToBoxAdapter(
+          child: TransactionsBuyingSelling(id: id,),
         ),
         const SliverToBoxAdapter(
             child: SizedBox(
@@ -49,7 +51,7 @@ class DetialsScreenBody extends StatelessWidget {
             child: SizedBox(
           height: 8,
         )),
-        const CustomSliverList(),
+         CustomSliverList(id: id,),
       ],
     );
   }

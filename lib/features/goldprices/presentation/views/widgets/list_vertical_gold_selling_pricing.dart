@@ -19,7 +19,7 @@ class ListVerticalGoldSellingPricing extends StatelessWidget {
                 ),
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "عيار 18",
+                nameWidget: "عيار 18", id: 12,
               ),
               SizedBox(
                 height: 10,

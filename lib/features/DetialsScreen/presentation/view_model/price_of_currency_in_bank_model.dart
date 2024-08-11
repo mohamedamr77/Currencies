@@ -5,8 +5,8 @@ class PriceOfCurrencyInBankModel {
   final String nameEn;
   final String nameAr;
   final String image;
-  final double purchasingPrice;
-  final double sellingPrice;
+  final String purchasingPrice;
+  final String sellingPrice;
   final String lastUpdate;
 
   PriceOfCurrencyInBankModel({
@@ -25,8 +25,8 @@ class PriceOfCurrencyInBankModel {
       nameEn: json['name_en'],
       nameAr: json['name_ar'],
       image: json['image'],
-      purchasingPrice: (json['purchasing_price'] as num).toDouble(),
-      sellingPrice: (json['selling_price'] as num).toDouble(),
+      purchasingPrice: json['purchasing_price'],
+      sellingPrice: json['selling_price'],
       lastUpdate: json['last_update'],
     );
   }

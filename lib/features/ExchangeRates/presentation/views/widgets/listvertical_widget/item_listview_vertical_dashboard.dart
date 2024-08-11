@@ -11,11 +11,14 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
       required this.widget,
       required this.sellingPrice,
       @required this.buyingPrice,
-      required this.nameWidget});
+      required this.nameWidget,
+        required this.id,
+      });
   final Widget widget;
   final String sellingPrice;
   final String? buyingPrice;
   final String nameWidget;
+  final int id;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -23,7 +26,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const DetailsScreen(),
+              builder: (context) =>  DetailsScreen(id: id,),
             ));
       },
       child: Container(

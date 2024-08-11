@@ -19,7 +19,7 @@ class ListVerticalSliverSellingPricing extends StatelessWidget {
                 ),
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "فضة 925",
+                nameWidget: "فضة 925", id: 20,
               ),
               SizedBox(
                 height: 10,

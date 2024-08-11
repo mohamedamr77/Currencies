@@ -15,7 +15,7 @@ class ListHorizontalHighestGold extends StatelessWidget {
         countryCurrency: TextApp.dollarText,
         abbreviationCountry: "USD",
         price: "2,330.28",
-        isGOld: true,
+        isGOld: true, id: 20,
       ),
       separatorBuilder: (context, index) => const SizedBox(width: 10),
       itemCount: 10,

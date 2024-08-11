@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/shared_widget/country_currency.dart';
@@ -7,13 +8,13 @@ import '../../../../../core/utils/textstyle.dart';
 class ItemListviewVerticalDetails extends StatelessWidget {
   const ItemListviewVerticalDetails(
       {super.key,
-      required this.widget,
+      required this.image,
       required this.sellingPrice,
       required this.buyingPrice,
       required this.nameWidget});
-  final Widget widget;
-  final double sellingPrice;
-  final double buyingPrice;
+  final String image;
+  final String sellingPrice;
+  final String buyingPrice;
   final String nameWidget;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,9 @@ class ItemListviewVerticalDetails extends StatelessWidget {
         textDirection: TextDirection.rtl,
         children: [
           CircleAvatar(
-            child: widget,
+            backgroundColor: Colors.white,
+            radius: 14,
+            child: Image(image: NetworkImage(image),)
           ),
           const SizedBox(width: 10),
           CountryCurrency(
