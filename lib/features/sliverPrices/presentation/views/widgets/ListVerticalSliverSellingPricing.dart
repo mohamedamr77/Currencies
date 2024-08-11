@@ -15,7 +15,7 @@ class ListVerticalSliverSellingPricing extends StatelessWidget {
               ItemListviewVerticalDashboard(
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "فضة 925", id: 20, image: '',
+                nameWidget: "فضة 925", id: 20, image: '', symbol: '',
               ),
               SizedBox(
                 height: 10,

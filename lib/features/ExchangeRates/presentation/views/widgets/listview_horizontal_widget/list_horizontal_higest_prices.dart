@@ -35,6 +35,7 @@ class ListHorizontalHigstPrices extends StatelessWidget {
                   abbreviationCountry: bank.currency.symbol,
                   price: double.parse(bank.highestPurchasePrice),
                   nameBank: bank.BankName ?? "Unknown Bank",
+                  symbol: bank.currency.symbol,
                 );
               },
               separatorBuilder: (context, index) => const SizedBox(width: 10),

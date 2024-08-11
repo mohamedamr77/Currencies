@@ -5,17 +5,18 @@ import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/abbreviation_country.dart';
 
 class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
-  const CurrencyInfoCardImageNameCurrency({super.key});
-
+  const CurrencyInfoCardImageNameCurrency({super.key, required this.name, required this.symbol});
+  final String name;
+  final String symbol;
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
+    return  Positioned(
         bottom: 0,
         right: 0,
         left: 0,
         child: Column(
           children: [
-            Stack(alignment: Alignment.center, children: [
+            const Stack(alignment: Alignment.center, children: [
               CircleAvatar(
                 radius: 40,
                 backgroundColor: ColorApp.backgroundColor,
@@ -30,19 +31,19 @@ class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
                 ),
               ),
             ]),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
-              "دولار أمريكى ",
+             name,
               maxLines: 1,
-              style: TextStyle(
+              style: const TextStyle(
                 color: ColorApp.primaryTextColor,
                 fontFamily: "Tajawal",
                 fontSize: 20,
               ),
             ),
-            AbbreviationOfTheCountry(text: "USD"),
+            AbbreviationOfTheCountry(text: symbol ),
           ],
         ));
   }

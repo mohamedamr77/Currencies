@@ -7,8 +7,9 @@ import '../../view_model/price_of_currency_in_bank_model.dart';
 import 'detials_body.dart';
 
 class TransactionsBuyingSelling extends StatelessWidget {
-  const TransactionsBuyingSelling({super.key, required this.id,});
-  final int id;
+  const TransactionsBuyingSelling({super.key, required this.sellingPrice, required this.buyingPrice,});
+   final String sellingPrice;
+   final String buyingPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +32,11 @@ class TransactionsBuyingSelling extends StatelessWidget {
           textDirection: TextDirection.rtl,
           children: [
             CustomNumberText(
-              number: 234.3,
+              number: double.parse(sellingPrice),
               colorText: ColorApp.deebBlueTextColor,
             ),
             CustomNumberText(
-              number: 47.32,
+              number: double.parse(buyingPrice),
               colorText: ColorApp.deebBlueTextColor,
             ),
             CustomNumberText(

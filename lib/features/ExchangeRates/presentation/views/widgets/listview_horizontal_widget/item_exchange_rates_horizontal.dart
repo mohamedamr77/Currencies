@@ -16,7 +16,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
       required this.countryCurrency,
       required this.abbreviationCountry,
       required this.price,
-      required this.nameBank, required this.id});
+      required this.nameBank, required this.id, required this.symbol});
   final String imageCountry;
   final String imageBank;
   final String countryCurrency;
@@ -24,6 +24,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
   final double price;
   final String nameBank;
   final int id;
+  final String symbol;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -31,7 +32,7 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>  DetailsScreen(id: id,),
+              builder: (context) =>  DetailsScreen(id: id, name: countryCurrency, symbol: symbol,),
             ));
       },
       child: Container(

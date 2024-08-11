@@ -16,7 +16,7 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsScreen(id: id,),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsScreen(id: id, name: '', symbol: '',),));
       },
       child: Container(
         width: MediaQuery.of(context).size.width*0.47,
