@@ -13,13 +13,9 @@ class ListVerticalSliverSellingPricing extends StatelessWidget {
           return const Column(
             children: [
               ItemListviewVerticalDashboard(
-                widget: CircleAvatar(
-                  backgroundColor: Color(0xffB0B0B0),
-                  child: Text("925"),
-                ),
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "فضة 925", id: 20,
+                nameWidget: "فضة 925", id: 20, image: '',
               ),
               SizedBox(
                 height: 10,

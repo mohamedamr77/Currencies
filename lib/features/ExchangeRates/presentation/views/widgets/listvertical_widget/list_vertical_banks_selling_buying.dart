@@ -96,11 +96,7 @@ class _ListVerticalBanksSellingBuyingState
                         const SizedBox(height: 10),
                         ItemListviewVerticalDashboard(
                           id: bank.id,
-                          widget: SvgPicture.network(
-                            bank.image,
-                            width: 40,
-                            height: 40,
-                          ),
+                          image:  bank.image,
                           // sellingPrice: double.parse(bank.sellingPrice),
                           // buyingPrice: double.parse(bank.purchasingPrice),
                           sellingPrice: bank.priceInEgp,
@@ -114,13 +110,9 @@ class _ListVerticalBanksSellingBuyingState
                       children: [
                         ItemListviewVerticalDashboard(
                           id: bank.id,
-                          widget: SvgPicture.network(
-                            bank.image,
-                            width: 40,
-                            height: 40,
-                          ),
                           sellingPrice: bank.priceInEgp,
                           nameWidget: bank.name,
+                          image:  bank.image,
                         ),
                         const SizedBox(height: 10),
                       ],

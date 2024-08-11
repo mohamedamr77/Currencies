@@ -1,5 +1,6 @@
 import 'package:digitaltransactions/core/shared_widget/limited_numbert_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../../../../../core/utils/color.dart';
 import '../../../../../../core/shared_widget/country_currency.dart';
 import '../../../../../../core/utils/textstyle.dart';
@@ -8,13 +9,13 @@ import '../../../../../DetialsScreen/screen.dart';
 class ItemListviewVerticalDashboard extends StatelessWidget {
   const ItemListviewVerticalDashboard(
       {super.key,
-      required this.widget,
+      required this.image,
       required this.sellingPrice,
       @required this.buyingPrice,
       required this.nameWidget,
         required this.id,
       });
-  final Widget widget;
+  final String image;
   final String sellingPrice;
   final String? buyingPrice;
   final String nameWidget;
@@ -39,7 +40,19 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         child: Row(
           textDirection: TextDirection.rtl,
           children: [
-            widget,
+            if(image.contains(".svg"))
+              SvgPicture.network(
+                image,
+                width: 40,
+                height: 40,
+              ),
+            if(image.contains(".png")||image.contains(".jpg"))
+              Image.network(
+                image,
+                width: 40,
+                height: 40,
+              ),
+
             const SizedBox(width: 10),
             CountryCurrency(
               nameWidget,

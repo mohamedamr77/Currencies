@@ -13,13 +13,9 @@ class ListVerticalGoldSellingPricing extends StatelessWidget {
           return const Column(
             children: [
               ItemListviewVerticalDashboard(
-                widget: CircleAvatar(
-                  backgroundColor: Color(0xffE3AC2A),
-                  child: Text("18"),
-                ),
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "عيار 18", id: 12,
+                nameWidget: "عيار 18", id: 12, image: '',
               ),
               SizedBox(
                 height: 10,

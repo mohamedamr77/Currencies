@@ -86,16 +86,10 @@ class DashboardBody extends StatelessWidget {
               shrinkWrap: true,
               itemBuilder: (context, index) =>
                   const ItemListviewVerticalDashboard(
-                    widget: Image(
-                      image: AssetImage(ImageApp.americaImage),
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: double.infinity,
-                    ),
                     sellingPrice: "48.36",
                     buyingPrice: "48.28",
                     nameWidget: TextApp.dollarText,
-                    id: 20,
+                    id: 20, image: ImageApp.americaImage,
                   ),
               separatorBuilder: (context, index) {
                 return const SizedBox(
