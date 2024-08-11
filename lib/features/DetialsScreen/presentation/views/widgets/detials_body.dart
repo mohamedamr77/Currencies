@@ -28,7 +28,7 @@ class DetialsScreenBody extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * 0.38,
             child: Stack(
               children: [
-                const DetailsAppbar(),
+                 DetailsAppbar(name: name,),
                 CurrencyInfoCardImageNameCurrency(
                   name: name,
                   symbol: symbol,

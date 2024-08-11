@@ -5,8 +5,8 @@ import '../../../../../core/utils/image.dart';
 import '../../../../../core/utils/textstyle.dart';
 
 class DetailsAppbar extends StatelessWidget {
-  const DetailsAppbar({super.key});
-
+  const DetailsAppbar({super.key, required this.name});
+ final String name;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,11 +27,11 @@ class DetailsAppbar extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Expanded(
+                   Expanded(
                     child: Text(
-                      "دولار أمريكى",
+                      name,
                       textAlign: TextAlign.center,
-                      style: CustomTextStyle(
+                      style: const CustomTextStyle(
                         color: ColorApp.whiteColor,
                         fontFamily: "Tajawal",
                         fontSize: 20,
