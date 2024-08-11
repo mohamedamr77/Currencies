@@ -7,20 +7,21 @@ import '../../../../../../core/utils/textstyle.dart';
 import '../../../../../DetialsScreen/screen.dart';
 
 class ItemListviewVerticalDashboard extends StatelessWidget {
-  const ItemListviewVerticalDashboard(
-      {super.key,
-      required this.image,
-      required this.sellingPrice,
-      @required this.buyingPrice,
-      required this.nameWidget,
-        required this.id, required this.symbol,
-      });
+  const ItemListviewVerticalDashboard({
+    super.key,
+    required this.image,
+    required this.sellingPrice,
+    @required this.buyingPrice,
+    required this.nameWidget,
+    required this.id,
+    required this.symbol,
+  });
   final String image;
   final String sellingPrice;
   final String? buyingPrice;
   final String nameWidget;
   final int id;
-  final  String symbol;
+  final String symbol;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -28,7 +29,11 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>  DetailsScreen(id: id, name: nameWidget, symbol: symbol,),
+              builder: (context) => DetailsScreen(
+                id: id,
+                name: nameWidget,
+                symbol: symbol,
+              ),
             ));
       },
       child: Container(
@@ -41,19 +46,18 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
         child: Row(
           textDirection: TextDirection.rtl,
           children: [
-            if(image.contains(".svg"))
+            if (image.contains(".svg"))
               SvgPicture.network(
                 image,
                 width: 40,
                 height: 40,
               ),
-            if(image.contains(".png")||image.contains(".jpg"))
+            if (image.contains(".png") || image.contains(".jpg"))
               Image.network(
                 image,
                 width: 40,
                 height: 40,
               ),
-
             const SizedBox(width: 10),
             CountryCurrency(
               nameWidget,

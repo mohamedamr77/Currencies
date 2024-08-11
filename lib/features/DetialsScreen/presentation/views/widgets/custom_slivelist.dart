@@ -1,9 +1,5 @@
 import 'package:digitaltransactions/services/get_price_of_currency_in_bank.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../../core/utils/image.dart';
-import '../../../../../core/utils/text.dart';
 import '../../view_model/price_of_currency_in_bank_model.dart';
 import 'item_listview_vertical_details.dart';
 
@@ -18,23 +14,22 @@ class CustomSliverList extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const SliverToBoxAdapter(
               child: Center(
-                child: CircularProgressIndicator(),
-              ));
+            child: CircularProgressIndicator(),
+          ));
         }
 
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
             return SliverToBoxAdapter(
                 child:
-                Center(child: Text('Error: ${snapshot.error.toString()}')));
+                    Center(child: Text('Error: ${snapshot.error.toString()}')));
           }
 
           if (snapshot.hasData) {
-
             return SliverList(
               delegate: SliverChildBuilderDelegate(
-                    (context, index) {
-                      var bank = snapshot.data![index];
+                (context, index) {
+                  var bank = snapshot.data![index];
                   return Column(
                     children: [
                       ItemListviewVerticalDetails(
@@ -43,12 +38,12 @@ class CustomSliverList extends StatelessWidget {
                         buyingPrice: bank.purchasingPrice,
                         nameWidget: bank.nameAr,
                       ),
-                      SizedBox(height: 10), // Space between every two items
+                      const SizedBox(height: 10), // Space between every two items
                     ],
                   );
                 },
                 childCount:
-                snapshot.data!.length, // Adjusted to show 10 items + 2 ads
+                    snapshot.data!.length, // Adjusted to show 10 items + 2 ads
               ),
             );
           }

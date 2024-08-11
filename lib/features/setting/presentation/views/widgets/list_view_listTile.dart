@@ -44,7 +44,6 @@ class ListViewListTile extends StatelessWidget {
               title: "تسجيل خروج",
             )
           ],
-        )
-    );
+        ));
   }
 }

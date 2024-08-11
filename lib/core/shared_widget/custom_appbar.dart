@@ -3,15 +3,19 @@ import 'package:flutter/material.dart';
 import '../utils/color.dart';
 
 class CustomAppbar extends StatelessWidget {
-   const CustomAppbar({super.key, required this.text, required this.action,});
-   final Widget action;
-    final String  text;
+  const CustomAppbar({
+    super.key,
+    required this.text,
+    required this.action,
+  });
+  final Widget action;
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Padding(
         padding: const EdgeInsets.only(left: 16, right: 10, top: 5),
-        child: Row (
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
@@ -23,13 +27,12 @@ class CustomAppbar extends StatelessWidget {
                     fontSize: 16,
                     fontWeight: null,
                     fontStyle: null,
-                  )
-              ),
+                  )),
             ),
             action,
           ],
         ),
-    ),
+      ),
     );
   }
 }

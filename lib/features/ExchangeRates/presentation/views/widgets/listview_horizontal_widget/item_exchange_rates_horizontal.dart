@@ -16,7 +16,9 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
       required this.countryCurrency,
       required this.abbreviationCountry,
       required this.price,
-      required this.nameBank, required this.id, required this.symbol});
+      required this.nameBank,
+      required this.id,
+      required this.symbol});
   final String imageCountry;
   final String imageBank;
   final String countryCurrency;
@@ -32,7 +34,11 @@ class ItemExchangeRatesListHorizontal extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>  DetailsScreen(id: id, name: countryCurrency, symbol: symbol,),
+              builder: (context) => DetailsScreen(
+                id: id,
+                name: countryCurrency,
+                symbol: symbol,
+              ),
             ));
       },
       child: Container(

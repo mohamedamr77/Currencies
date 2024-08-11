@@ -8,7 +8,7 @@ class Api {
     if (token != null) {
       headers.addAll({
         "Authorization": "Bearer $token",
-        "lang":"ar",
+        "lang": "ar",
       });
     }
 
@@ -23,17 +23,19 @@ class Api {
       }
       return jsonDecode(response.body);
     } else {
-      throw Exception('Failed to load data status code: ${response.statusCode}');
+      throw Exception(
+          'Failed to load data status code: ${response.statusCode}');
     }
   }
 
-  Future<dynamic> post({required String url, dynamic body, String? token}) async {
+  Future<dynamic> post(
+      {required String url, dynamic body, String? token}) async {
     Map<String, String> headers = {};
 
     if (token != null) {
       headers.addAll({
         "Authorization": "Bearer $token",
-        "lang":"ar",
+        "lang": "ar",
       });
     }
 
@@ -49,16 +51,18 @@ class Api {
       }
       return jsonDecode(response.body);
     } else {
-      throw Exception('Failed to load data status code: ${response.statusCode}');
+      throw Exception(
+          'Failed to load data status code: ${response.statusCode}');
     }
   }
 
-  Future<dynamic> put({required String url, dynamic body, String? token}) async {
+  Future<dynamic> put(
+      {required String url, dynamic body, String? token}) async {
     Map<String, String> headers = {
       "Content-Type": "application/x-www-form-urlencoded",
     };
 
-     if (token != null) {
+    if (token != null) {
       headers.addAll({
         "Authorization": "Bearer $token",
       });
@@ -77,7 +81,8 @@ class Api {
       }
       return jsonDecode(response.body);
     } else {
-      throw Exception('Failed to load data status code: ${response.statusCode}');
+      throw Exception(
+          'Failed to load data status code: ${response.statusCode}');
     }
   }
 }

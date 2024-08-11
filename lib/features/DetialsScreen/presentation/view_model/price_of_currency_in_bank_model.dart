@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 class PriceOfCurrencyInBankModel {
   final int id;
@@ -48,4 +47,3 @@ class PriceOfCurrencyInBankModel {
     return 'CurrencyModel{id: $id, nameEn: $nameEn, nameAr: $nameAr, image: $image, purchasingPrice: $purchasingPrice, sellingPrice: $sellingPrice, lastUpdate: $lastUpdate}';
   }
 }
-

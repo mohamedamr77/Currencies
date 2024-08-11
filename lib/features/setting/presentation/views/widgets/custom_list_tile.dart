@@ -3,14 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/image.dart';
 
-
 // ignore: must_be_immutable
 class CustomListTile extends StatelessWidget {
   CustomListTile(
       {super.key,
-        required this.trailingImage,
-        required this.title,
-        this.onTap});
+      required this.trailingImage,
+      required this.title,
+      this.onTap});
   final String trailingImage;
   final String title;
   void Function()? onTap;

@@ -5,33 +5,49 @@ import '../../../../core/shared_widget/abbreviation_country.dart';
 import '../../../../core/shared_widget/country_currency.dart';
 
 class ItemGoldAndSliverListHorizontal extends StatelessWidget {
-  const ItemGoldAndSliverListHorizontal({super.key, required this.imageCountry, required this.countryCurrency, required this.abbreviationCountry, required this.price, required this.isGOld, required this.id});
+  const ItemGoldAndSliverListHorizontal(
+      {super.key,
+      required this.imageCountry,
+      required this.countryCurrency,
+      required this.abbreviationCountry,
+      required this.price,
+      required this.isGOld,
+      required this.id});
   final String imageCountry;
-  final String  abbreviationCountry;
-  final  String   price;
-   final String  countryCurrency;
-   final bool  isGOld;
-   final int id;
+  final String abbreviationCountry;
+  final String price;
+  final String countryCurrency;
+  final bool isGOld;
+  final int id;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsScreen(id: id, name: '', symbol: '',),));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailsScreen(
+                id: id,
+                name: '',
+                symbol: '',
+              ),
+            ));
       },
       child: Container(
-        width: MediaQuery.of(context).size.width*0.47,
-        padding:  EdgeInsets.only(
-          top: MediaQuery.sizeOf(context).height*0.02,
-          left: MediaQuery.sizeOf(context).width*0.02,
-          right:  MediaQuery.sizeOf(context).width*0.02,
-          bottom:  MediaQuery.sizeOf(context).height*0.01,
+        width: MediaQuery.of(context).size.width * 0.47,
+        padding: EdgeInsets.only(
+          top: MediaQuery.sizeOf(context).height * 0.02,
+          left: MediaQuery.sizeOf(context).width * 0.02,
+          right: MediaQuery.sizeOf(context).width * 0.02,
+          bottom: MediaQuery.sizeOf(context).height * 0.01,
         ),
         decoration: BoxDecoration(
           color: ColorApp.whiteColor,
           borderRadius: BorderRadius.circular(8),
         ),
-        child:  Column(
-          mainAxisSize: MainAxisSize.min, // Adjust the container size to its content
+        child: Column(
+          mainAxisSize:
+              MainAxisSize.min, // Adjust the container size to its content
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Row(
@@ -48,39 +64,37 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
                     height: double.infinity,
                   ),
                 ),
-                SizedBox(width: MediaQuery.sizeOf(context).width*0.035),
+                SizedBox(width: MediaQuery.sizeOf(context).width * 0.035),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     //CountryCurrency
                     Text(
-                     isGOld==true?
-                     "أونصة ذهب":
-                      "اونصة الفضه"
-                      ,
-                   style: const TextStyle(
-                     color: Color(0xff444555),
-                   ),
-                   ),
+                      isGOld == true ? "أونصة ذهب" : "اونصة الفضه",
+                      style: const TextStyle(
+                        color: Color(0xff444555),
+                      ),
+                    ),
                     AbbreviationOfTheCountry(text: abbreviationCountry),
                   ],
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-              child: Text(price,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff14172c),
-              ),
-              )
-            ),
-           Padding(
-             padding: const EdgeInsets.symmetric(horizontal: 13),
-             child: CountryCurrency(countryCurrency, fontSize: 14),
-           )
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                child: Text(
+                  price,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff14172c),
+                  ),
+                )),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 13),
+              child: CountryCurrency(countryCurrency, fontSize: 14),
+            )
           ],
         ),
       ),

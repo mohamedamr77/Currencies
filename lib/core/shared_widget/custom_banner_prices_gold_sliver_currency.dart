@@ -4,11 +4,16 @@ import 'custom_appbar.dart';
 import 'description_listview_horizontal.dart';
 
 class CustomBannerPricesGoldSliverCurrency extends StatelessWidget {
-  const CustomBannerPricesGoldSliverCurrency({super.key, required this.titleScreen, required this.descriptionListviewHorizontal, required this.action, required this.listHorizontal});
-   final String titleScreen;
-   final String descriptionListviewHorizontal;
-   final Widget action;
-   final Widget listHorizontal;
+  const CustomBannerPricesGoldSliverCurrency(
+      {super.key,
+      required this.titleScreen,
+      required this.descriptionListviewHorizontal,
+      required this.action,
+      required this.listHorizontal});
+  final String titleScreen;
+  final String descriptionListviewHorizontal;
+  final Widget action;
+  final Widget listHorizontal;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -30,7 +35,7 @@ class CustomBannerPricesGoldSliverCurrency extends StatelessWidget {
                   text: titleScreen,
                   action: action,
                 ),
-                 DescriptionListviewHorizontal(
+                DescriptionListviewHorizontal(
                     text: descriptionListviewHorizontal),
               ],
             ),

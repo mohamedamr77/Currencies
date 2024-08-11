@@ -1,22 +1,24 @@
-import 'package:digitaltransactions/services/get_price_of_currency_in_bank.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/shared_widget/three_Text_Bank_buying_selling.dart';
-import '../../view_model/price_of_currency_in_bank_model.dart';
 import 'detials_body.dart';
 
 class TransactionsBuyingSelling extends StatelessWidget {
-  const TransactionsBuyingSelling({super.key, required this.sellingPrice, required this.buyingPrice,});
-   final String sellingPrice;
-   final String buyingPrice;
+  const TransactionsBuyingSelling({
+    super.key,
+    required this.sellingPrice,
+    required this.buyingPrice,
+  });
+  final String sellingPrice;
+  final String buyingPrice;
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
+        const Row(
           textDirection: TextDirection.rtl,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -25,7 +27,7 @@ class TransactionsBuyingSelling extends StatelessWidget {
             CustomText(text: "تغير"),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Row(
@@ -39,7 +41,7 @@ class TransactionsBuyingSelling extends StatelessWidget {
               number: double.parse(buyingPrice),
               colorText: ColorApp.deebBlueTextColor,
             ),
-            CustomNumberText(
+            const CustomNumberText(
               number: -12,
               colorText: ColorApp.redColor,
             ),

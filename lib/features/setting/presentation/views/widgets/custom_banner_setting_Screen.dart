@@ -5,7 +5,8 @@ import '../../../../../core/shared_widget/custom_appbar.dart';
 import '../../../../../core/utils/image.dart';
 
 class CustomBannerSettingScreen extends StatelessWidget {
-  const CustomBannerSettingScreen({super.key, required this.title, required this.subTitle});
+  const CustomBannerSettingScreen(
+      {super.key, required this.title, required this.subTitle});
 
   final String title;
   final String subTitle;
@@ -43,7 +44,7 @@ class CustomBannerSettingScreen extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                   Text(
+                  Text(
                     subTitle,
                     style: const TextStyle(
                         fontFamily: "Tajawal", color: Colors.white),
@@ -59,8 +60,7 @@ class CustomBannerSettingScreen extends StatelessWidget {
           bottom: 0,
           child: Column(
             children: [
-              Stack(
-                  children: [
+              Stack(children: [
                 const CircleAvatar(
                   backgroundColor: Colors.white,
                   maxRadius: 30,
@@ -80,8 +80,7 @@ class CustomBannerSettingScreen extends StatelessWidget {
               ),
               const Text(
                 "اسم المستخدم",
-                style:
-                TextStyle(fontFamily: "Tajawal", color: Colors.black),
+                style: TextStyle(fontFamily: "Tajawal", color: Colors.black),
               )
             ],
           ),

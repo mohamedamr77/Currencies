@@ -7,9 +7,15 @@ import 'details_appbar.dart';
 import 'divider.dart';
 
 class DetialsScreenBody extends StatelessWidget {
-  const DetialsScreenBody({super.key, required this.id, required this.sellingPrice, required this.buyingPrice, required this.name, required this.symbol});
- final int id;
- final String sellingPrice;
+  const DetialsScreenBody(
+      {super.key,
+      required this.id,
+      required this.sellingPrice,
+      required this.buyingPrice,
+      required this.name,
+      required this.symbol});
+  final int id;
+  final String sellingPrice;
   final String buyingPrice;
   final String name;
   final String symbol;
@@ -20,10 +26,13 @@ class DetialsScreenBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.38,
-            child:  Stack(
+            child: Stack(
               children: [
-                DetailsAppbar(),
-                CurrencyInfoCardImageNameCurrency(name: name, symbol: symbol,),
+                const DetailsAppbar(),
+                CurrencyInfoCardImageNameCurrency(
+                  name: name,
+                  symbol: symbol,
+                ),
                 // ButtonCalculator(),
               ],
             ),
@@ -33,8 +42,11 @@ class DetialsScreenBody extends StatelessWidget {
             child: SizedBox(
           height: 8,
         )),
-         SliverToBoxAdapter(
-          child: TransactionsBuyingSelling( sellingPrice: "243", buyingPrice: '100',),
+        const SliverToBoxAdapter(
+          child: TransactionsBuyingSelling(
+            sellingPrice: "243",
+            buyingPrice: '100',
+          ),
         ),
         const SliverToBoxAdapter(
             child: SizedBox(
@@ -53,7 +65,9 @@ class DetialsScreenBody extends StatelessWidget {
             child: SizedBox(
           height: 8,
         )),
-         CustomSliverList(id: id,),
+        CustomSliverList(
+          id: id,
+        ),
       ],
     );
   }

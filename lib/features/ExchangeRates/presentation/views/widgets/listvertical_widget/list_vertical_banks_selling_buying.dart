@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/features/ExchangeRates/presentation/view_model/currency_price_model.dart';
 import 'package:digitaltransactions/services/get_currency_prices.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../../ad_manager.dart';
 import 'item_listview_vertical_dashboard.dart';
@@ -96,7 +95,7 @@ class _ListVerticalBanksSellingBuyingState
                         const SizedBox(height: 10),
                         ItemListviewVerticalDashboard(
                           id: bank.id,
-                          image:  bank.image,
+                          image: bank.image,
                           // sellingPrice: double.parse(bank.sellingPrice),
                           // buyingPrice: double.parse(bank.purchasingPrice),
                           sellingPrice: bank.priceInEgp,
@@ -113,7 +112,7 @@ class _ListVerticalBanksSellingBuyingState
                           id: bank.id,
                           sellingPrice: bank.priceInEgp,
                           nameWidget: bank.name,
-                          image:  bank.image,
+                          image: bank.image,
                           symbol: bank.symbol,
                         ),
                         const SizedBox(height: 10),

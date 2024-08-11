@@ -15,10 +15,10 @@ class CountryCurrency extends StatelessWidget {
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
       textDirection: TextDirection.rtl,
-      style:  TextStyle(
+      style: TextStyle(
         color: const Color(0xff444555),
         //Color(0xff9a9cb8),
-        fontSize: fontSize ,
+        fontSize: fontSize,
         fontFamily: "Tajawal",
       ),
     );

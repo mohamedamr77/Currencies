@@ -1,7 +1,6 @@
 import 'package:digitaltransactions/core/utils/image.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomShowModelBottomSheet extends StatelessWidget {
   const CustomShowModelBottomSheet({super.key});
 
@@ -16,16 +15,16 @@ class CustomShowModelBottomSheet extends StatelessWidget {
               children: [
                 const Center(
                     child: Text(
-                      "اكتب المبلغ",
-                      style: TextStyle(fontSize: 20),
-                    )),
+                  "اكتب المبلغ",
+                  style: TextStyle(fontSize: 20),
+                )),
                 Row(
                   children: [
                     const Expanded(
                         child: Text(
-                          "40",
-                          style: TextStyle(fontSize: 30),
-                        )),
+                      "40",
+                      style: TextStyle(fontSize: 30),
+                    )),
                     const Text(
                       "دولار أمريكى",
                       style: TextStyle(fontSize: 20),
@@ -48,9 +47,9 @@ class CustomShowModelBottomSheet extends StatelessWidget {
                   children: [
                     const Expanded(
                         child: Text(
-                          "1920",
-                          style: TextStyle(fontSize: 30),
-                        )),
+                      "1920",
+                      style: TextStyle(fontSize: 30),
+                    )),
                     const Text(
                       "الجنية المصري",
                       style: TextStyle(fontSize: 20),
@@ -82,7 +81,11 @@ class CustomShowModelBottomSheet extends StatelessWidget {
       _buildNumberPadRow(["1", "2", "3"]),
       _buildNumberPadRow(["4", "5", "6"]),
       _buildNumberPadRow(["7", "8", "9"]),
-      _buildNumberPadRow([".", "0", const Icon(Icons.arrow_forward_rounded, color: Colors.white)]),
+      _buildNumberPadRow([
+        ".",
+        "0",
+        const Icon(Icons.arrow_forward_rounded, color: Colors.white)
+      ]),
     ];
   }
 
@@ -100,8 +103,8 @@ class CustomShowModelBottomSheet extends StatelessWidget {
                 child: item is String
                     ? Text(item)
                     : item is Icon
-                    ? item
-                    : const Text(''),
+                        ? item
+                        : const Text(''),
               ),
             ),
           );

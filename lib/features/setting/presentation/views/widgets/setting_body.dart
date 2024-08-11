@@ -9,7 +9,10 @@ class SettingBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CustomBannerSettingScreen(title: "الاعدادت", subTitle: "اهلا بيك في اسم التطبيق",),
+        CustomBannerSettingScreen(
+          title: "الاعدادت",
+          subTitle: "اهلا بيك في اسم التطبيق",
+        ),
         SizedBox(
           height: 10,
         ),

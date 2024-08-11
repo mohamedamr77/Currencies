@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 
 class LimitedNumberText extends StatelessWidget {
   final double number;
- final TextStyle style;
-  const LimitedNumberText({super.key, required this.number, required this.style});
+  final TextStyle style;
+  const LimitedNumberText(
+      {super.key, required this.number, required this.style});
 
   @override
   Widget build(BuildContext context) {

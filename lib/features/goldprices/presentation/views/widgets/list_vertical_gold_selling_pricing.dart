@@ -15,7 +15,10 @@ class ListVerticalGoldSellingPricing extends StatelessWidget {
               ItemListviewVerticalDashboard(
                 sellingPrice: "48.36",
                 buyingPrice: "48.28",
-                nameWidget: "عيار 18", id: 12, image: '', symbol: '',
+                nameWidget: "عيار 18",
+                id: 12,
+                image: '',
+                symbol: '',
               ),
               SizedBox(
                 height: 10,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/shared_widget/country_currency.dart';
@@ -29,10 +28,11 @@ class ItemListviewVerticalDetails extends StatelessWidget {
         textDirection: TextDirection.rtl,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 14,
-            child: Image(image: NetworkImage(image),)
-          ),
+              backgroundColor: Colors.white,
+              radius: 14,
+              child: Image(
+                image: NetworkImage(image),
+              )),
           const SizedBox(width: 10),
           CountryCurrency(
             nameWidget,
@@ -46,7 +46,7 @@ class ItemListviewVerticalDetails extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "$sellingPrice", // Replace with the actual buying price
+                sellingPrice, // Replace with the actual buying price
                 style: const CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",
@@ -55,7 +55,7 @@ class ItemListviewVerticalDetails extends StatelessWidget {
               ),
               const SizedBox(width: 62),
               Text(
-                "$buyingPrice", // Replace with the actual selling price
+                buyingPrice, // Replace with the actual selling price
                 style: const CustomTextStyle(
                   color: ColorApp.deebBlueTextColor,
                   fontFamily: "Tajawal",
