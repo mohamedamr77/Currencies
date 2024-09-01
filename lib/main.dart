@@ -1,4 +1,5 @@
 import 'package:digitaltransactions/services/get_gold_price.dart';
+import 'package:digitaltransactions/services/get_silver_price.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -8,7 +9,7 @@ import 'core/utils/routes.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
-   GetGoldPrice().getGoldPrice();
+  GetSliverPrice().getSliverPrice();
   // GetCurrencyPrices().getCurrencyPrices();
   runApp(const MyApp());
   //mohamed amr
