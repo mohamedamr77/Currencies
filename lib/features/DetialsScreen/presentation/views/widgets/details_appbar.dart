@@ -6,7 +6,7 @@ import '../../../../../core/utils/textstyle.dart';
 
 class DetailsAppbar extends StatelessWidget {
   const DetailsAppbar({super.key, required this.name});
- final String name;
+  final String name;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +27,7 @@ class DetailsAppbar extends StatelessWidget {
             children: [
               Row(
                 children: [
-                   Expanded(
+                  Expanded(
                     child: Text(
                       name,
                       textAlign: TextAlign.center,

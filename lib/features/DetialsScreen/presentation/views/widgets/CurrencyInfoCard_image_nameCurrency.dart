@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/color.dart';
-import '../../../../../core/utils/image.dart';
 import '../../../../../core/shared_widget/abbreviation_country.dart';
 
 class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
   const CurrencyInfoCardImageNameCurrency(
-      {super.key, required this.name, required this.symbol, required this.image});
+      {super.key,
+      required this.name,
+      required this.symbol,
+      required this.image});
   final String name;
   final String symbol;
   final String image;
@@ -19,8 +21,8 @@ class CurrencyInfoCardImageNameCurrency extends StatelessWidget {
         left: 0,
         child: Column(
           children: [
-             Stack(alignment: Alignment.center, children: [
-              CircleAvatar(
+            Stack(alignment: Alignment.center, children: [
+              const CircleAvatar(
                 radius: 40,
                 backgroundColor: ColorApp.backgroundColor,
               ),

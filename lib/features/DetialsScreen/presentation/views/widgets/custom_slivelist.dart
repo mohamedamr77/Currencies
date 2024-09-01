@@ -38,7 +38,8 @@ class CustomSliverList extends StatelessWidget {
                         buyingPrice: bank.purchasingPrice,
                         nameWidget: bank.nameAr,
                       ),
-                      const SizedBox(height: 10), // Space between every two items
+                      const SizedBox(
+                          height: 10), // Space between every two items
                     ],
                   );
                 },

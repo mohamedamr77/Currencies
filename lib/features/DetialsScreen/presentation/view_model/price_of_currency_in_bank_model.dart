@@ -1,4 +1,3 @@
-
 class PriceOfCurrencyInBankModel {
   final int id;
   final String nameEn;

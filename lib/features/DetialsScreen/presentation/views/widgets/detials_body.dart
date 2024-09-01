@@ -13,7 +13,8 @@ class DetialsScreenBody extends StatelessWidget {
       required this.sellingPrice,
       required this.buyingPrice,
       required this.name,
-      required this.symbol, required this.image});
+      required this.symbol,
+      required this.image});
   final int id;
   final String sellingPrice;
   final String buyingPrice;
@@ -29,10 +30,13 @@ class DetialsScreenBody extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * 0.38,
             child: Stack(
               children: [
-                DetailsAppbar(name: name,),
+                DetailsAppbar(
+                  name: name,
+                ),
                 CurrencyInfoCardImageNameCurrency(
                   name: name,
-                  symbol: symbol, image: image,
+                  symbol: symbol,
+                  image: image,
                 ),
                 // ButtonCalculator(),
               ],

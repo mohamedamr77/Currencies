@@ -23,7 +23,8 @@ class DetailsScreen extends StatelessWidget {
         sellingPrice: '',
         buyingPrice: '',
         name: name,
-        symbol: symbol, image: image,
+        symbol: symbol,
+        image: image,
       ),
     );
   }

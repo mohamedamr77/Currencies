@@ -32,7 +32,8 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               builder: (context) => DetailsScreen(
                 id: id,
                 name: nameWidget,
-                symbol: symbol, image: image,
+                symbol: symbol,
+                image: image,
               ),
             ));
       },
