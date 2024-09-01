@@ -29,7 +29,7 @@ class ItemGoldAndSliverListHorizontal extends StatelessWidget {
               builder: (context) => DetailsScreen(
                 id: id,
                 name: '',
-                symbol: '', image: '',
+                symbol: '', image: imageCountry,
               ),
             ));
       },
