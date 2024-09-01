@@ -1,11 +1,11 @@
-class GoldPriceModel {
+class GoldAndSliverModel {
   final int id;
   final String name;
   final String icon;
   final String purchasingPrice;
   final String sellingPrice;
 
-  GoldPriceModel({
+  GoldAndSliverModel({
     required this.id,
     required this.name,
     required this.icon,
@@ -14,8 +14,8 @@ class GoldPriceModel {
   });
 
   // Factory constructor to create an instance from JSON
-  factory GoldPriceModel.fromJson(Map<String, dynamic> json) {
-    return GoldPriceModel(
+  factory GoldAndSliverModel.fromJson(Map<String, dynamic> json) {
+    return GoldAndSliverModel(
       id: json['id'],
       name: json['name'],
       icon: json['icon'],

@@ -1,5 +1,5 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/shared_widget/country_currency.dart';
 import '../../../../../core/utils/color.dart';
 import '../../../../../core/utils/textstyle.dart';
@@ -42,7 +42,9 @@ class ItemListVerticalGoldSliver extends StatelessWidget {
                   );
                 },
                 errorBuilder: (context, error, stackTrace) {
-                  print("Image loading error: $error");
+                  if (kDebugMode) {
+                    print("Image loading error: $error");
+                  }
                   return const Icon(Icons.error, size: 40);
                 },
               ),

@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/features/goldprices/presentation/view_model/gold_price_model.dart';
+import 'package:digitaltransactions/core/gold_price_model.dart';
 import 'package:digitaltransactions/services/get_gold_price.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -57,7 +57,7 @@ class _ListVerticalGoldSellingPricingState extends State<ListVerticalGoldSelling
   @override
   Widget build(BuildContext context) {
 
-    return FutureBuilder<List<GoldPriceModel>>(
+    return FutureBuilder<List<GoldAndSliverModel>>(
 
       future: GetGoldPrice().getGoldPrice(),
 

@@ -1,10 +1,10 @@
-import 'package:digitaltransactions/features/goldprices/presentation/view_model/gold_price_model.dart';
+import 'package:digitaltransactions/core/gold_price_model.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../helper/api.dart';
 
 class GetGoldPrice{
-     Future<List<GoldPriceModel>>  getGoldPrice() async {
+     Future<List<GoldAndSliverModel>>  getGoldPrice() async {
          Map<String, dynamic> jsonData = await Api().get(
              url:
              "https://Bankeer.banker-eg.live/api/gold-prices-egypt?country_id=2",
@@ -12,9 +12,9 @@ class GetGoldPrice{
          );
          try {
            List<dynamic> dataList = jsonData["data"];
-           List<GoldPriceModel> goldPriceList = [];
+           List<GoldAndSliverModel> goldPriceList = [];
            for (int i = 0; i < dataList.length; i++) {
-             goldPriceList.add(GoldPriceModel.fromJson(dataList[i]));
+             goldPriceList.add(GoldAndSliverModel.fromJson(dataList[i]));
            }
            debugPrint("$goldPriceList");
            return goldPriceList;
