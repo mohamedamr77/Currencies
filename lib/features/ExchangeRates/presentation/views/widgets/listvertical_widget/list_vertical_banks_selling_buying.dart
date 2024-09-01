@@ -60,6 +60,7 @@ class _ListVerticalBanksSellingBuyingState
     return FutureBuilder<List<CurrencyPriceModel>>(
       future: GetCurrencyPrices().getCurrencyPrices(),
       builder: (context, snapshot) {
+
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const SliverToBoxAdapter(
               child: Center(

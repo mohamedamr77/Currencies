@@ -14,14 +14,14 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
     @required this.buyingPrice,
     required this.nameWidget,
     required this.id,
-    required this.symbol,
+     this.symbol,
   });
   final String image;
   final String sellingPrice;
   final String? buyingPrice;
   final String nameWidget;
   final int id;
-  final String symbol;
+  final String? symbol;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -32,7 +32,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               builder: (context) => DetailsScreen(
                 id: id,
                 name: nameWidget,
-                symbol: symbol,
+                symbol: symbol?? "Error",
                 image: image,
               ),
             ));
@@ -58,6 +58,19 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
                 image,
                 width: 40,
                 height: 40,
+                errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) {
+                  return Icon(Icons.error, size: 40);
+                },
+                loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                    child: CircularProgressIndicator(
+                      value: loadingProgress.expectedTotalBytes != null
+                          ? loadingProgress.cumulativeBytesLoaded / (loadingProgress.expectedTotalBytes ?? 1)
+                          : null,
+                    ),
+                  );
+                },
               ),
             const SizedBox(width: 10),
             CountryCurrency(

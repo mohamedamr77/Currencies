@@ -1,14 +1,16 @@
 class GoldPriceModel {
-  final int? id;
-  final String? name;
-  final String? price;
-  final String? date;
+  final int id;
+  final String name;
+  final String icon;
+  final String purchasingPrice;
+  final String sellingPrice;
 
   GoldPriceModel({
     required this.id,
     required this.name,
-    required this.price,
-    required this.date,
+    required this.icon,
+    required this.purchasingPrice,
+    required this.sellingPrice,
   });
 
   // Factory constructor to create an instance from JSON
@@ -16,23 +18,20 @@ class GoldPriceModel {
     return GoldPriceModel(
       id: json['id'],
       name: json['name'],
-      price: json['price'],
-      date: json['date'],
+      icon: json['icon'],
+      purchasingPrice: json['purchasing_price'],
+      sellingPrice: json['selling_price'],
     );
   }
 
-  // Method to convert an instance to JSON
+  // Method to convert an instance to JSON (optional, useful for sending data back to the server)
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'name': name,
-      'price': price,
-      'date': date,
+      'icon': icon,
+      'purchasing_price': purchasingPrice,
+      'selling_price': sellingPrice,
     };
-  }
-
-  @override
-  String toString() {
-    return 'GoldPrice{id: $id, name: $name, price: $price, date: $date}';
   }
 }

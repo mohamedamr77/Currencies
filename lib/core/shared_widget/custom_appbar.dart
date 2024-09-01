@@ -2,6 +2,10 @@ import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../utils/color.dart';
 
+import 'package:flutter/material.dart';
+import '../utils/color.dart';
+import 'package:digitaltransactions/core/utils/textstyle.dart';
+
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
     super.key,
@@ -10,6 +14,7 @@ class CustomAppbar extends StatelessWidget {
   });
   final Widget action;
   final String text;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,15 +24,17 @@ class CustomAppbar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-              child: Text(text,
-                  textAlign: TextAlign.center,
-                  style: const CustomTextStyle(
-                    color: ColorApp.whiteColor,
-                    fontFamily: "Tajawal",
-                    fontSize: 16,
-                    fontWeight: null,
-                    fontStyle: null,
-                  )),
+              child: Text(
+                text,
+                textAlign: TextAlign.center,
+                style: const CustomTextStyle(
+                  color: ColorApp.whiteColor,
+                  fontFamily: "Tajawal",
+                  fontSize: 16,
+                  fontWeight: null,
+                  fontStyle: null,
+                ),
+              ),
             ),
             action,
           ],
@@ -36,6 +43,7 @@ class CustomAppbar extends StatelessWidget {
     );
   }
 }
+
 // Image(image: AssetImage(ImageApp.actionDashboardImage),),
 
 /*
