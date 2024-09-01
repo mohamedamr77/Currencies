@@ -1,4 +1,4 @@
-import 'package:digitaltransactions/services/get_price_of_currency_in_bank.dart';
+import 'package:digitaltransactions/services/get_gold_price.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -8,7 +8,7 @@ import 'core/utils/routes.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
-  GetPriceOfCurrencyInBank().getPriceOfCurrencyInBank(id: 13);
+  GetGoldPrice().getGoldPrice().toString();
   runApp(const MyApp());
   //mohamed amr
 }
