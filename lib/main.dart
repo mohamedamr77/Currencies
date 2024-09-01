@@ -1,3 +1,4 @@
+import 'package:digitaltransactions/services/get_news.dart';
 import 'package:digitaltransactions/services/get_silver_price.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,7 @@ import 'core/utils/routes.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
-  GetSliverPrice().getSliverPrice();
+  GetNews().getNews(type: "general");
   runApp(const MyApp());
   //mohamed amr
 }

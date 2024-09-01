@@ -2,9 +2,9 @@ class NewsModel {
   final String title;
   final Source source;  // Updated to use the Source model
   final DateTime postedAt;
-  final String image;
-  final String link;
-  final String body;
+  final String? image;
+  final String? link;
+  final String? body;
 
   NewsModel({
     required this.title,
