@@ -4,7 +4,7 @@ import 'package:digitaltransactions/helper/api.dart';
 class GetHighestPurchasePriceForAllCurrencies {
   // ignore: non_constant_identifier_names
   Future<List<BankModel>>
-      get_highest_purchase_price_for_all_currencies() async {
+      getHighestPurchasePriceForAllCurrencies() async {
     Map<String, dynamic> jsonData = await Api().get(
         url:
             "https://Bankeer.Banker-eg.live/api/highest-purchase-price-for-all-currencies");

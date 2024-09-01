@@ -10,7 +10,7 @@ class ListHorizontalHigstPrices extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<List<BankModel>>(
       future: GetHighestPurchasePriceForAllCurrencies()
-          .get_highest_purchase_price_for_all_currencies(),
+          .getHighestPurchasePriceForAllCurrencies(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());

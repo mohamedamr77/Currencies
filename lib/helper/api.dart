@@ -9,8 +9,9 @@ class Api {
       headers.addAll({
         "Authorization": "Bearer $token",
         "lang": "ar",
-        "client-version":"1",
-        "client-type":"android",
+         "client-version": "1",
+         "client-type": "android",
+         "Accept": "application/json"
       });
     }
 
