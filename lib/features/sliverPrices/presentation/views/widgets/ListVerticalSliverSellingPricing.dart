@@ -2,7 +2,6 @@ import 'package:digitaltransactions/features/goldprices/presentation/views/widge
 import 'package:digitaltransactions/services/get_silver_price.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-
 import '../../../../../core/gold_price_model.dart';
 import '../../../../ad_manager.dart';
 
@@ -83,7 +82,7 @@ class _ListVerticalSliverSellingPricingState extends State<ListVerticalSliverSel
             return SliverList(
               delegate: SliverChildBuilderDelegate(
                     (context, index) {
-                  var  goldPrices= snapshot.data![index];
+                  var  sliverPrices= snapshot.data![index];
                   if (index % 5 == 0 && index != 0) {
                     // Insert an ad after every 5 items
                     return Column(
@@ -99,11 +98,11 @@ class _ListVerticalSliverSellingPricingState extends State<ListVerticalSliverSel
                           ),
                         const SizedBox(height: 10),
                         ItemListVerticalGoldSliver(
-                          id: goldPrices.id,
-                          sellingPrice: goldPrices.sellingPrice.toString(),
-                          nameWidget: goldPrices.name,
-                          image: goldPrices.icon,
-                          buyingPrice: goldPrices.purchasingPrice.toString(),
+                          id: sliverPrices.id,
+                          sellingPrice: sliverPrices.sellingPrice.toString(),
+                          nameWidget: sliverPrices.name,
+                          image: sliverPrices.icon,
+                          buyingPrice: sliverPrices.purchasingPrice.toString(),
                         ),
                         const SizedBox(height: 10),
                       ],
@@ -112,11 +111,11 @@ class _ListVerticalSliverSellingPricingState extends State<ListVerticalSliverSel
                     return  Column(
                       children: [
                         ItemListVerticalGoldSliver(
-                          id: goldPrices.id,
-                          sellingPrice: goldPrices.sellingPrice.toString(),
-                          nameWidget: goldPrices.name,
-                          image: goldPrices.icon,
-                          buyingPrice: goldPrices.purchasingPrice,
+                          id: sliverPrices.id,
+                          sellingPrice: sliverPrices.sellingPrice.toString(),
+                          nameWidget: sliverPrices.name,
+                          image: sliverPrices.icon,
+                          buyingPrice: sliverPrices.purchasingPrice,
                         ),
 
                         const SizedBox(height: 10),
