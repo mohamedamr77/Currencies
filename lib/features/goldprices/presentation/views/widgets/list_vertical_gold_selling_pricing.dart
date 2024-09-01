@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../ExchangeRates/presentation/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';
 import '../../../../ad_manager.dart';
+import 'item_list_vertical_gold_sliver.dart';
 
 class ListVerticalGoldSellingPricing extends StatefulWidget {
   const ListVerticalGoldSellingPricing({super.key});
@@ -97,25 +98,25 @@ class _ListVerticalGoldSellingPricingState extends State<ListVerticalGoldSelling
                             child: AdWidget(ad: bannerAds[index ~/ 6]),
                           ),
                         const SizedBox(height: 10),
-                        ItemListviewVerticalDashboard(
+                        ItemListVerticalGoldSliver(
                           id: goldPrices.id,
                           sellingPrice: goldPrices.sellingPrice.toString(),
                           nameWidget: goldPrices.name,
-                          image: "assets/images/arrow.png",
+                          image: goldPrices.icon,
                           buyingPrice: goldPrices.purchasingPrice.toString(),
                         ),
                         const SizedBox(height: 10),
                       ],
                     );
-                  } else {
+                  }  else {
                     return  Column(
                       children: [
-                        ItemListviewVerticalDashboard(
+                        ItemListVerticalGoldSliver(
                           id: goldPrices.id,
                           sellingPrice: goldPrices.sellingPrice.toString(),
                           nameWidget: goldPrices.name,
-                          image: "assets/images/arrow.png",
-                         buyingPrice: goldPrices.purchasingPrice.toString(),
+                          image: goldPrices.icon,
+                         buyingPrice: goldPrices.purchasingPrice,
                         ),
 
                         const SizedBox(height: 10),

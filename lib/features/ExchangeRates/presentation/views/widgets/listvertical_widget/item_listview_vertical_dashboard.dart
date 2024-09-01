@@ -77,6 +77,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
               nameWidget,
               fontSize: 16,
             ),
+
             const Spacer(
               flex: 2,
             ),
@@ -93,7 +94,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
                       fontSize: 16,
                     ),
                   ),
-                Padding(
+                  Padding(
                   padding: buyingPrice != null
                       ? EdgeInsets.zero
                       : const EdgeInsets.only(left: 55),
