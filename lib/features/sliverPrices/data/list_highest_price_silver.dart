@@ -1,17 +1,17 @@
 import '../../../core/shared_widget/model_highset_price.dart';
 
-List<HighestPriceModel>   highestGoldPriceList=[
+List<HighestPriceModel>   highestSilverPriceList=[
   HighestPriceModel(
       image: "assets/images/European Union.png",
-      name: "أونصة الذهب ",
-      price: "2,170.48",
+      name: "أونصة الفضه ",
+      price: "1000.20",
       abbreviation: "EU",
       nameCurrency: "اليورو"
   ),
   HighestPriceModel(
       image: "assets/images/america gold.png",
-      name: "أونصة الذهب ",
-      price: "2,330.288",
+      name: "أونصة الفضه ",
+      price: "9200.500",
       abbreviation: "USD",
       nameCurrency: "دولار امريكى"
   ),
