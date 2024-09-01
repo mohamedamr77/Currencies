@@ -10,7 +10,6 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   GetSliverPrice().getSliverPrice();
-  // GetCurrencyPrices().getCurrencyPrices();
   runApp(const MyApp());
   //mohamed amr
 }
