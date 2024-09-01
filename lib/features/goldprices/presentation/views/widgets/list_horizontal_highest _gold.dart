@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/shared_widget/dashboard/Item_goldandsliver_ListHorizontal.dart';
-import '../../../../../core/utils/text.dart';
 import '../../../data/list_highset_price.dart';
 
 class ListHorizontalHighestGold extends StatelessWidget {

@@ -1,4 +1,3 @@
-import 'package:digitaltransactions/services/get_gold_price.dart';
 import 'package:digitaltransactions/services/get_silver_price.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
