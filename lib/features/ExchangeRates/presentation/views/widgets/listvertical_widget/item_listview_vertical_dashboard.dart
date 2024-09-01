@@ -59,7 +59,7 @@ class ItemListviewVerticalDashboard extends StatelessWidget {
                 width: 40,
                 height: 40,
                 errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) {
-                  return Icon(Icons.error, size: 40);
+                  return const Icon(Icons.error, size: 40);
                 },
                 loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
                   if (loadingProgress == null) return child;

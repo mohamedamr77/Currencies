@@ -2,7 +2,6 @@ import 'package:digitaltransactions/features/goldprices/presentation/view_model/
 import 'package:digitaltransactions/services/get_gold_price.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import '../../../../ExchangeRates/presentation/views/widgets/listvertical_widget/item_listview_vertical_dashboard.dart';
 import '../../../../ad_manager.dart';
 import 'item_list_vertical_gold_sliver.dart';
 

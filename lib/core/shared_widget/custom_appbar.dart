@@ -2,9 +2,6 @@ import 'package:digitaltransactions/core/utils/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../utils/color.dart';
 
-import 'package:flutter/material.dart';
-import '../utils/color.dart';
-import 'package:digitaltransactions/core/utils/textstyle.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
